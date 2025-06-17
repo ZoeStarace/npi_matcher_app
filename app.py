@@ -51,6 +51,7 @@ st.download_button(
     mime="text/csv"
 )
 
+# --- Begin utils.py content ---
 REQUIRED_COLUMNS = {"First Name", "Last Name", "Specialty", "Hospital"}
 
 def validate_file(file):
@@ -70,6 +71,7 @@ def validate_file(file):
         return df, None
     except Exception as e:
         return None, f"Error reading file: {str(e)}"
+# --- End utils.py content ---
 
 def query_npi_api(first, last, state, version=2.1, limit=10):
     base_url = "https://npiregistry.cms.hhs.gov/api/"
@@ -158,7 +160,6 @@ if uploaded_file:
                         basic = m.get("basic", {})
                         taxonomies = m.get("taxonomies", [])
                         addresses = m.get("addresses", [])
-                        # Use organization_name as Matched Hospital if available
                         matched_hospital = m.get("organization_name", "")
                         result_rows.append({
                             "Original First Name": row.get("First Name", ""),
