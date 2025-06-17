@@ -3,39 +3,42 @@ import pandas as pd
 import requests
 from rapidfuzz import fuzz
 
+# -------------------- CONFIG & CONSTANTS --------------------
 st.set_page_config(page_title="NPI Matcher", layout="wide")
-st.title("🔍 NPI Registry Matcher")
+REQUIRED_COLUMNS = {"First Name", "Last Name", "Specialty", "Hospital"}
 
-st.markdown("""
-**Provider File Format Instructions**
+# -------------------- SIDEBAR: APP INFO & OPTIONS --------------------
+with st.sidebar:
+    st.title("NPI Matcher Settings")
+    st.markdown("Configure your matching preferences below.")
+    state = st.text_input("Limit search to state (e.g., NY)", max_chars=2)
+    limit = st.number_input("Max matches per provider", min_value=1, max_value=50, value=10)
+    fuzzy_threshold = st.slider("Fuzzy match threshold", min_value=60, max_value=100, value=80, help="Higher = stricter match")
+    st.markdown("---")
+    st.markdown("**Need help?**\n- Download the sample template\n- Ensure your file has the required columns\n- Adjust matching options as needed")
 
-Your uploaded file (CSV or Excel) **must include these columns** (case-sensitive):
+# -------------------- HEADER & INSTRUCTIONS --------------------
+st.markdown(
+    "<h1 style='text-align: center; color: #4F8BF9;'>🔍 NPI Registry Matcher</h1>",
+    unsafe_allow_html=True
+)
 
-- First Name
-- Last Name
-- Middle Name (optional)
-- Specialty
-- Hospital
+st.info(
+    "Upload a CSV or Excel file with these columns (case-sensitive):\n\n"
+    "- First Name\n- Last Name\n- Middle Name (optional)\n- Specialty\n- Hospital\n\n"
+    "Example header: `First Name,Last Name,Middle Name,Specialty,Hospital`"
+)
 
-**Example CSV header:**
-```
-First Name,Last Name,Middle Name,Specialty,Hospital
-```
+with st.expander("Show detailed instructions"):
+    st.markdown("""
+    **How to use this app:**
+    1. Download the sample template and fill in your provider data.
+    2. Upload your completed CSV or Excel file.
+    3. Adjust matching options in the sidebar.
+    4. Click **Run Matching** to see results.
+    """)
 
-Each row should contain the provider’s first name, last name, (optional) middle name, specialty, and hospital.
-
-If your file is missing any of these columns or the column names are incorrect, the application will reject the file and display an error message indicating which column is missing.
-""")
-
-st.markdown("""
-**How to use this app:**
-1. Download the sample template and fill in your provider data.
-2. Upload your completed CSV or Excel file.
-3. Set your matching options.
-4. Click "Run Matching" to see results.
-""")
-
-# Download sample template
+# -------------------- DOWNLOAD SAMPLE TEMPLATE --------------------
 sample_data = pd.DataFrame({
     "First Name": [],
     "Last Name": [],
@@ -43,17 +46,14 @@ sample_data = pd.DataFrame({
     "Specialty": [],
     "Hospital": []
 })
-csv = sample_data.to_csv(index=False)
 st.download_button(
-    label="Download Sample CSV Template",
-    data=csv,
+    label="⬇️ Download Sample CSV Template",
+    data=sample_data.to_csv(index=False),
     file_name="sample_provider_file.csv",
     mime="text/csv"
 )
 
-# --- Begin utils.py content ---
-REQUIRED_COLUMNS = {"First Name", "Last Name", "Specialty", "Hospital"}
-
+# -------------------- FILE VALIDATION --------------------
 def validate_file(file):
     try:
         if file.name.endswith('.csv'):
@@ -62,37 +62,26 @@ def validate_file(file):
             df = pd.read_excel(file)
         else:
             return None, "Unsupported file format. Please upload CSV or Excel."
-        if not REQUIRED_COLUMNS.issubset(set(df.columns)):
+        if not REQUIRED_COLUMNS.issubset(df.columns):
             missing = REQUIRED_COLUMNS - set(df.columns)
             return None, f"Missing required columns: {', '.join(missing)}"
-        # Add empty Middle Name column if not present
         if "Middle Name" not in df.columns:
             df["Middle Name"] = ""
         return df, None
     except Exception as e:
         return None, f"Error reading file: {str(e)}"
-# --- End utils.py content ---
 
+# -------------------- NPI API & MATCHING HELPERS --------------------
 def query_npi_api(first, last, state, version=2.1, limit=10):
-    base_url = "https://npiregistry.cms.hhs.gov/api/"
     params = {
-        "number": "",
-        "enumeration_type": "NPI-1",
-        "taxonomy_description": "",
         "first_name": first,
         "last_name": last,
-        "organization_name": "",
-        "address_purpose": "",
-        "city": "",
         "state": state,
-        "postal_code": "",
-        "country_code": "",
         "limit": limit,
-        "skip": "",
         "version": version,
-        "use_first_name_alias": "False"
+        "enumeration_type": "NPI-1",
     }
-    r = requests.get(base_url, params=params)
+    r = requests.get("https://npiregistry.cms.hhs.gov/api/", params=params)
     return r.json()
 
 def is_fuzzy_match(supplied, candidate, threshold=80):
@@ -103,8 +92,7 @@ def filter_results_by_state(matches, state):
         return matches
     filtered = []
     for m in matches:
-        addresses = m.get("addresses", [])
-        for addr in addresses:
+        for addr in m.get("addresses", []):
             if addr.get("state", "").strip().upper() == state.strip().upper():
                 filtered.append(m)
                 break
@@ -113,35 +101,27 @@ def filter_results_by_state(matches, state):
 def match_provider(row, state, limit, fuzzy_threshold=80):
     first = row['First Name']
     last = row['Last Name']
-    version = 2.1
-
     strategies = [
         {"first": first, "last": last, "state": state, "level": "Full"},
         {"first": first, "last": last, "state": "", "level": "Fuzzy"},
         {"first": "", "last": last, "state": state, "level": "Last Name Only"},
     ]
-    match_level = "No Match"
-    matches = []
     for strat in strategies:
-        results_json = query_npi_api(strat["first"], strat["last"], strat["state"], version, limit)
-        if results_json.get('result_count', 0) > 0:
-            if strat["level"] == "Full":
-                matches = filter_results_by_state(results_json['results'], state)
-            else:
-                matches = [
-                    m for m in filter_results_by_state(results_json['results'], state)
-                    if is_fuzzy_match(first, m.get("basic", {}).get("first_name", ""), fuzzy_threshold)
-                ]
-            if matches:
-                match_level = strat["level"]
-                break
-    return match_level, matches
+        results_json = query_npi_api(strat["first"], strat["last"], strat["state"], limit=limit)
+        matches = results_json.get('results', []) if results_json.get('result_count', 0) > 0 else []
+        if strat["level"] == "Full":
+            matches = filter_results_by_state(matches, state)
+        elif strat["level"] == "Fuzzy":
+            matches = [
+                m for m in filter_results_by_state(matches, state)
+                if is_fuzzy_match(first, m.get("basic", {}).get("first_name", ""), fuzzy_threshold)
+            ]
+        if matches:
+            return strat["level"], matches
+    return "No Match", []
 
+# -------------------- FILE UPLOAD & MATCHING --------------------
 uploaded_file = st.file_uploader("Upload Provider File (CSV or Excel)", type=["csv", "xls", "xlsx"])
-
-state = st.text_input("Limit search to state (e.g., NY)", max_chars=2)
-limit = st.number_input("Max matches per provider", min_value=1, max_value=50, value=10)
-fuzzy_threshold = st.slider("Fuzzy match threshold (higher = stricter)", min_value=60, max_value=100, value=80)
 
 if uploaded_file:
     df, error = validate_file(uploaded_file)
@@ -150,10 +130,10 @@ if uploaded_file:
     else:
         st.success(f"Uploaded {len(df)} rows successfully!")
 
-        if st.button("Run Matching"):
+        if st.button("🚦 Run Matching"):
             result_rows = []
-            with st.spinner("Matching providers..."):
-                for idx, row in df.iterrows():
+            with st.spinner("🔎 Matching providers, please wait..."):
+                for _, row in df.iterrows():
                     match_level, matches = match_provider(row, state, limit, fuzzy_threshold)
                     if matches:
                         m = matches[0]
@@ -219,5 +199,10 @@ if uploaded_file:
                 "Address 2", "City 2", "State 2",
                 "Address 3", "City 3", "State 3"
             ])
-            st.dataframe(result_df)
-            st.download_button("Download Results as CSV", result_df.to_csv(index=False), "npi_results.csv", "text/csv")
+            st.success("✅ Matching complete! Preview your results below.")
+            st.dataframe(result_df, use_container_width=True)
+            st.download_button("💾 Download Results as CSV", result_df.to_csv(index=False), "npi_results.csv", "text/csv")
+        else:
+            st.info("Ready to match! Click **Run Matching** to begin.")
+else:
+    st.warning("Please upload a provider file to get started.")
