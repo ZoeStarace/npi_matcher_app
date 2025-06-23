@@ -52,9 +52,8 @@ st.markdown(
 )
 
 st.info(
-    "Upload a CSV or Excel file with these columns (case-sensitive):\n\n"
-    "- First Name\n- Last Name\n- Middle Name (optional)\n- Specialty\n- Hospital\n\n"
-    "Example header: `First Name,Last Name,Middle Name,Specialty,Hospital`"
+    "**Upload a CSV or Excel file with these columns (case-sensitive):**\n"
+    "First Name, Last Name, Middle Name, Specialty, Hospital\n"
 )
 
 with st.expander("Show detailed instructions"):
@@ -135,17 +134,6 @@ def query_npi_api(first, last, state, version=2.1, limit=1000, max_results=500):
 def is_fuzzy_match(supplied, candidate, threshold=70):
     return fuzz.partial_ratio(str(supplied).lower(), str(candidate).lower()) >= threshold
 
-def filter_results_by_state(matches, state):
-    if not state:
-        return matches
-    filtered = []
-    for m in matches:
-        for addr in m.get("addresses", []):
-            if addr.get("state", "").strip().upper() == state.strip().upper():
-                filtered.append(m)
-                break
-    return filtered
-
 def match_provider(row, state, limit):
     first = row['First Name']
     last = row['Last Name']
@@ -161,7 +149,6 @@ def match_provider(row, state, limit):
         if label == "Best: Full first and last name match":
             results_json = query_npi_api(first, last, state)
             matches = results_json.get('results', []) if results_json.get('result_count', 0) > 0 else []
-            #matches = filter_results_by_state(matches, state)
             matches = [
                 m for m in matches
                 if m.get("basic", {}).get("first_name", "").strip().lower() == first.strip().lower()
@@ -171,18 +158,15 @@ def match_provider(row, state, limit):
             results_json = query_npi_api("", last, state)
             matches = results_json.get('results', []) if results_json.get('result_count', 0) > 0 else []
             matches = [
-                m for m in filter_results_by_state(matches, state)
-                #m for m in matches
+                m for m in matches
                 if is_fuzzy_match(first, m.get("basic", {}).get("first_name", ""), fuzzy_threshold)
             ]
         elif label == "Potential: Last name only match":
             results_json = query_npi_api("", last, state)
             matches = results_json.get('results', []) if results_json.get('result_count', 0) > 0 else []
-            #matches = filter_results_by_state(matches, state)
         elif label == "Limited Potential: First name only match":
             results_json = query_npi_api(first, "", state)
             matches = results_json.get('results', []) if results_json.get('result_count', 0) > 0 else []
-            #matches = filter_results_by_state(matches, state)
         else:
             matches = []
 
@@ -205,7 +189,7 @@ if uploaded_file:
     else:
         st.success(f"Uploaded {len(df)} rows successfully!")
 
-        if st.button("🚦 Run Matching"):
+        if st.button("Click to Run Matching"):
             result_rows = []
             with st.spinner("🔎 Matching providers, please wait..."):
                 for _, row in df.iterrows():
@@ -274,10 +258,42 @@ if uploaded_file:
                 "Address 2", "City 2", "State 2",
                 "Address 3", "City 3", "State 3"
             ])
-            st.success("✅ Matching complete! Preview your results below.")
-            st.dataframe(result_df, use_container_width=True)
-            st.download_button("💾 Download Results as CSV", result_df.to_csv(index=False), "npi_results.csv", "text/csv")
-        else:
-            st.info("Ready to match! Click **Run Matching** to begin.")
+            st.session_state['result_df'] = result_df  # <-- Store in session_state
+
+# --- Results Filtering & Display (always visible if results exist) ---
+result_df = st.session_state.get('result_df')
+if result_df is not None and not result_df.empty:
+    st.success("Matching complete! Preview your results below.")
+
+    filter_col1, filter_col2, filter_col3 = st.columns(3)
+    with filter_col1:
+        state_filter = st.multiselect(
+            "Filter by State",
+            options=sorted(result_df["State 1"].dropna().unique()),
+            default=[]
+        )
+    with filter_col2:
+        specialty_filter = st.multiselect(
+            "Filter by Specialty",
+            options=sorted(result_df["Matched Specialty 1"].dropna().unique()),
+            default=[]
+        )
+    with filter_col3:
+        match_level_filter = st.multiselect(
+            "Filter by Match Level",
+            options=sorted(result_df["Match Level"].dropna().unique()),
+            default=[]
+        )
+
+    filtered_df = result_df.copy()
+    if state_filter:
+        filtered_df = filtered_df[filtered_df["State 1"].isin(state_filter)]
+    if specialty_filter:
+        filtered_df = filtered_df[filtered_df["Matched Specialty 1"].isin(specialty_filter)]
+    if match_level_filter:
+        filtered_df = filtered_df[filtered_df["Match Level"].isin(match_level_filter)]
+
+    st.dataframe(filtered_df, use_container_width=True)
+    st.download_button("Download Results as CSV", filtered_df.to_csv(index=False), "npi_results.csv", "text/csv")
 else:
     st.warning("Please upload a provider file to get started.")
