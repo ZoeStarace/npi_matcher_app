@@ -5,7 +5,7 @@ from rapidfuzz import fuzz
 
 # -------------------- CONFIG & CONSTANTS --------------------
 st.set_page_config(page_title="NPI Matcher", layout="wide")
-REQUIRED_COLUMNS = {"First Name", "Last Name", "Specialty", "Hospital"}
+REQUIRED_COLUMNS = {"First Name", "Last Name"}
 
 MATCH_STRATEGIES = [
     ("Best: Full first and last name match", "Best"),
@@ -14,12 +14,16 @@ MATCH_STRATEGIES = [
     ("Limited Potential: First name only match", "Limited Potential"),
 ]
 
+def clear_results():
+    if 'result_df' in st.session_state:
+        del st.session_state['result_df']
+
 # -------------------- SIDEBAR: APP INFO & OPTIONS --------------------
 with st.sidebar:
     st.title("NPI Matcher Settings")
     st.markdown("Configure your matching preferences below.")
-    state = st.text_input("Limit search to state (e.g., NY)", max_chars=2)
-    limit = st.number_input("Max matches per provider", min_value=1, max_value=50, value=10)
+    state = st.text_input("Limit search to state (e.g., NY)", max_chars=2, key="state", on_change=clear_results)
+    limit = st.number_input("Max matches per provider", min_value=1, max_value=50, value=10, key="limit", on_change=clear_results)
     st.markdown("**Match strictness options:**")
     st.markdown("""
 - **Best:** Full first and last name match  
@@ -32,7 +36,9 @@ with st.sidebar:
         "Slide to adjust match strictness:",
         options=slider_labels,
         value=slider_labels[0],
-        help="Left: Only exact matches. Right: More possible matches, but less strict."
+        help="Left: Only exact matches. Right: More possible matches, but less strict.",
+        key="selected_label",
+        on_change=clear_results
     )
     st.markdown(f"**Selected:** {selected_label}")
     label_map = {
@@ -43,7 +49,7 @@ with st.sidebar:
     }
     search_type = label_map[selected_label]
     st.markdown("---")
-    st.markdown("**Need help?**\n- Download the sample template\n- Ensure your file has the required columns\n- Adjust matching options as needed")
+    st.markdown("**Need help?**\n- Download the sample template\n- Ensure your file has the required columns\n- Adjust matching options as needed\n - Click **Run Matching** to start the process\n - Refine results using filters\n\n")
 
 # -------------------- HEADER & INSTRUCTIONS --------------------
 st.markdown(
@@ -51,10 +57,25 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-st.info(
-    "**Upload a CSV or Excel file with these columns (case-sensitive):**\n"
-    "First Name, Last Name, Middle Name, Specialty, Hospital\n"
-)
+col1, col2 = st.columns([4, 1])
+with col1:
+    st.info(
+        "**Upload a CSV or Excel file with these columns (case-sensitive):**\n"
+        "First Name, Last Name, Middle Name (optional)"
+    )
+with col2:
+    sample_data = pd.DataFrame({
+        "First Name": [],
+        "Last Name": [],
+        "Middle Name": []
+    })
+    st.download_button(
+        label="📄 Example CSV",
+        data=sample_data.to_csv(index=False),
+        file_name="sample_provider_file.csv",
+        mime="text/csv",
+        key="download_sample_csv"
+    )
 
 with st.expander("Show detailed instructions"):
     st.markdown("""
@@ -63,22 +84,9 @@ with st.expander("Show detailed instructions"):
     2. Upload your completed CSV or Excel file.
     3. Adjust matching options in the sidebar.
     4. Click **Run Matching** to see results.
+    5. Use the filters to refine results based on state, specialty, and match level.
+    6. Download the results as a CSV file.
     """)
-
-# -------------------- DOWNLOAD SAMPLE TEMPLATE --------------------
-sample_data = pd.DataFrame({
-    "First Name": [],
-    "Last Name": [],
-    "Middle Name": [],
-    "Specialty": [],
-    "Hospital": []
-})
-st.download_button(
-    label="⬇️ Download Sample CSV Template",
-    data=sample_data.to_csv(index=False),
-    file_name="sample_provider_file.csv",
-    mime="text/csv"
-)
 
 # -------------------- FILE VALIDATION --------------------
 def validate_file(file):
@@ -133,6 +141,7 @@ def query_npi_api(first, last, state, version=2.1, limit=1000, max_results=500):
 
 def is_fuzzy_match(supplied, candidate, threshold=70):
     return fuzz.partial_ratio(str(supplied).lower(), str(candidate).lower()) >= threshold
+
 
 def match_provider(row, state, limit):
     first = row['First Name']
@@ -199,21 +208,17 @@ if uploaded_file:
                             basic = m.get("basic", {})
                             taxonomies = m.get("taxonomies", [])
                             addresses = m.get("addresses", [])
-                            matched_hospital = m.get("organization_name", "")
                             result_rows.append({
                                 "Original First Name": row.get("First Name", ""),
                                 "Original Last Name": row.get("Last Name", ""),
                                 "Original Middle Name": row.get("Middle Name", ""),
-                                "Original Specialty": row.get("Specialty", ""),
-                                "Original Hospital": row.get("Hospital", ""),
                                 "Match Level": match_level,
                                 "NPI": m.get("number", ""),
                                 "Matched First Name": basic.get("first_name", ""),
                                 "Matched Last Name": basic.get("last_name", ""),
                                 "Matched Middle Name": basic.get("middle_name", ""),
-                                "Matched Specialty 1": taxonomies[0].get("desc", "") if len(taxonomies) > 0 else "",
-                                "Matched Specialty 2": taxonomies[1].get("desc", "") if len(taxonomies) > 1 else "",
-                                "Matched Hospital": matched_hospital,
+                                "Specialty 1": taxonomies[0].get("desc", "") if len(taxonomies) > 0 else "",
+                                "Specialty 2": taxonomies[1].get("desc", "") if len(taxonomies) > 1 else "",
                                 "Address 1": addresses[0]["address_1"] if len(addresses) > 0 else "",
                                 "City 1": addresses[0]["city"] if len(addresses) > 0 else "",
                                 "State 1": addresses[0]["state"] if len(addresses) > 0 else "",
@@ -229,16 +234,13 @@ if uploaded_file:
                             "Original First Name": row.get("First Name", ""),
                             "Original Last Name": row.get("Last Name", ""),
                             "Original Middle Name": row.get("Middle Name", ""),
-                            "Original Specialty": row.get("Specialty", ""),
-                            "Original Hospital": row.get("Hospital", ""),
                             "Match Level": "No Match",
                             "NPI": "",
                             "Matched First Name": "",
                             "Matched Last Name": "",
                             "Matched Middle Name": "",
-                            "Matched Specialty 1": "",
-                            "Matched Specialty 2": "",
-                            "Matched Hospital": "",
+                            "Specialty 1": "",
+                            "Specialty 2": "",
                             "Address 1": "",
                             "City 1": "",
                             "State 1": "",
@@ -250,10 +252,10 @@ if uploaded_file:
                             "State 3": "",
                         })
             result_df = pd.DataFrame(result_rows, columns=[
-                "Original First Name", "Original Last Name", "Original Middle Name", "Original Specialty", "Original Hospital",
+                "Original First Name", "Original Last Name", "Original Middle Name", 
                 "Match Level", "NPI",
                 "Matched First Name", "Matched Last Name", "Matched Middle Name",
-                "Matched Specialty 1", "Matched Specialty 2", "Matched Hospital",
+                "Specialty 1", "Specialty 2",
                 "Address 1", "City 1", "State 1",
                 "Address 2", "City 2", "State 2",
                 "Address 3", "City 3", "State 3"
@@ -263,19 +265,28 @@ if uploaded_file:
 # --- Results Filtering & Display (always visible if results exist) ---
 result_df = st.session_state.get('result_df')
 if result_df is not None and not result_df.empty:
-    st.success("Matching complete! Preview your results below.")
+    st.success("Matching complete! Preview the results below. Use the filters to refine these results.")
 
     filter_col1, filter_col2, filter_col3 = st.columns(3)
     with filter_col1:
+        all_states = pd.concat([
+            result_df["State 1"].dropna(),
+            result_df["State 2"].dropna(),
+            result_df["State 3"].dropna()
+        ]).unique()
         state_filter = st.multiselect(
             "Filter by State",
-            options=sorted(result_df["State 1"].dropna().unique()),
+            options=sorted(all_states),
             default=[]
         )
     with filter_col2:
+        all_specialties = pd.concat([
+            result_df["Specialty 1"].dropna(),
+            result_df["Specialty 2"].dropna()
+        ]).unique()
         specialty_filter = st.multiselect(
             "Filter by Specialty",
-            options=sorted(result_df["Matched Specialty 1"].dropna().unique()),
+            options=sorted(all_specialties),
             default=[]
         )
     with filter_col3:
@@ -287,9 +298,15 @@ if result_df is not None and not result_df.empty:
 
     filtered_df = result_df.copy()
     if state_filter:
-        filtered_df = filtered_df[filtered_df["State 1"].isin(state_filter)]
+        filtered_df = filtered_df[
+            filtered_df["State 1"].isin(state_filter) |
+            filtered_df["State 2"].isin(state_filter) |
+            filtered_df["State 3"].isin(state_filter)
+        ]
     if specialty_filter:
-        filtered_df = filtered_df[filtered_df["Matched Specialty 1"].isin(specialty_filter)]
+        filtered_df = filtered_df[
+            filtered_df["Specialty 1"].isin(specialty_filter) | filtered_df["Specialty 2"].isin(specialty_filter)
+        ]
     if match_level_filter:
         filtered_df = filtered_df[filtered_df["Match Level"].isin(match_level_filter)]
 
