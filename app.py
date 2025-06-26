@@ -3,6 +3,7 @@ import pandas as pd
 import requests
 from rapidfuzz import fuzz
 import re
+import concurrent.futures
 
 # -------------------- CONFIG & CONSTANTS --------------------
 st.set_page_config(page_title="NPI Matcher", layout="wide", initial_sidebar_state="expanded")
@@ -47,7 +48,7 @@ with st.sidebar:
         on_change=clear_results
     )
 
-    limit = st.number_input("Max matches per provider", min_value=1, max_value=50, value=10, key="limit", on_change=clear_results)
+    limit = st.number_input("Max matches per provider", min_value=1, max_value=50, value=5, key="limit", on_change=clear_results)
     st.markdown("**Match strictness options:**")
     st.markdown("""
 - **Best:** Full first and last name match  
@@ -112,7 +113,6 @@ with st.expander("Show detailed instructions"):
     5. Use the filters to refine results based on state, specialty, and match level.
     6. Download the results as a CSV file.
     """)
-
 # -------------------- FILE VALIDATION --------------------
 def validate_file(file):
     try:
@@ -187,24 +187,20 @@ def match_provider(row, state, limit):
         if label == "Best: Full first and last name match":
             results_json = query_npi_api(first, last, state)
             matches = results_json.get('results', []) if results_json.get('result_count', 0) > 0 else []
-            # Try matching with specialty first
             matches = [
-                 m for m in matches
-                 if (
-            #         (
-            #             m.get("basic", {}).get("first_name", "").strip().lower() == first.strip().lower()
-            #             and m.get("basic", {}).get("last_name", "").strip().lower() == last.strip().lower()
-            #         )
-            #         or matches_former_name(first, last, m.get("other_names", []))
-            #     )
-            #     and (
-                     (not specialty) or
-                     any(
-                         specialty.strip().lower() == (t.get("desc") or "").strip().lower()
-                         for t in m.get("taxonomies", [])
-                     )
-                 )
-                 ]
+                m for m in matches
+                if (
+                    m.get("basic", {}).get("first_name", "").strip().lower() == first.strip().lower()
+                    and m.get("basic", {}).get("last_name", "").strip().lower() == last.strip().lower()
+                )
+                and (
+                    (not specialty) or
+                    any(
+                        clean_specialty(specialty).lower() == clean_specialty(t.get("desc", "")).lower()
+                        for t in m.get("taxonomies", [])
+                    )
+                )
+            ]
             # If no matches and specialty was provided, try again without specialty
             if debug:
                 print(f"Best matches found with specialty: {len(matches)}")
@@ -251,6 +247,24 @@ def match_provider(row, state, limit):
                 seen_npis.add(npi)
             if len(all_matches) >= limit:
                 break
+
+    # Filter by specialty before returning, if specialty is provided
+    if specialty:
+        def specialty_matches(supplied, taxonomies):
+            supplied = clean_specialty(supplied).lower()
+            for t in taxonomies:
+                desc = clean_specialty(t.get("desc", "")).lower()
+                if supplied == desc:
+                    return True
+            return False
+
+        filtered_matches = []
+        for match_level, m in all_matches:
+            if specialty_matches(specialty, m.get("taxonomies", [])):
+                filtered_matches.append((match_level, m))
+        if filtered_matches:
+            return filtered_matches
+
     return all_matches
 
 def try_both_split_and_unsplit(row, state, limit):
@@ -304,74 +318,83 @@ if uploaded_file:
         df["Middle Name"] = df["Middle Name"].fillna("").astype(str)
         df["Suffix"] = df["Suffix"].fillna("").astype(str)
         df["Specialty"] = df["Specialty"].fillna("").astype(str).apply(clean_specialty)
+        def process_row(row):
+            matches, row_for_results = try_both_split_and_unsplit(row, state, limit)
+            result_rows = []
+            if matches:
+                for idx, (match_level, m) in enumerate(matches, start=1):
+                    basic = m.get("basic", {})
+                    taxonomies = m.get("taxonomies", [])
+                    addresses = m.get("addresses", [])
+                    result_rows.append({
+                        "First_Name_Supplied": row_for_results.get("First Name", ""),
+                        "Last_Name_Supplied": row_for_results.get("Last Name", ""),
+                        "FIRST_LAST": f"{row_for_results.get('First Name', '')} {row_for_results.get('Last Name', '')}".strip(),
+                        "Middle_Name_Supplied": row_for_results.get("Middle Name", ""),
+                        "Specialty_Supplied": row_for_results.get("Specialty", ""), 
+                        "Match_Level": match_level,
+                        "Result_Count": len(matches),
+                        "Result": f"{idx}",
+                        "NPI": m.get("number", ""),
+                        "First_Name": basic.get("first_name", ""),
+                        "Last_Name": basic.get("last_name", ""),
+                        "Middle_Name": basic.get("middle_name", ""),
+                        "Creditials": basic.get("credential", ""),
+                        "Specialty_1": taxonomies[0].get("desc", "") if len(taxonomies) > 0 else "",
+                        "Specialty_2": taxonomies[1].get("desc", "") if len(taxonomies) > 1 else "",
+                        "Address_1": addresses[0]["address_1"] if len(addresses) > 0 else "",
+                        "City_1": addresses[0]["city"] if len(addresses) > 0 else "",
+                        "State_1": addresses[0]["state"] if len(addresses) > 0 else "",
+                        "Address_2": addresses[1]["address_1"] if len(addresses) > 1 else "",
+                        "City_2": addresses[1]["city"] if len(addresses) > 1 else "",
+                        "State_2": addresses[1]["state"] if len(addresses) > 1 else "",
+                        "Address_3": addresses[2]["address_1"] if len(addresses) > 2 else "",
+                        "City_3": addresses[2]["city"] if len(addresses) > 2 else "",
+                        "State_3": addresses[2]["state"] if len(addresses) > 2 else "",
+                        "Suffix": row_for_results.get("Suffix", ""),
+                        "Address Match": "",
+                    })
+            else:
+                result_rows.append({
+                    "First_Name_Supplied": row.get("First Name", ""),
+                    "Last_Name_Supplied": row.get("Last Name", ""),
+                    "FIRST_LAST": f"{row.get('First Name', '')} {row.get('Last Name', '')}".strip(),
+                    "Middle_Name_Supplied": row.get("Middle Name", ""),
+                    "Specialty_Supplied": row.get("Specialty", ""), 
+                    "Match_Level": "No Match",
+                    "Result_Count": 0,
+                    "Result": "No Match",
+                    "NPI": "",
+                    "First_Name": "",
+                    "Last_Name": "",
+                    "Middle_Name": "",
+                    "Creditials": "",
+                    "Specialty_1": "",
+                    "Specialty_2": "",
+                    "Address_1": "",
+                    "City_1": "",
+                    "State_1": "",
+                    "Address_2": "",
+                    "City_2": "",
+                    "State_2": "",
+                    "Address_3": "",
+                    "City_3": "",
+                    "State_3": "",
+                    "Specialty_Supplied": row.get("Specialty", ""),
+                    "Suffix": row.get("Suffix", ""),
+                    "Address Match": "",
+                })
+            return result_rows
+
+        # In your "Click to Run Matching" button:
         if st.button("Click to Run Matching"):
             result_rows = []
             with st.spinner("🔎 Matching providers, please wait..."):
-                for _, row in df.iterrows():
-                    matches, row_for_results = try_both_split_and_unsplit(row, state, limit)
-                    if matches:
-                        for idx, (match_level, m) in enumerate(matches, start=1):
-                            basic = m.get("basic", {})
-                            taxonomies = m.get("taxonomies", [])
-                            addresses = m.get("addresses", [])
-                            result_rows.append({
-                                "First_Name_Supplied": row_for_results.get("First Name", ""),
-                                "Last_Name_Supplied": row_for_results.get("Last Name", ""),
-                                "FIRST_LAST": f"{row_for_results.get('First Name', '')} {row_for_results.get('Last Name', '')}".strip(),
-                                "Middle_Name_Supplied": row_for_results.get("Middle Name", ""),
-                                "Specialty_Supplied": row_for_results.get("Specialty", ""), 
-                                "Match_Level": match_level,
-                                "Result_Count": len(matches),
-                                "Result": f"{idx}",
-                                "NPI": m.get("number", ""),
-                                "First_Name": basic.get("first_name", ""),
-                                "Last_Name": basic.get("last_name", ""),
-                                "Middle_Name": basic.get("middle_name", ""),
-                                "Creditials": basic.get("credential", ""),
-                                "Specialty_1": taxonomies[0].get("desc", "") if len(taxonomies) > 0 else "",
-                                "Specialty_2": taxonomies[1].get("desc", "") if len(taxonomies) > 1 else "",
-                                "Address_1": addresses[0]["address_1"] if len(addresses) > 0 else "",
-                                "City_1": addresses[0]["city"] if len(addresses) > 0 else "",
-                                "State_1": addresses[0]["state"] if len(addresses) > 0 else "",
-                                "Address_2": addresses[1]["address_1"] if len(addresses) > 1 else "",
-                                "City_2": addresses[1]["city"] if len(addresses) > 1 else "",
-                                "State_2": addresses[1]["state"] if len(addresses) > 1 else "",
-                                "Address_3": addresses[2]["address_1"] if len(addresses) > 2 else "",
-                                "City_3": addresses[2]["city"] if len(addresses) > 2 else "",
-                                "State_3": addresses[2]["state"] if len(addresses) > 2 else "",
-                                "Suffix": row_for_results.get("Suffix", ""),
-                                "Address Match": "",
-                            })
-                    else:
-                        result_rows.append({
-                            "First_Name_Supplied": row.get("First Name", ""),
-                            "Last_Name_Supplied": row.get("Last Name", ""),
-                            "FIRST_LAST": f"{row.get('First Name', '')} {row.get('Last Name', '')}".strip(),
-                            "Middle_Name_Supplied": row.get("Middle Name", ""),
-                            "Specialty_Supplied": row.get("Specialty", ""), 
-                            "Match_Level": "No Match",
-                            "Result_Count": 0,
-                            "Result": "No Match",
-                            "NPI": "",
-                            "First_Name": "",
-                            "Last_Name": "",
-                            "Middle_Name": "",
-                            "Creditials": "",
-                            "Specialty_1": "",
-                            "Specialty_2": "",
-                            "Address_1": "",
-                            "City_1": "",
-                            "State_1": "",
-                            "Address_2": "",
-                            "City_2": "",
-                            "State_2": "",
-                            "Address_3": "",
-                            "City_3": "",
-                            "State_3": "",
-                            "Specialty_Supplied": row.get("Specialty", ""),
-                            "Suffix": row.get("Suffix", ""),
-                            "Address Match": "",
-                        })
+                with concurrent.futures.ThreadPoolExecutor(max_workers=8) as executor:
+                    results = list(executor.map(process_row, [row for _, row in df.iterrows()]))
+                # Flatten the list of lists
+                for rows in results:
+                    result_rows.extend(rows)
             desired_columns = [
                 "First_Name_Supplied", "Last_Name_Supplied", "FIRST_LAST", "Middle_Name_Supplied", "Specialty_Supplied",
                 "Match_Level", "Result_Count", "Result", "NPI",
