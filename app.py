@@ -2,9 +2,10 @@ import streamlit as st
 import pandas as pd
 import requests
 from rapidfuzz import fuzz
+import re
 
 # -------------------- CONFIG & CONSTANTS --------------------
-st.set_page_config(page_title="NPI Matcher", layout="wide")
+st.set_page_config(page_title="NPI Matcher", layout="wide", initial_sidebar_state="expanded")
 REQUIRED_COLUMNS = {"First Name", "Last Name"}
 
 MATCH_STRATEGIES = [
@@ -135,6 +136,12 @@ def validate_file(file):
         return df, None
     except Exception as e:
         return None, f"Error reading file: {str(e)}"
+    
+def clean_specialty(s):
+    # Remove everything after a slash or comma (including the slash/comma)
+    if pd.isna(s):
+        return ""
+    return re.split(r"[/,]", str(s))[0].strip()
 
 # -------------------- NPI API & MATCHING HELPERS --------------------
 def query_npi_api(first, last, state, version=2.1, limit=1000, max_results=500):
@@ -167,7 +174,7 @@ def is_fuzzy_match(supplied, candidate, threshold=70):
 def match_provider(row, state, limit):
     first = row['First Name']
     last = row['Last Name']
-    middle = row.get('Middle Name', "")
+    specialty = row.get('Specialty', "")
     fuzzy_threshold = 70 
 
     selected_idx = next(i for i, (label, _) in enumerate(MATCH_STRATEGIES) if label == search_type)
@@ -175,23 +182,52 @@ def match_provider(row, state, limit):
     seen_npis = set()  # To avoid duplicate NPIs
 
     for i, (label, match_level) in enumerate(MATCH_STRATEGIES):
-        if i > selected_idx or len(all_matches) >= limit:
+        if i > selected_idx or len(all_matches) >= 1:
             break
         if label == "Best: Full first and last name match":
             results_json = query_npi_api(first, last, state)
             matches = results_json.get('results', []) if results_json.get('result_count', 0) > 0 else []
+            # Try matching with specialty first
             matches = [
-                m for m in matches
-                if m.get("basic", {}).get("first_name", "").strip().lower() == first.strip().lower()
-                and m.get("basic", {}).get("last_name", "").strip().lower() == last.strip().lower()
-                and (
-                    not middle.strip()  # No middle name provided, accept match
-                    or (
-                        m.get("basic", {}).get("middle_name", "").strip()
-                        and m.get("basic", {}).get("middle_name", "").strip()[0].lower() == middle.strip()[0].lower()
-                    )
-                )
-            ]
+                 m for m in matches
+                 if (
+            #         (
+            #             m.get("basic", {}).get("first_name", "").strip().lower() == first.strip().lower()
+            #             and m.get("basic", {}).get("last_name", "").strip().lower() == last.strip().lower()
+            #         )
+            #         or matches_former_name(first, last, m.get("other_names", []))
+            #     )
+            #     and (
+                     (not specialty) or
+                     any(
+                         specialty.strip().lower() == (t.get("desc") or "").strip().lower()
+                         for t in m.get("taxonomies", [])
+                     )
+                 )
+                 ]
+            # If no matches and specialty was provided, try again without specialty
+            if debug:
+                print(f"Best matches found with specialty: {len(matches)}")
+                print(f"Matches with specialty: {matches}")
+            if not matches and specialty:
+                results_json_no_spec = query_npi_api(first, last, state)
+                matches = results_json_no_spec.get('results', []) if results_json_no_spec.get('result_count', 0) > 0 else []
+                if debug:
+                    print(f"Retrying without specialty, matches found: {len(matches)}")
+                    print(f"Matches: {matches}")
+                # matches = [
+                #     m for m in matches
+                #     if (
+                #     (
+                #         m.get("basic", {}).get("first_name", "").strip().lower() == first.strip().lower()
+                #         and m.get("basic", {}).get("last_name", "").strip().lower() == last.strip().lower()
+                #     )
+                #     or matches_former_name(first, last, m.get("other_names", []))
+                # )
+                # ]
+            if debug:
+                print(f"Best matches found: {len(matches)}")
+                print(f"Matches: {matches}")
         elif label == "Good: Last name match + fuzzy first name":
             results_json = query_npi_api("", last, state)
             matches = results_json.get('results', []) if results_json.get('result_count', 0) > 0 else []
@@ -225,6 +261,8 @@ def try_both_split_and_unsplit(row, state, limit):
 
     # Try splitting last word as middle name if possible
     parts = str(row['First Name']).strip().split()
+    if debug:
+        print(f"Parts after split: {parts}")
     if (row.get("Middle Name", "") == "") and len(parts) > 1:
         row2 = row.copy()
         row2['First Name'] = " ".join(parts[:-1])
@@ -234,7 +272,20 @@ def try_both_split_and_unsplit(row, state, limit):
             return matches, row2
     return [], row
 
+def matches_former_name(first, last, other_names):
+    first = first.strip().lower()
+    last = last.strip().lower()
+    for name in other_names or []:
+        if (
+            (name.get("first_name", "") or "").strip().lower() == first and
+            (name.get("last_name", "") or "").strip().lower() == last
+        ):
+            return True
+    return False
+
 # -------------------- FILE UPLOAD & MATCHING --------------------
+debug = False
+
 uploaded_file = st.file_uploader("Upload Provider File (CSV or Excel)", type=["csv", "xls", "xlsx"])
 
 if uploaded_file:
@@ -242,13 +293,17 @@ if uploaded_file:
     if error:
         st.error(error)
     else:
+        if debug:
+            df = df[df["Last Name"].str.strip().str.lower() == "sandler"]  # use this to debug
+
         st.success(f"Uploaded {len(df)} rows successfully!")
-        df = split_first_and_middle(df)
+        #df = split_first_and_middle(df)
+
         df["First Name"] = df["First Name"].fillna("").astype(str)
         df["Last Name"] = df["Last Name"].fillna("").astype(str)
         df["Middle Name"] = df["Middle Name"].fillna("").astype(str)
         df["Suffix"] = df["Suffix"].fillna("").astype(str)
-        df["Specialty"] = df["Specialty"].fillna("").astype(str)
+        df["Specialty"] = df["Specialty"].fillna("").astype(str).apply(clean_specialty)
         if st.button("Click to Run Matching"):
             result_rows = []
             with st.spinner("🔎 Matching providers, please wait..."):
