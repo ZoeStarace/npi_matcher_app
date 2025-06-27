@@ -149,6 +149,7 @@ def clean_specialty(s):
     return re.split(r"[/,]", str(s))[0].strip()
 
 # -------------------- NPI API & MATCHING HELPERS --------------------
+@st.cache_data(show_spinner=False)
 def query_npi_api(first, last, state, version=2.1, limit=1000, max_results=500):
     all_results = []
     skip = 0
