@@ -6,7 +6,7 @@ import re
 import concurrent.futures
 import io
 
-show_stats = True
+show_stats = False
 
 # -------------------- CONFIG & CONSTANTS --------------------
 st.set_page_config(page_title="NPI Matcher", layout="wide", initial_sidebar_state="expanded")
