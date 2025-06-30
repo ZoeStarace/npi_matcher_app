@@ -6,7 +6,7 @@ import re
 import concurrent.futures
 import io
 
-show_stats = False
+show_stats = True
 
 # -------------------- CONFIG & CONSTANTS --------------------
 st.set_page_config(page_title="NPI Matcher", layout="wide", initial_sidebar_state="expanded")
@@ -20,7 +20,8 @@ exclude_npis = {
     "1093028102", "1841674926", "1053961292", "1386377265", "1063097814", "1093264822", "1104130947",
     "1154402139", "1639515497", "1649767559", "1659306322", "1821363334", "1831392034", "1851393771",
     "1467035998", "1366590192", "1881700177", "1902102387", "1982943957", "1356996813", "1245959253",
-    "1952767535", "1982985610", "1437860566", "1164208385", "1427881531"
+    "1952767535", "1982985610", "1437860566", "1164208385", "1427881531", "1346421963", "1427596337",
+    "1578271474", "1851446116"
 }
 npi_expected = [npi for npi in npi_expected if npi not in exclude_npis]
 
@@ -219,14 +220,17 @@ def match_provider(row, state, limit, search_type):
             matches_with_specialty = [
                 m for m in matches
                 if (
-                    m.get("basic", {}).get("first_name", "").strip().lower() == first.strip().lower()
-                    and m.get("basic", {}).get("last_name", "").strip().lower() == last.strip().lower()
-                    and (
-                        (not specialty) or
-                        any(
-                            clean_specialty(specialty).lower() in clean_specialty(t.get("desc", "")).lower()
-                            for t in m.get("taxonomies", [])
-                        )
+                    (
+                        m.get("basic", {}).get("first_name", "").strip().lower() == first.strip().lower()
+                        and m.get("basic", {}).get("last_name", "").strip().lower() == last.strip().lower()
+                    )
+                    or matches_former_name(first, last, m.get("other_names", []))
+                )
+                and (
+                    (not specialty) or
+                    any(
+                        clean_specialty(specialty).lower() in clean_specialty(t.get("desc", "")).lower()
+                        for t in m.get("taxonomies", [])
                     )
                 )
             ]
@@ -330,6 +334,12 @@ def match_provider(row, state, limit, search_type):
                     continue
                 # Fuzzy score for name
                 if label == "Good: Last name match + fuzzy first name":
+                    # Add former name logic here!
+                    first_name_fuzzy = fuzz.token_sort_ratio(first, m.get("basic", {}).get("first_name", "")) >= fuzzy_threshold
+                    former_name_match = matches_former_name(first, last, m.get("other_names", []))
+                    last_name_match = m.get("basic", {}).get("last_name", "").strip().lower() == last.strip().lower()
+                    if not (last_name_match and (first_name_fuzzy or former_name_match)):
+                        continue
                     name_score = fuzz.token_sort_ratio(first, m.get("basic", {}).get("first_name", ""))
                     if name_score < fuzzy_threshold:
                         continue  # Skip if below threshold
@@ -360,8 +370,13 @@ def match_provider(row, state, limit, search_type):
                 m["_specialty_score"] = specialty_score
                 all_matches.append((match_level, m, specialty_matched))
                 seen_npis.add(npi)
-            if len(all_matches) >= limit:
-                break
+        # --- NY prioritization: sort NY matches to the top before slicing to limit ---
+        def is_ny(match_tuple):
+            m = match_tuple[1]
+            addresses = m.get("addresses", [])
+            return any(addr.get("state") == "NY" for addr in addresses)
+        all_matches = sorted(all_matches, key=lambda x: not is_ny(x))
+        all_matches = all_matches[:limit]
         if all_matches:
             return all_matches, all_matches[0][2]  # Return the specialty_matched of the top result
 
@@ -402,7 +417,13 @@ def matches_former_name(first, last, other_names):
             return True
     return False
 
-def get_state_passes(user_states):
+def get_strategy_state_passes(user_states):
+    """
+    Returns a list of state groups for matching passes.
+    - If user_states is empty or contains NY, first pass is NY, second pass is all other states.
+    - If user_states is only NY, only NY is checked.
+    - If user_states does not contain NY, only those states are checked.
+    """
     us_states = [
         "AK", "AL", "AR", "AZ", "CA", "CO", "CT", "DC", "DE", "FL", "GA", "HI", "IA", "ID", "IL", "IN", "KS", "KY",
         "LA", "MA", "MD", "ME", "MI", "MN", "MO", "MS", "MT", "NC", "ND", "NE", "NH", "NJ", "NM", "NV", "NY", "OH",
@@ -410,13 +431,13 @@ def get_state_passes(user_states):
     ]
     user_states = [s.strip() for s in user_states if s.strip()]
     if not user_states:
-        # No user filter: first NY, then all others
+        # No filter: NY first, then all others
         return [["NY"], [s for s in us_states if s != "NY"]]
     elif user_states == ["NY"]:
-        # Only NY selected: just one pass
+        # Only NY selected
         return [["NY"]]
     elif "NY" in user_states:
-        # NY in filter: first NY, then others in filter (excluding NY)
+        # NY in filter: NY first, then others in filter (excluding NY)
         return [["NY"], [s for s in user_states if s != "NY"]]
     else:
         # NY not in filter: just use their filter
@@ -445,19 +466,70 @@ if uploaded_file:
         df["Suffix"] = df["Suffix"].fillna("").astype(str)
         df["Specialty"] = df["Specialty"].fillna("").astype(str)
         def process_row(row):
-            # Determine state passes (NY first, then others)
-            state_passes = get_state_passes(state if isinstance(state, list) else [state])
-
             result_rows = []
             found_match = False
-            for state_group in state_passes:
-                # Try all strategies up to the selected strictness for this state group
+
+            if search_type == "Best: Full first and last name match":
+                # NY-first logic as before
+                state_passes = get_strategy_state_passes(state if isinstance(state, list) else [state])
+                for state_group in state_passes:
+                    matches, row_for_results, specialty_matched = try_new_match(
+                        row, ",".join(state_group), limit, search_type
+                    )
+                    if matches:
+                        found_match = True
+                        for idx, (match_level, m, specialty_matched) in enumerate(matches, start=1):
+                            basic = m.get("basic", {})
+                            taxonomies = m.get("taxonomies", [])
+                            addresses = m.get("addresses", [])
+                            result_rows.append({
+                                "First_Name_Supplied": row_for_results.get("First Name", ""),
+                                "Last_Name_Supplied": row_for_results.get("Last Name", ""),
+                                "FIRST_LAST": f"{row_for_results.get('First Name', '')} {row_for_results.get('Last Name', '')}".strip(),
+                                "Middle_Name_Supplied": row_for_results.get("Middle Name", ""),
+                                "Specialty_Supplied": row_for_results.get("Specialty", ""), 
+                                "Match_Level": match_level,
+                                "Specialty_Matched": specialty_matched,
+                                "Result_Count": len(matches),
+                                "Result": f"{idx}",
+                                "NPI": m.get("number", ""),
+                                "First_Name": basic.get("first_name", ""),
+                                "Last_Name": basic.get("last_name", ""),
+                                "Middle_Name": basic.get("middle_name", ""),
+                                "Creditials": basic.get("credential", ""),
+                                "Specialty_1": taxonomies[0].get("desc", "") if len(taxonomies) > 0 else "",
+                                "Specialty_2": taxonomies[1].get("desc", "") if len(taxonomies) > 1 else "",
+                                "Address_1": addresses[0]["address_1"] if len(addresses) > 0 else "",
+                                "City_1": addresses[0]["city"] if len(addresses) > 0 else "",
+                                "State_1": addresses[0]["state"] if len(addresses) > 0 else "",
+                                "Address_2": addresses[1]["address_1"] if len(addresses) > 1 else "",
+                                "City_2": addresses[1]["city"] if len(addresses) > 1 else "",
+                                "State_2": addresses[1]["state"] if len(addresses) > 1 else "",
+                                "Address_3": addresses[2]["address_1"] if len(addresses) > 2 else "",
+                                "City_3": addresses[2]["city"] if len(addresses) > 2 else "",
+                                "State_3": addresses[2]["state"] if len(addresses) > 2 else "",
+                                "Suffix": row_for_results.get("Suffix", ""),
+                                "Address Match": "",
+                            })
+                        break  # Stop after first successful state group
+            else:
+                # For fuzzy strategies: search all selected states at once, then sort NY to top
+                states_to_use = state if isinstance(state, list) else [state]
                 matches, row_for_results, specialty_matched = try_new_match(
-                    row, ",".join(state_group), limit, search_type
+                    row, ",".join(states_to_use), limit*3, search_type  # get more than limit to allow NY sorting
                 )
                 if matches:
+                    # Sort NY matches to the top
+                    def is_ny(m):
+                        # m can be a tuple (match_level, m, specialty_matched) or just a dict
+                        match_obj = m[1] if isinstance(m, tuple) else m
+                        addresses = match_obj.get("addresses", [])
+                        return any(addr.get("state") == "NY" for addr in addresses)
+                    matches = sorted(matches, key=lambda m: not is_ny(m))
+                    matches = matches[:limit]  # Apply limit after sorting NY to top
+
                     found_match = True
-                    for idx, (match_level, m, specialty_matched) in enumerate(matches, start=1):
+                    for idx, (match_level, m, specialty_matched) in enumerate(matches[:limit], start=1):
                         basic = m.get("basic", {})
                         taxonomies = m.get("taxonomies", [])
                         addresses = m.get("addresses", [])
@@ -490,7 +562,7 @@ if uploaded_file:
                             "Suffix": row_for_results.get("Suffix", ""),
                             "Address Match": "",
                         })
-                    break  # Stop after first successful state group
+
             if not found_match:
                 result_rows.append({
                     "First_Name_Supplied": row.get("First Name", ""),
