@@ -253,14 +253,17 @@ def match_provider(row, state, limit, search_type):
                     matches_with_specialty_split = [
                         m for m in matches_split
                         if (
-                            m.get("basic", {}).get("first_name", "").strip().lower() == first_split.strip().lower()
-                            and m.get("basic", {}).get("last_name", "").strip().lower() == last.strip().lower()
-                            and (
-                                (not specialty) or
-                                any(
-                                    clean_specialty(specialty).lower() in clean_specialty(t.get("desc", "")).lower()
-                                    for t in m.get("taxonomies", [])
-                                )
+                            (
+                                m.get("basic", {}).get("first_name", "").strip().lower() == first_split.strip().lower()
+                                and m.get("basic", {}).get("last_name", "").strip().lower() == last.strip().lower()
+                            )
+                            or matches_former_name(first_split, last, m.get("other_names", []))
+                        )
+                        and (
+                            (not specialty) or
+                            any(
+                                clean_specialty(specialty).lower() in clean_specialty(t.get("desc", "")).lower()
+                                for t in m.get("taxonomies", [])
                             )
                         )
                     ]
@@ -283,6 +286,7 @@ def match_provider(row, state, limit, search_type):
                                 m.get("basic", {}).get("first_name", "").strip().lower() == first_val.strip().lower()
                                 and m.get("basic", {}).get("last_name", "").strip().lower() == last_val.strip().lower()
                             )
+                            or matches_former_name(first_val, last_val, m.get("other_names", []))
                         ],
                         key=lambda m: max(
                             [
@@ -407,14 +411,26 @@ def try_both_split_and_unsplit(row, state, limit, search_type):
     return [], row, False
 
 def matches_former_name(first, last, other_names):
+    """
+    Checks if (first, last) matches any former name, with or without a middle name in 'first'.
+    """
     first = first.strip().lower()
     last = last.strip().lower()
+    # Check as-is
     for name in other_names or []:
-        if (
-            (name.get("first_name", "") or "").strip().lower() == first and
-            (name.get("last_name", "") or "").strip().lower() == last
-        ):
+        fn = (name.get("first_name", "") or "").strip().lower()
+        ln = (name.get("last_name", "") or "").strip().lower()
+        if fn == first and ln == last:
             return True
+    # If first name contains a space, try stripping the last part (middle name)
+    parts = first.split()
+    if len(parts) > 1:
+        first_no_middle = " ".join(parts[:-1])
+        for name in other_names or []:
+            fn = (name.get("first_name", "") or "").strip().lower()
+            ln = (name.get("last_name", "") or "").strip().lower()
+            if fn == first_no_middle and ln == last:
+                return True
     return False
 
 def get_strategy_state_passes(user_states):
