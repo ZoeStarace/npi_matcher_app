@@ -66,13 +66,13 @@ with st.sidebar:
     )
 
     limit = st.number_input("Max matches per provider", min_value=1, max_value=50, value=5, key="limit", on_change=clear_results)
-    st.markdown("**Match strictness options:**")
-    st.markdown("""
-- **Best:** Full first and last name match  
-- **Good:** Last name match + fuzzy first name  
-- **Potential:** Last name only match  
-- **Limited Potential:** First name only match
-    """)
+    #st.markdown("**Match strictness options:**")
+    #st.markdown("""
+#- **Best:** Full first and last name match  
+#- **Good:** Last name match + fuzzy first name  
+#- **Potential:** Last name only match  
+#- **Limited Potential:** First name only match
+ #   """)
     slider_labels = ["Best", "Good", "Potential", "Limited Potential"]
     selected_label = st.select_slider(
         "Slide to adjust match strictness:",
@@ -90,11 +90,29 @@ with st.sidebar:
         "Limited Potential": "Limited Potential: First name only match"
     }
     search_type = label_map[selected_label]
+
+    with st.expander("ℹ️ What do the match levels mean?"):
+        st.markdown("""
+**Match Level Explanations:**
+
+- **Best:**  
+  Requires an exact match on both first and last name (case-insensitive, ignores extra spaces). Also checks former names (aliases/other names) for an exact match. Specialty must match strictly. NY is prioritized if not specified.
+
+- **Good:**  
+  Last name must match exactly. First name is matched fuzzily (allows for typos or nicknames) or by former name. Specialty is matched fuzzily. NY matches are sorted to the top.
+
+- **Potential:**  
+  Only the last name must match exactly. First name is ignored. Specialty is matched fuzzily if provided. NY matches are sorted to the top.
+
+- **Limited Potential:**  
+  Only the first name must match exactly. Last name is ignored. Specialty is matched fuzzily if provided. NY matches are sorted to the top.
+""")
 # -------------------- HEADER & INSTRUCTIONS --------------------
 st.markdown(
     "<h1 style='text-align: center; color: #4F8BF9;'>🔍 NPI Registry Matcher</h1>",
     unsafe_allow_html=True
 )
+
 
 col1, col2 = st.columns([4, 1])
 with col1:
@@ -119,13 +137,14 @@ with col2:
 
 with st.expander("Show detailed instructions"):
     st.markdown("""
-    **How to use this app:**
-        1. Download the sample template and fill in your provider data.
-        2. Upload your completed CSV file.
-        3. Choose your matching options in the sidebar (state, strictness, max matches).
-        4. Click "Run Matching" to start.
-        5. Review and filter your results.
-        6. Download your results as Excel
+**How to use this app:**
+
+1. Download the sample template and fill in your provider data.  
+2. Upload your completed CSV file.  
+3. Choose your matching options in the sidebar (state, strictness, max matches).  
+4. Click "Run Matching" to start.  
+5. Review and filter your results.  
+6. Download your results as Excel.
     """)
 # -------------------- FILE VALIDATION --------------------
 def validate_file(file):
