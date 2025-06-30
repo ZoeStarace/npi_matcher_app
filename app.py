@@ -96,7 +96,7 @@ with st.sidebar:
 **Match Level Explanations:**
 
 - **Best:**  
-  Requires an exact match on both first and last name (case-insensitive, ignores extra spaces). Also checks former names (aliases/other names) for an exact match. Specialty must match strictly. NY is prioritized if not specified.
+  Requires an exact match on both first and last name (case-insensitive, ignores extra spaces). Attempts to strip out middle name from first name. Also checks former names (aliases/other names) for an exact match. Attempts to match specialty. NY is prioritized.
 
 - **Good:**  
   Last name must match exactly. First name is matched fuzzily (allows for typos or nicknames) or by former name. Specialty is matched fuzzily. NY matches are sorted to the top.
