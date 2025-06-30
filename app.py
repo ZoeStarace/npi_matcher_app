@@ -6,7 +6,7 @@ import re
 import concurrent.futures
 import io
 
-show_stats = True
+show_stats = False
 
 # -------------------- CONFIG & CONSTANTS --------------------
 st.set_page_config(page_title="NPI Matcher", layout="wide", initial_sidebar_state="expanded")
@@ -90,9 +90,6 @@ with st.sidebar:
         "Limited Potential": "Limited Potential: First name only match"
     }
     search_type = label_map[selected_label]
-    st.markdown("---")
-    st.markdown("**Need help?**\n- Download the sample template\n- Ensure your file has the required columns\n- Adjust matching options as needed\n - Click **Run Matching** to start the process\n - Refine results using filters\n\n")
-
 # -------------------- HEADER & INSTRUCTIONS --------------------
 st.markdown(
     "<h1 style='text-align: center; color: #4F8BF9;'>🔍 NPI Registry Matcher</h1>",
@@ -123,12 +120,12 @@ with col2:
 with st.expander("Show detailed instructions"):
     st.markdown("""
     **How to use this app:**
-    1. Download the sample template and fill in your provider data.
-    2. Upload your completed CSV file.
-    3. Adjust matching options in the sidebar.
-    4. Click **Run Matching** to see results.
-    5. Use the filters to refine results based on state, specialty, and match level.
-    6. Download the results as a CSV file.
+        1. Download the sample template and fill in your provider data.
+        2. Upload your completed CSV file.
+        3. Choose your matching options in the sidebar (state, strictness, max matches).
+        4. Click "Run Matching" to start.
+        5. Review and filter your results.
+        6. Download your results as Excel
     """)
 # -------------------- FILE VALIDATION --------------------
 def validate_file(file):
@@ -216,7 +213,7 @@ def match_provider(row, state, limit, search_type):
                 results_json = query_npi_api(first, last, s)
                 all_results.extend(results_json.get('results', []) if results_json.get('result_count', 0) > 0 else [])
             matches = all_results
-            print(f"All candidate matches for {first} {last}: {[m.get('number') for m in matches]}")
+            #print(f"All candidate matches for {first} {last}: {[m.get('number') for m in matches]}")
             matches_with_specialty = [
                 m for m in matches
                 if (
@@ -234,7 +231,7 @@ def match_provider(row, state, limit, search_type):
                     )
                 )
             ]
-            print(f"After filtering for exact name: {[m.get('number') for m in matches_with_specialty]}")
+            #print(f"After filtering for exact name: {[m.get('number') for m in matches_with_specialty]}")
             if matches_with_specialty:
                 matches = matches_with_specialty
                 match_level = "Best"
@@ -267,7 +264,7 @@ def match_provider(row, state, limit, search_type):
                             )
                         )
                     ]
-                    print(f"After splitting first name and filtering: {[m.get('number') for m in matches_with_specialty_split]}")
+                    #print(f"After splitting first name and filtering: {[m.get('number') for m in matches_with_specialty_split]}")
                     if matches_with_specialty_split:
                         matches = matches_with_specialty_split
                         match_level = "Best"
@@ -502,7 +499,7 @@ if uploaded_file:
                                 "First_Name_Supplied": row_for_results.get("First Name", ""),
                                 "Last_Name_Supplied": row_for_results.get("Last Name", ""),
                                 "FIRST_LAST": f"{row_for_results.get('First Name', '')} {row_for_results.get('Last Name', '')}".strip(),
-                                "Middle_Name_Supplied": row_for_results.get("Middle Name", ""),
+                                #"Middle_Name_Supplied": row_for_results.get("Middle Name", ""),
                                 "Specialty_Supplied": row_for_results.get("Specialty", ""), 
                                 "Match_Level": match_level,
                                 "Specialty_Matched": specialty_matched,
@@ -525,7 +522,7 @@ if uploaded_file:
                                 "City_3": addresses[2]["city"] if len(addresses) > 2 else "",
                                 "State_3": addresses[2]["state"] if len(addresses) > 2 else "",
                                 "Suffix": row_for_results.get("Suffix", ""),
-                                "Address Match": "",
+                                #"Address Match": "",
                             })
                         break  # Stop after first successful state group
             else:
@@ -553,7 +550,7 @@ if uploaded_file:
                             "First_Name_Supplied": row_for_results.get("First Name", ""),
                             "Last_Name_Supplied": row_for_results.get("Last Name", ""),
                             "FIRST_LAST": f"{row_for_results.get('First Name', '')} {row_for_results.get('Last Name', '')}".strip(),
-                            "Middle_Name_Supplied": row_for_results.get("Middle Name", ""),
+                            #"Middle_Name_Supplied": row_for_results.get("Middle Name", ""),
                             "Specialty_Supplied": row_for_results.get("Specialty", ""), 
                             "Match_Level": match_level,
                             "Specialty_Matched": specialty_matched,
@@ -576,7 +573,7 @@ if uploaded_file:
                             "City_3": addresses[2]["city"] if len(addresses) > 2 else "",
                             "State_3": addresses[2]["state"] if len(addresses) > 2 else "",
                             "Suffix": row_for_results.get("Suffix", ""),
-                            "Address Match": "",
+                            #"Address Match": "",
                         })
 
             if not found_match:
@@ -584,8 +581,8 @@ if uploaded_file:
                     "First_Name_Supplied": row.get("First Name", ""),
                     "Last_Name_Supplied": row.get("Last Name", ""),
                     "FIRST_LAST": f"{row.get('First Name', '')} {row.get('Last Name', '')}".strip(),
-                    "Middle_Name_Supplied": row.get("Middle Name", ""),
-                    "Specialty_Supplied": row.get("Specialty", ""), 
+                    #"Middle_Name_Supplied": row.get("Middle Name", ""),
+                    "Specialty_Supplied": row.get("Specialty", ""),
                     "Match_Level": "No Match",
                     "Result_Count": 0,
                     "Result": "No Match",
@@ -621,14 +618,13 @@ if uploaded_file:
                 for rows in results:
                     result_rows.extend(rows)
             desired_columns = [
-                "First_Name_Supplied", "Last_Name_Supplied", "FIRST_LAST", "Middle_Name_Supplied", "Specialty_Supplied",
+                "First_Name_Supplied", "Last_Name_Supplied", "FIRST_LAST", "Specialty_Supplied",
                 "Match_Level", "Result_Count", "Result", "NPI",
                 "First_Name", "Last_Name", "Middle_Name", "Creditials",
                 "Specialty_1", "Specialty_2",
                 "Address_1", "City_1", "State_1",
                 "Address_2", "City_2", "State_2",
                 "Address_3", "City_3", "State_3",
-                "Specialty", "Suffix", "Address Match"
             ]
             result_df = pd.DataFrame(result_rows, columns=desired_columns)
 
