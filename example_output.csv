@@ -1,0 +1,493 @@
+Row_ID,First_Name_Supplied,Last_Name_Supplied,FIRST_LAST,Middle_Name_Supplied,Match_Level,Result_Count,Result,NPI,First_Name,Last_Name,Middle_Name,Creditials,Specialty_1,Specialty_2,Address_1,City_1,State_1,Address_2,City_2,State_2,Address_3,City_3,State_3,Specialty,Suffix,Address Match
+249,Rajan,Subbiah,Rajan Subbiah,Sadagopal,0,0,0,,,,,,,,,,,,,,,,,Pulmonary Disease with Bronchoscipies,MD,0
+318,Raquel,Gomes-Rosenfeld,Raquel Gomes-Rosenfeld,,0,0,0,,,,,,,,,,,,,,,,,Physician Assistant/Medical,PA,0
+332,Mihaela,Krachtua,Mihaela Krachtua,,0,0,0,,,,,,,,,,,,,,,,,Nurse Practitioner-Endocrinology,NP,0
+381,Marco,Del Salto,Marco Del Salto,,0,0,0,,,,,,,,,,,,,,,,,Physical Therapist,,0
+387,Robin,Stegman Sakla,Robin Stegman Sakla,,0,0,0,,,,,,,,,,,,,,,,,LCSW,,0
+394,Maria,Lourdes Gonzales,Maria Lourdes Gonzales,,0,0,0,,,,,,,,,,,,,,,,,PsyD,,0
+396,Kara,Lynn Silverstein,Kara Lynn Silverstein,,0,0,0,,,,,,,,,,,,,,,,,Physical Therapist,,0
+398,Jose,Allan Aban,Jose Allan Aban,,0,0,0,,,,,,,,,,,,,,,,,Physical Therapist,,0
+402,Zaineb,Shamin,Zaineb Shamin,,0,0,0,,,,,,,,,,,,,,,,,,MD,0
+1,Leena,Abdelrahman,Leena Abdelrahman,,1,1,1,1467912576,LEENA,ABDELRAHMAN,,MD,Internal Medicine,,155 CRYSTAL RUN RD,MIDDLETOWN,NY,45 READE PL,POUGHKEEPSIE,NY,,,,Internal Medicine/Hospitalist,MD,1
+2,Marie,Abougou,Marie Abougou,,1,1,1,1770739559,MARIE,ABOUGOU,,MD,Obstetrics & Gynecology,,61 EMERALD PL,ROCK HILL,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Obstetrics & Gynecology ,MD,1
+3,Sami,Ahmad,Sami Ahmad,,1,1,1,1619258381,SAMI,AHMAD,,"M.D., M.S,",Obstetrics & Gynecology,,2 CENTEROCK RD,WEST NYACK,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Obstetrics & Gynecology ,MD,1
+4,Oladipo,Alao,Oladipo Alao,,1,1,1,1265539993,OLADIPO,ALAO,,MD,"Internal Medicine, Infectious Disease",Internal Medicine,2 CENTEROCK RD,WEST NYACK,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Infectious Disease ,MD,1
+5,MHD,Alnachawati,MHD Alnachawati,Hicham,2,1,1,1407041312,MHD HICHAM,ALNACHAWATI,,"MD, MPH","Preventive Medicine, Occupational Medicine",General Practice,2960 VICTORY BLVD,STATEN ISLAND,NY,50 STATE RT 5,FORT LEE,NJ,,,,Urgent Care,MD,0
+6,Anmar,Al-Qaisi,Anmar Al-Qaisi,,1,1,1,1811278195,ANMAR,AL-QAISI,,M.D.,Pediatrics,,61 EMERALD PL,ROCK HILL,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Pediatrics ,MD,1
+7,Alexey,Amchentsev,Alexey Amchentsev,,1,1,1,1235386517,ALEXEY,AMCHENTSEV,,M.D.,"Internal Medicine, Critical Care Medicine","Internal Medicine, Pulmonary Disease",61 EMERALD PL,ROCK HILL,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Pulmonary Diseases with Bronchoscopies,MD,1
+8,Saher,Amin,Saher Amin,,3,1,1,1245894286,SAHER,AMIN,NASIR,MD,Student in an Organized Health Care Education/Training Program,Internal Medicine,11575 PEARLAND PKWY APT 13202,HOUSTON,TX,4000 SPENCER HWY,PASADENA,TX,,,,Internal Medicine-Hospitalist,MD,0
+9,Kaytan,Amrute,Kaytan Amrute,,1,1,1,1619070836,KAYTAN,AMRUTE,V,M.D.,"Obstetrics & Gynecology, Urogynecology and Reconstructive Pelvic Surgery",Obstetrics & Gynecology,2 CENTEROCK RD,WEST NYACK,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Obstetrics & Gynecology ,MD,1
+10,Michael,Angeline,Michael Angeline,,1,1,1,1780830158,MICHAEL,ANGELINE,EDWARD,M.D.,"Orthopaedic Surgery, Sports Medicine",Orthopaedic Surgery,61 EMERALD PL,ROCK HILL,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Orthopedic Surgery ,MD,1
+11,Michaelle,Antoine,Michaelle Antoine,,1,1,1,1497963599,MICHAELLE,ANTOINE,,MD,Pediatrics,,300 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Pediatrics ,MD,1
+12,Narcis,Aron,Narcis Aron,,1,1,1,1265402374,NARCIS,ARON,BERNAT,MD,"Internal Medicine, Nephrology",,211 W 61ST ST,NEW YORK,NY,211 W 61ST ST,NEW YORK,NY,,,,Nephrology,MD,0
+13,Shafia,Aslam,Shafia Aslam,,1,1,1,1639632656,SHAFIA,ASLAM,,MD,Student in an Organized Health Care Education/Training Program,,280 LOUIS AVE,SOUTH FLORAL PARK,NY,355 BARD AVE,STATEN ISLAND,NY,,,,Pediatrics,MD,0
+14,Thomas,Avella,Thomas Avella,,1,1,1,1932105541,THOMAS,AVELLA,J,M.D.,Internal Medicine,,6 LIBERTY SQUARE MALL,STONY POINT,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Internal Medicine ,MD,1
+16,Benson,Babu,Benson Babu,,1,1,1,1508015082,BENSON,BABU,ABBI,M.D.,Internal Medicine,Hospitalist,630 1ST AVE,NEW YORK,NY,630 1ST AVE,NEW YORK,NY,,,,Internal Medicine-Hospitalist,MD,0
+17,Shane,Baker,Shane Baker,,1,1,1,1063792828,SHANE,BAKER,,DPM,Podiatrist,,155 CRYSTAL RUN RD,MIDDLETOWN,NY,95 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,"Podiatry, Surgical",DPM,1
+18,Sanjeev,Baldeo,Sanjeev Baldeo,,1,1,1,1861013005,SANJEEV,BALDEO,,DPM,Student in an Organized Health Care Education/Training Program,,222 STATION PLZ N STE 305,MINEOLA,NY,222 STATION RD STE 305,MINEOLA,NY,,,,Podiatry,DPM,0
+19,Eric,Barbanel,Eric Barbanel,W.,1,1,1,1790786432,ERIC,BARBANEL,,MD,Internal Medicine,,155 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Internal Medicine ,MD,1
+20,Lisa,Batson,Lisa Batson,,1,1,1,1013172279,LISA,BATSON,ANN,M.D.,"Psychiatry & Neurology, Psychiatry",,155 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Psychiatry ,MD,1
+21,Nicholas,Batson,Nicholas Batson,,1,1,1,1295909786,NICHOLAS,BATSON,EUGENE,M.D.,"Psychiatry & Neurology, Psychiatry",,155 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Psychiatry ,MD,1
+22,Shane,Bealer,Shane Bealer,,1,1,1,1154941409,SHANE,BEALER,THOMAS,DO,Family Medicine,Family Medicine,61 EMERALD PL,ROCK HILL,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Primary care/Sports Medicine,DO,1
+23,Zewditu,Bekele-Arcuri,Zewditu Bekele-Arcuri,,1,1,1,1902099963,ZEWDITU,BEKELE-ARCURI,,M.D.,"Psychiatry & Neurology, Clinical Neurophysiology","Psychiatry & Neurology, Neurology",155 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Neurology ,MD,1
+24,Mark,Bele,Mark Bele,J.,1,1,1,1982605614,MARK,BELE,J,DO,"Internal Medicine, Rheumatology",,95 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Rheumatology ,DO,1
+25,Zacheriah,Benton,Zacheriah Benton,,1,1,1,1497337794,ZACHERIAH,BENTON,ROBERT,MD,Family Medicine,,155 CRYSTAL RUN RD,MIDDLETOWN,NY,145 AVALON GARDENS DR,NANUET,NY,,,,Family Medicine-Hospitalist/Urgentcare,MD,1
+26,Ashley,Bhola,Ashley Bhola,,3,1,1,1952925224,ASHLEY,BHOLA,,MD,Family Medicine,,PO BOX 13579,READING,PA,420 S 5TH AVE,WEST READING,PA,,,,Family Medicine- No Surgery,MD,0
+27,Thomas,Booker,Thomas Booker,J.,1,1,1,1255344644,THOMAS,BOOKER,JOHN,MD,"Physical Medicine & Rehabilitation, Pain Medicine",Physical Medicine & Rehabilitation,95 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Physical Medicine & Rehab  ,MD,1
+28,Shawn,Brito,Shawn Brito,,1,1,1,1942611546,SHAWN,BRITO,JOSEPH,M.D.,Internal Medicine,Hospitalist,155 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Internal Medicine,MD,1
+29,Sandra,Bulos,Sandra Bulos,,1,1,1,1356712657,SANDRA,BULOS,,M.D.,Internal Medicine,,155 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Internal Medicine,MD,1
+31,Rebeca,Caban,Rebeca Caban,,1,1,1,1033495130,REBECA,CABAN,,M.D.,Obstetrics & Gynecology,,81 RONALD REAGAN BLVD,WARWICK,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Obstetrics & Gynecology ,MD,1
+32,Irvelyne,Camille,Irvelyne Camille,,1,1,1,1508851759,IRVELYNE,CAMILLE,,MD,Obstetrics & Gynecology,,707 E MAIN ST,MIDDLETOWN,NY,707 E MAIN ST,MIDDLETOWN,NY,,,,Ob/Gyn,MD,0
+33,Anthony,Caramico,Anthony Caramico,,1,1,1,1336113414,ANTHONY,CARAMICO,GEORGE,MD,"Radiology, Neuroradiology","Radiology, Diagnostic Radiology",155 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Diagnostic Radiology ,MD,1
+34,Florence,Celzo-Vista,Florence Celzo-Vista,I,1,1,1,1588838809,FLORENCE,CELZO-VISTA,INTIA,MD,"Internal Medicine, Endocrinology, Diabetes & Metabolism",,155 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Endocrinology ,MD,1
+35,Marsha,Charles-Pierre,Marsha Charles-Pierre,,1,1,1,1639420995,MARSHA,CHARLES-PIERRE,,MD,Physical Medicine & Rehabilitation,,2 CENTEROCK RD,WEST NYACK,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Physical Medicine & Rehab,MD,1
+36,Javeria,Chaudhry,Javeria Chaudhry,,1,1,1,1932528874,JAVERIA,CHAUDHRY,FARHAN,M.B.B.S.,Internal Medicine,Hospitalist,155 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Internal Medicine,MD,1
+38,Lisa,Choi,Lisa Choi,,1,1,1,1922200427,LISA,CHOI,E,MD,Orthopaedic Surgery,,95 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Orthopedic- Surgery,MD,1
+39,Samina,Choudry,Samina Choudry,,1,1,1,1720029770,SAMINA,CHOUDRY,,MD,Hospitalist,Internal Medicine,2834 RT. 17M,NEW HAMPTON,NY,2834 RT. 17M,NEW HAMPTON,NY,,,,Internal Medicine,MD,0
+40,Rosa,Cirillo,Rosa Cirillo,J.,1,1,1,1215938766,ROSA,CIRILLO,,MD,"Internal Medicine, Gastroenterology",,95 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Gastroenterology/General ,MD,1
+41,Inna,Cohn,Inna Cohn,,1,1,1,1518240720,INNA,COHN,,D.O.,Obstetrics & Gynecology,,2 CENTEROCK RD,WEST NYACK,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Obstetrics & Gynecology ,DO,1
+42,Justin,Conway,Justin Conway,,1,1,1,1437416807,JUSTIN,CONWAY,,MD,Family Medicine,"Family Medicine, Sports Medicine",155 CRYSTAL RUN RD,MIDDLETOWN,NY,1200 ROUTE 300,NEWBURGH,NY,,,,Family Practice- No Surgery,MD,1
+43,Edward,Croen,Edward Croen,,1,1,1,1780677708,EDWARD,CROEN,,MD,"Internal Medicine, Gastroenterology",,95 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Gastroenterology/Advanced ,MD,1
+44,Linda,Cuomo,Linda Cuomo,,1,1,1,1710145008,LINDA,CUOMO,J,MD,"Internal Medicine, Interventional Cardiology","Internal Medicine, Cardiovascular Disease",855 STATE ROUTE 17M,MONROE,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Cardiovascular Disease ,MD,1
+45,Valerie,Curro,Valerie Curro,,1,1,1,1265888242,VALERIE,CURRO,E,DO,Obstetrics & Gynecology,,95 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Obstetrics & Gynecology,DO,1
+46,Vinay,Das,Vinay Das,,1,1,1,1760425243,VINAY,DAS,BANANDA,MD,Hospitalist,Internal Medicine,41 CASTLE POINT RD,WAPPINGERS FALLS,NY,41 CASTLE POINT ROAD,WAPPINGERS FALLS,NY,,,,Internal Medicine  ,MD,0
+47,Lunique,Denis,Lunique Denis,,1,1,1,1265718118,LUNIQUE,DENIS,L,MD,Family Medicine,,61 EMERALD PL,ROCK HILL,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Family Practice- No Surgery,MD,1
+48,Nathan,DeVenney,Nathan DeVenney,,1,1,1,1578023727,NATHAN,DEVENNEY,MARK,MD,Pediatrics,Pediatrics,95 CRYSTAL RUN RD,MIDDLETOWN,NY,95 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Pediatrics,MD,1
+49,Robert,Dinsmore,Robert Dinsmore,,1,1,1,1285635912,ROBERT,DINSMORE,E.,MD,Internal Medicine,"Internal Medicine, Hematology",155 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Hematology/Oncology,MD,1
+50,Olga,Dobuzinsky,Olga Dobuzinsky,,1,1,1,1629351838,OLGA,DOBUZINSKY,,M.D.,Obstetrics & Gynecology,,95 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Obstetrics & Gynecology ,MD,1
+51,Sandy,Doti,Sandy Doti,,1,1,1,1477545085,SANDY,DOTI,W.,MD,Internal Medicine,,155 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Internal Medicine ,MD,1
+52,Matthew,Dros,Matthew Dros,,1,1,1,1831651827,MATTHEW,DROS,,MD,Student in an Organized Health Care Education/Training Program,,121 DEKALB AVE,BROOKLYN,NY,121 DEKALB AVE,BROOKLYN,NY,,,,Internal Medicine,MD,0
+53,Jinlin,Du,Jinlin Du,,1,1,1,1760475875,JINLIN,DU,,MD,Allergy & Immunology,,95 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Allergy ,MD,1
+54,Abigail,Ducheine,Abigail Ducheine,,1,1,1,1639528375,ABIGAIL,DUCHEINE,,MD,Family Medicine,,155 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Urgent Care- Family Medicine,MD,1
+55,Jocelyn,Dummett,Jocelyn Dummett,,1,1,1,1679649933,JOCELYN,DUMMETT,A.,MD FACOG,Pediatrics,,300 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Pediatrics,MD,1
+56,Kimberly,Estler,Kimberly Estler,,1,1,1,1992797500,KIMBERLY,ESTLER,A.,MD,Obstetrics & Gynecology,,855 STATE ROUTE 17M,MONROE,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Office Gynecology ,MD,1
+57,Paul,Eugenio,Paul Eugenio,,1,1,1,1528206166,PAUL,EUGENIO,L,M.D.,"Internal Medicine, Cardiovascular Disease","Internal Medicine, Clinical Cardiac Electrophysiology",155 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Cardiovascular Disease w/CC's,MD,1
+58,Wael,Fakhoury,Wael Fakhoury,,1,1,1,1194070904,WAEL,FAKHOURY,,MD,Family Medicine,,1200 ROUTE 300,NEWBURGH,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Family Practice- No Surgery,MD,1
+59,Andrew,Faskowitz,Andrew Faskowitz,Jay,1,1,1,1790932119,ANDREW,FASKOWITZ,JAY,D.O.,"Psychiatry & Neurology, Neurology","Psychiatry & Neurology, Hospice and Palliative Medicine",155 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Neurology ,DO,1
+60,Zoltan,Fekete,Zoltan Fekete,,1,1,1,1285627216,ZOLTAN,FEKETE,,"MD, PHD","Psychiatry & Neurology, Neurology",,61 EMERALD PL,ROCK HILL,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Neurology ,MD,1
+61,Veronica,Ferencz,Veronica Ferencz,,1,1,1,1871993642,VERONICA,FERENCZ,,"DO, MBA",Surgery,,1200 ROUTE 300,NEWBURGH,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Plastic Surgery,DO,1
+62,Karen,Finnigan,Karen Finnigan,,1,1,1,1982696506,KAREN,FINNIGAN,,"MD, MBA",Pediatrics,Internal Medicine,155 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Internal Medicine ,MD,1
+63,John,Fiorianti,John Fiorianti,,1,1,1,1619172871,JOHN,FIORIANTI,ANTHONY,MD,Surgery,"Surgery, Vascular Surgery",95 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Vascular Surgery,MD,1
+64,Olga,Fishman,Olga Fishman,,1,1,1,1295949279,OLGA,FISHMAN,,M.D.,"Psychiatry & Neurology, Neurology",,1200 ROUTE 300,NEWBURGH,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Neurology ,MD,1
+65,Fatima,Flood,Fatima Flood,,1,1,1,1821372004,FATIMA,FLOOD,V.,MD,Obstetrics & Gynecology,,1200 ROUTE 300,NEWBURGH,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Obstetrics & Gynecology ,MD,1
+66,Christina,Florival,Christina Florival,,1,1,1,1285165597,CHRISTINA,FLORIVAL,J,M.D.,Student in an Organized Health Care Education/Training Program,"Psychiatry & Neurology, Neurology",1200 ROUTE 300,NEWBURGH,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Neurology ,MD,1
+67,Thomas,Folino,Thomas Folino,,1,1,1,1770071136,THOMAS,FOLINO,BRODIE,DO,Student in an Organized Health Care Education/Training Program,Anesthesiology,550 1ST AVE,NEW YORK,NY,2 BURT STREET,WARWICK,NY,,,,Interventional Pain Management,DO,0
+68,Jonathan,Francois,Jonathan Francois,,1,1,1,1922505866,JONATHAN,FRANCOIS,,MD,Student in an Organized Health Care Education/Training Program,,450 CLARKSON AVE,BROOKLYN,NY,450 CLARKSON AVE,BROOKLYN,NY,,,,Internal Medicine,MD,0
+69,Sophia,Galustian,Sophia Galustian,,1,1,1,1841672110,SOPHIA,GALUSTIAN,,,"Internal Medicine, Endocrinology, Diabetes & Metabolism",,2411 HOLMES ST,KANSAS CITY,MO,374 STOCKHOLM ST,BROOKLYN,NY,,,,Endocrinology ,MD,0
+70,Geejo,Geevarghese,Geejo Geevarghese,,1,1,1,1417187345,GEEJO,GEEVARGHESE,,MD,Family Medicine,,155 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Urgent Care ,MD,1
+72,Sephora,Germain,Sephora Germain,,1,1,1,1831538149,SEPHORA,GERMAIN,MARSHA,M.D,Pediatrics,,2 CENTEROCK RD,WEST NYACK,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Pediatrics ,MD,1
+73,Alex,Gershenhorn,Alex Gershenhorn,,1,1,1,1437257797,ALEX,GERSHENHORN,J,MD,"Internal Medicine, Gastroenterology",,95 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Gastroenterology/General ,MD,1
+74,Anousheh,Ghezel-Ayagh,Anousheh Ghezel-Ayagh,,1,1,1,1124009832,ANOUSHEH,GHEZEL-AYAGH,,M.D.,Internal Medicine,"Internal Medicine, Infectious Disease",155 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Infectious Disease,MD,1
+75,Carlton,Glover,Carlton Glover,,1,1,1,1083093942,CARLTON,GLOVER,I.,MD,Family Medicine,Hospitalist,707 E MAIN ST,MIDDLETOWN,NY,707 E MAIN ST,MIDDLETOWN,NY,,,,Family Medicine- No Surgery,MD,0
+76,Dorian,Gomez,Dorian Gomez,,1,1,1,1659577799,DORIAN,GOMEZ,YOLANDA,M.D.,"Internal Medicine, Sleep Medicine","Internal Medicine, Pulmonary Disease",155 CRYSTAL RUN RD,MIDDLETOWN,NY,1200 ROUTE 300,NEWBURGH,NY,,,,Pulmonary Diseases with Bronchoscopies,MD,1
+77,Bing,Gong,Bing Gong,,1,1,1,1306238100,BING,GONG,,MD,Hospitalist,Hospitalist,155 CRYSTAL RUN RD,MIDDLETOWN,NY,68 HOLLAND AVE,DEMAREST,NJ,,,,Internal Medicine,MD,1
+78,Noemi,Gonzalez-Klayman,Noemi Gonzalez-Klayman,,1,1,1,1497749808,NOEMI,GONZALEZ-KLAYMAN,,MD,Internal Medicine,"Internal Medicine, Geriatric Medicine",155 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Internal Medicine ,MD,1
+79,Matthew,Gordon,Matthew Gordon,,1,1,1,1942488358,MATTHEW,GORDON,PHILIP,M.D.,Orthopaedic Surgery,,1200 ROUTE 300,NEWBURGH,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Orthopedic Surgery-Excluding Spine,MD,1
+80,William,Gotsis,William Gotsis,,1,1,1,1215921606,WILLIAM,GOTSIS,,MD,"Internal Medicine, Cardiovascular Disease","Internal Medicine, Interventional Cardiology",155 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Cardiovascular Disease ,MD,1
+81,Indrit,Greca,Indrit Greca,,1,1,1,1194257535,INDRIT,GRECA,,M.D.,Student in an Organized Health Care Education/Training Program,,750 E ADAMS ST,SYRACUSE,NY,750 E ADAMS ST,SYRACUSE,NY,,,,Rheumatology ,MD,0
+82,Steven,Grundfast,Steven Grundfast,,1,1,1,1710971049,STEVEN,GRUNDFAST,,MD,"Internal Medicine, Critical Care Medicine","Internal Medicine, Sleep Medicine",155 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Pulmonary Diseases with Bronchoscopies,MD,1
+83,Aleksandr,Guchinskiy,Aleksandr Guchinskiy,,1,1,1,1770735607,ALEKSANDR,GUCHINSKIY,,D.O.,"Otolaryngology, Otolaryngology/Facial Plastic Surgery",Otolaryngology,95 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Otorhinolaryngology  ,DO,1
+84,Nabil,Guindi,Nabil Guindi,,1,1,1,1215180922,NABIL,GUINDI,BOSHRA,MD,Internal Medicine,,1200 ROUTE 300,NEWBURGH,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Internal Medicine,MD,1
+85,Min,Guo,Min Guo,,1,1,1,1316108871,MIN,GUO,,M.D.,"Pathology, Anatomic Pathology & Clinical Pathology",,155 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Pathology ,MD,1
+86,Moosa,Haider,Moosa Haider,,1,1,1,1336567494,MOOSA,HAIDER,,M.D.,"Internal Medicine, Interventional Cardiology",,155 CRYSTAL RUN RD,MIDDLETOWN,NY,2 CENTEROCK RD,WEST NYACK,NY,,,,Cardiology/Vascular,MD,1
+87,Tehseen,Haider,Tehseen Haider,,1,1,1,1093102451,TEHSEEN,HAIDER,,M.D.,"Internal Medicine, Gastroenterology",,2 CENTEROCK RD,WEST NYACK,NY,111 E 210TH ST,BRONX,NY,,,,Gastroenterology/General ,MD,0
+88,Marc,Hamet,Marc Hamet,,3,1,1,1295700920,MARC,HAMET,RONALD,M.D.,"Radiology, Neuroradiology","Radiology, Neuroradiology",20 DIALSTONE LN,RIVERSIDE,CT,20 DIALSTONE LN,RIVERSIDE,CT,,,,Diagnostic Radiology ,MD,0
+89,Christopher,Han,Christopher Han,,1,1,1,1386937696,CHRISTOPHER,HAN,S.,MD,Urology,Urology,95 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Urology ,MD,1
+90,Masood,Haque,Masood Haque,,1,1,1,1780637421,MASOOD,HAQUE,U,M.D.,Emergency Medicine,,155 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Urgent Care,MD,1
+91,John,Hardcastle,John Hardcastle,,1,1,1,1922338276,JOHN,HARDCASTLE,M.,M.D.,Orthopaedic Surgery,,95 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Orthopedics Surgery,MD,1
+92,Ronen,Harel,Ronen Harel,,1,1,1,1750671228,RONEN,HAREL,JUSTIN,DO,"Internal Medicine, Hematology & Oncology",,185 RYKOWSKI LN,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Hematology/Oncology ,DO,1
+93,Javad,Hazeghi,Javad Hazeghi,,1,1,1,1598173684,JAVAD,HAZEGHI,,MD,Internal Medicine,,245 E MAIN ST,RAMSEY,NJ,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Internal Medicine,MD,1
+94,Lernice,Henry,Lernice Henry,,1,1,1,1407874563,LERNICE,HENRY,L.,D.O.,Pediatrics,,100 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Pediatrics,DO,1
+95,Scott,Hines,Scott Hines,,1,1,1,1811934987,SCOTT,HINES,T,MD,"Internal Medicine, Endocrinology, Diabetes & Metabolism",,155 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Endocrinology ,MD,1
+96,Ali,Hmidi,Ali Hmidi,,1,1,1,1619960630,ALI,HMIDI,,MD,"Internal Medicine, Critical Care Medicine","Internal Medicine, Pulmonary Disease",155 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Pulmonary Diseases with Bronchoscopies,MD,1
+97,Khin,Hnin,Khin Hnin,,1,1,1,1043475080,KHIN,HNIN,NGE,MD,Hospitalist,Internal Medicine,707 E MAIN ST,MIDDLETOWN,NY,707 E MAIN ST,MIDDLETOWN,NY,,,,Internal Medicine ,MD,0
+98,Can,Hu,Can Hu,,1,1,1,1588160709,CAN,HU,,,"Internal Medicine, Rheumatology",,300 COMMUNITY DR,MANHASSET,NY,300 COMMUNITY DR,MANHASSET,NY,,,,Rheumatology ,MD,0
+99,Kristen,Hull,Kristen Hull,,1,1,1,1831183227,KRISTEN,HULL,,MD,"Internal Medicine, Endocrinology, Diabetes & Metabolism",,155 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Endocrinology ,MD,1
+100,Geoffrey,Hulse,Geoffrey Hulse,,1,1,1,1821060146,GEOFFREY,HULSE,E,MD,"Internal Medicine, Critical Care Medicine","Internal Medicine, Pulmonary Disease",155 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Pulmonary Diseases with Bronchoscopies,MD,1
+101,Luke,Hutchison,Luke Hutchison,,1,1,1,1326509969,LUKE,HUTCHISON,A,,Student in an Organized Health Care Education/Training Program,,27 SYCAMORE DR,MIDDLETOWN,NY,240 MEETING HOUSE LN,SOUTHAMPTON,NY,,,,Urgent Care,DO,0
+102,Leonid,Izikson,Leonid Izikson,,1,1,1,1972624120,LEONID,IZIKSON,,M.D.,"Dermatology, MOHS-Micrographic Surgery",Dermatology,745 STATE ROUTE 17M,MONROE,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Dermatology ,MD,1
+103,David,Jaeger,David Jaeger,A.,1,1,1,1265429922,DAVID,JAEGER,ALEX,"MD, PHD","Psychiatry & Neurology, Neurology",,155 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Neurology ,MD,1
+105,Aslam,Jangda,Aslam Jangda,,1,1,1,1922031962,ASLAM,JANGDA,,M.D.,Pediatrics,,300 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Pediatrics ,MD,1
+106,Florence,Jean-Louis,Florence Jean-Louis,,1,1,1,1013943547,FLORENCE,JEAN-LOUIS,,MD,Obstetrics & Gynecology,Obstetrics & Gynecology,707 E MAIN ST,MIDDLETOWN,NY,707 E MAIN ST,MIDDLETOWN,NY,,,,Obstetrics & Gynecology,MD,0
+107,Todd,Jessup,Todd Jessup,P.,1,1,1,1144202979,TODD,JESSUP,P,M.D.,"Internal Medicine, Gastroenterology",,61 EMERALD PL,ROCK HILL,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Gastroenterology/General ,MD,1
+108,Seth,Judd,Seth Judd,,1,1,1,1326247453,SETH,JUDD,CHRISTIAN,MD,Surgery,,95 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,General Surgery,MD,1
+109,John,Juliano,John Juliano,S.,1,1,1,1083681852,JOHN,JULIANO,STEPHEN,M.D.,Orthopaedic Surgery,,75 RONALD REAGAN BLVD,WARWICK,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Orthopedics Surgery  ,MD,1
+110,Jehanne,Julien-Banica,Jehanne Julien-Banica,,1,1,1,1164653010,JEHANNE,JULIEN-BANICA,,D.O.,Family Medicine,,155 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Urgent Care,DO,1
+111,Aimee,Kahn,Aimee Kahn,,1,1,1,1578805552,AIMEE,KAHN,MEYER,"M.D. ,  M.P.H.",Pediatrics,,2 CENTEROCK RD,WEST NYACK,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Pediatrics ,MD,1
+112,Megan,Kaknis,Megan Kaknis,,1,1,1,1356796312,MEGAN,KAKNIS,ELIZABETH,D.O.,Internal Medicine,,1200 ROUTE 300,NEWBURGH,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Internal Medicine ,DO,1
+113,Lillian,Kaminsky,Lillian Kaminsky,,1,1,1,1174563969,LILLIAN,KAMINSKY,M.,MD,"Obstetrics & Gynecology, Maternal & Fetal Medicine",Obstetrics & Gynecology,95 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Obstetrics & Gynecology ,MD,1
+115,Grace,Kang,Grace Kang,,1,1,1,1912056623,GRACE,KANG,Y.,M.D.,"Internal Medicine, Endocrinology, Diabetes & Metabolism",,2 CENTEROCK RD,WEST NYACK,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Endocrinology ,MD,1
+116,Moyna,Kapoor,Moyna Kapoor,,1,1,1,1790733186,MOYNA,KAPOOR,,MD,Internal Medicine,"Internal Medicine, Nephrology",1200 ROUTE 300,NEWBURGH,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Nephrology  ,MD,1
+117,Teresa,Karcnik,Teresa Karcnik,,1,1,1,1992771596,TERESA,KARCNIK,JULIA,MD,"Radiology, Diagnostic Radiology",,155 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Diagnostic Radiology,MD,1
+118,Howard,Karpoff,Howard Karpoff,M.,1,1,1,1164415188,HOWARD,KARPOFF,,MD,"Surgery, Surgical Oncology",Surgery,95 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,General  Surgery,MD,1
+121,Pankaj,Kaw,Pankaj Kaw,,1,1,1,1255527008,PANKAJ,KAW,,M.D.,Internal Medicine,"Internal Medicine, Sports Medicine",95 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Internal Medicine ,MD,1
+122,Yong,Ke,Yong Ke,,1,1,1,1578652392,YONG,KE,,M.D.,"Pathology, Anatomic Pathology & Clinical Pathology",,155 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Pathology ,MD,1
+123,Erum,Khan,Erum Khan,,1,1,1,1609172360,ERUM,KHAN,SHUJAAT,MD,Internal Medicine,Hospitalist,707 E MAIN ST,MIDDLETOWN,NY,707 E MAIN ST,MIDDLETOWN,NY,,,,Internal Medicine,MD,0
+125,Israr,Khankhel,Israr Khankhel,,1,1,1,1427382399,ISRAR,KHANKHEL,,MD,Hospitalist,Family Medicine,418 BLOOMING GROVE TPKE,NEW WINDSOR,NY,34 GREENWICH AVE,CENTRAL VALLEY,NY,,,,Family Medicine- No Surgery,MD,0
+126,Ila,Khanna,Ila Khanna,,1,1,1,1598999484,ILA,KHANNA,,MD,"Internal Medicine, Endocrinology, Diabetes & Metabolism",,855 STATE ROUTE 17M,MONROE,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Endocrinology ,MD,1
+127,Neel,Khanna,Neel Khanna,,1,1,1,1124347612,NEEL,KHANNA,,MD,"Internal Medicine, Cardiovascular Disease","Internal Medicine, Interventional Cardiology",1200 ROUTE 300,NEWBURGH,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Cardiology Disease ,MD,1
+128,Nida,Khokhar,Nida Khokhar,,1,1,1,1316574817,NIDA,KHOKHAR,,MD,Student in an Organized Health Care Education/Training Program,Internal Medicine,45 READE PL,POUGHKEEPSIE,NY,45 READE PL,POUGHKEEPSIE,NY,,,,Internal Medicine Hospitalist,MD,0
+129,Sibat,Khwaja,Sibat Khwaja,,3,1,1,1053708073,SIBAT,KHWAJA,MAHMEED,MD,Family Medicine,,8901 CLEMENT AVE,PARKVILLE,MD,8901 CLEMENT AVE,PARKVILLE,MD,,,,Family Practice- No Surgery,MD,0
+132,Lezode,Kipoliongo,Lezode Kipoliongo,,1,1,1,1760475792,LEZODE,KIPOLIONGO,,MD,Obstetrics & Gynecology,,95 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Obstetrics & Gynecology ,MD,1
+133,Carl,Kirchhoff,Carl Kirchhoff,,1,1,1,1376639088,CARL,KIRCHHOFF,HENDRIK,M.D.,"Surgery, Surgery of the Hand",,95 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Orthopedics Surgery  ,MD,1
+134,Bryan,Kleinman,Bryan Kleinman,,1,1,1,1730479510,BRYAN,KLEINMAN,MATTHEW,D.O.,"Internal Medicine, Gastroenterology",,1200 ROUTE 300,NEWBURGH,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Gastroenterology/General ,DO,1
+135,Gnanamba,Kondagunta,Gnanamba Kondagunta,,1,1,1,1265403208,GNANAMBA,KONDAGUNTA,V,MD,"Internal Medicine, Hematology & Oncology",,155 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Hematology/Oncology,MD,1
+136,Genevieve,Krebs,Genevieve Krebs,,1,1,1,1497863195,GENEVIEVE,KREBS,MARGARET,M.D.,Pediatrics,,76 WASHINGTON AVE,SUFFERN,NY,2 CENTEROCK RD,WEST NYACK,NY,,,,Pediatrics,MD,0
+137,Melissa,Kubenik,Melissa Kubenik,,1,1,1,1760689590,MELISSA,KUBENIK,COLL,M.D.,Obstetrics & Gynecology,,61 EMERALD PL,ROCK HILL,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Obstetrics & Gynecology ,MD,1
+139,Ranjan,Kumar,Ranjan Kumar,,1,1,1,1659667772,RANJAN,KUMAR,V,M.D.,Hospitalist,,571 SAINT JOSEPHS BLVD,ELMIRA,NY,600 ROE AVE,ELMIRA,NY,,,,Internal Medicine,MD,0
+140,Sylvie,Lagodka,Sylvie Lagodka,,1,1,1,1851851307,SYLVIE,LAGODKA,,MD,Obstetrics & Gynecology,,95 CRYSTAL RUN RD,MIDDLETOWN,NY,355 BARD AVE OFC 477,STATEN ISLAND,NY,,,,Ob/Gyn,MD,1
+141,Balika,Lal,Balika Lal,,1,1,1,1700271699,BALIKA,LAL,D.,MD,Internal Medicine,Hospitalist,155 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Internal Medicine,MD,1
+142,Ontario,Lau,Ontario Lau,,1,1,1,1417120031,ONTARIO,LAU,DORIAN,M.D.,Surgery,Otolaryngology,2 CENTEROCK RD,WEST NYACK,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Otorhinolaryngology ,MD,1
+143,Tien,Lau,Tien Lau,,1,1,1,1467807776,TIEN,LAU,K,D.O.,Internal Medicine,Hospitalist,155 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Internal Medicine ,DO,1
+144,Florence,Lazaroff,Florence Lazaroff,,1,1,1,1265615918,FLORENCE,LAZAROFF,,,Pediatrics,,61 EMERALD PL,ROCK HILL,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Pediatrics ,MD,1
+146,Matthew,Leone,Matthew Leone,,1,1,1,1326144650,MATTHEW,LEONE,S.,MD,Internal Medicine,"Internal Medicine, Endocrinology, Diabetes & Metabolism",1200 ROUTE 300,NEWBURGH,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Endocrinologist,MD,1
+147,Seth,Lessner,Seth Lessner,,1,1,1,1972761591,SETH,LESSNER,JOSEPH,MD,"Internal Medicine, Cardiovascular Disease","Internal Medicine, Clinical Cardiac Electrophysiology",155 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Cardiovascular Disease w/CC's,MD,1
+148,Liza,Levin,Liza Levin,,1,1,1,1295153138,LIZA,LEVIN,BRAUN,MD,Dermatology,,2 CENTEROCK RD,WEST NYACK,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Dermatology- Non-Cosmetic,MD,1
+149,Sangjin,Lim,Sangjin Lim,,1,1,1,1063825792,SANGJIN,LIM,,DO,Family Medicine,"Family Medicine, Sports Medicine",155 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Physical Medicine & Rehab,DO,1
+150,Nancy,Linneman,Nancy Linneman,,1,1,1,1003816604,NANCY,LINNEMAN,I.,MD,"Internal Medicine, Critical Care Medicine","Internal Medicine, Sleep Medicine",155 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Pulmonary Diseases ,MD,1
+151,Konstantin,Lipelis,Konstantin Lipelis,,1,1,1,1548423809,KONSTANTIN,LIPELIS,,MD,Physical Medicine & Rehabilitation,,61 EMERALD PL,ROCK HILL,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Physical Medicine & Rehab,MD,1
+152,Elton,Llukani,Elton Llukani,,1,1,1,1982101614,ELTON,LLUKANI,,M.D.,Hospitalist,,707 E MAIN ST,MIDDLETOWN,NY,707 E MAIN ST,MIDDLETOWN,NY,,,,Internal Medicine ,MD,0
+153,Gary,Loden,Gary Loden,,1,1,1,1598771529,GARY,LODEN,BLAINE,M.D.,Urology,,1200 ROUTE 300,NEWBURGH,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Urology,MD,1
+154,Eric,Lonergan,Eric Lonergan,,1,1,1,1124188925,ERIC,LONERGAN,,M.D.,Family Medicine,Family Medicine,155 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Urgent Care,MD,1
+155,Zeyad,Loubnan,Zeyad Loubnan,,1,1,1,1235581174,ZEYAD,LOUBNAN,,M.D.,Surgery,,95 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Bariatrics & General Surgery,MD,1
+157,Kaiyu,Ma,Kaiyu Ma,,1,1,1,1417158072,KAIYU,MA,,MD,"Psychiatry & Neurology, Neurology",,855 STATE ROUTE 17M,MONROE,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Neurology ,MD,1
+158,Saeed,Mahmood,Saeed Mahmood,,1,1,1,1447834601,SAEED,MAHMOOD,AHSEN,MD,Family Medicine,,155 CRYSTAL RUN RD,MIDDLETOWN,NY,507 MAIN ST,JOHNSON CITY,NY,,,,Urgent Care,MD,1
+159,Herman,Mai,Herman Mai,,1,1,1,1972959831,HERMAN,MAI,,M.D.,Internal Medicine,,550 1ST AVE,NEW YORK,NY,550 1ST AVE,NEW YORK,NY,,,,Internal Medicine,MD,0
+160,Sheyda,Makui,Sheyda Makui,,3,1,1,1790066454,SHEYDA,MAKUI,,M.D.,Family Medicine,,110 MAIN AVE,PASSAIC,NJ,110 MAIN AVE,PASSAIC,NJ,,,,Family Practice- No Surgery,MD,0
+161,Sandeep,Malhotra,Sandeep Malhotra,,1,1,1,1023163771,SANDEEP,MALHOTRA,,MD,Surgery,,95 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,General Surgery,MD,1
+162,Aaqib,Malik,Aaqib Malik,,1,1,1,1053629956,AAQIB,MALIK,HABIB,"M.D., B.Sc, M.P.H.",Hospitalist,Internal Medicine,100 WOODS RD,VALHALLA,NY,100 WOODS RD,VALHALLA,NY,,,,Internal Medicine ,MD,0
+163,Abida,Mallick,Abida Mallick,,1,1,1,1871659136,ABIDA,MALLICK,K,MD,Pediatrics,,1200 ROUTE 300,NEWBURGH,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Pediatrics ,MD,1
+165,Rajendra,Mannava,Rajendra Mannava,,1,1,1,1538466438,RAJENDRA,MANNAVA,KUMAR,MD,Hospitalist,Student in an Organized Health Care Education/Training Program,1980 CROMPOND ROAD,CORTLANDT MANOR,NY,50 DAYTON LN STE 202,PEEKSKILL,NY,,,,Internal Medicine-Hospitalist,MD,0
+166,Sherley,Marceus,Sherley Marceus,,1,1,1,1508304155,SHERLEY,MARCEUS,,MD,Obstetrics & Gynecology,,2 CENTEROCK RD,WEST NYACK,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Obstetrics & Gynecology,MD,1
+167,Adeel,Masood,Adeel Masood,,3,1,1,1093156028,ADEEL,MASOOD,,M.D.,Internal Medicine,Internal Medicine,44405 WOODWARD AVE,PONTIAC,MI,44405 WOODWARD AVE,PONTIAC,MI,,,,Internal Medicine-Hospitalist,MD,0
+168,Shawkat,Massih,Shawkat Massih,G.,1,1,1,1215125588,SHAWKAT,MASSIH,GEORGE,MD,Family Medicine,,155 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Family Practice- No Surgery,MD,1
+169,Liby,Mathew,Liby Mathew,,1,1,1,1154587566,LIBY,MATHEW,,M.D.,Internal Medicine,,2 CENTEROCK RD,WEST NYACK,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Internal Medicine ,MD,1
+171,Richard,Martirosian,Richard Martirosian,,1,1,1,1699208454,RICHARD,MARTIROSIAN,M,D.O.,Family Medicine,,155 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Urgent Care,DO,1
+173,Rajana,Meka,Rajana Meka,,1,1,1,1396945903,RAJANA,MEKA,,M.D.,Family Medicine,,155 CRYSTAL RUN RD,MIDDLETOWN,NY,855 STATE ROUTE 17M,MONROE,NY,,,,Family Practice- No Surgery,MD,1
+174,Maria,Mercado,Maria Mercado,Kristin,2,1,1,1093264822,MARIE,MERCADO,,Psy.D.,"Psychologist, Clinical",,117 DOBBIN ST STE 210,BROOKLYN,NY,117 DOBBIN ST STE 210,BROOKLYN,NY,,,,Cardiovascular Disease ,MD,0
+175,Sajid,Mir,Sajid Mir,,1,1,1,1275655565,SAJID,MIR,AHMAD,MD,Internal Medicine,Hospitalist,155 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Internal Medicine ,MD,1
+176,Constantine,Monzidelis,Constantine Monzidelis,,1,1,1,1750763504,CONSTANTINE,MONZIDELIS,,M.D.,Student in an Organized Health Care Education/Training Program,"Internal Medicine, Cardiovascular Disease",155 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Cardiovascular Disease,MD,1
+177,Vincent,Moscato,Vincent Moscato,,1,1,1,1699138974,VINCENT,MOSCATO,PAUL,MD,Ophthalmology,,155 CRYSTAL RUN RD,MIDDLETOWN,NY,7 HATFIELD LN,GOSHEN,NY,,,,Ophthalmology ,MD,1
+178,Khin,Myat,Khin Myat,,1,1,1,1366945180,KHIN,MYAT,MAY,MD,Hospitalist,,707 E MAIN ST,MIDDLETOWN,NY,707 E MAIN ST,MIDDLETOWN,NY,,,,Internal Medicine ,MD,0
+179,Yoon,Myung,Yoon Myung,,1,1,1,1134120967,YOON,MYUNG,MO,M.D.,Ophthalmology,,7 HATFIELD LN,GOSHEN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Ophthalmology ,MD,1
+180,Kajal,Nadpara,Kajal Nadpara,N.,1,1,1,1114123742,KAJAL,NADPARA,NISHANT,MD,Family Medicine,,155 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Urgent Care,MD,1
+181,Malloy,Nair,Malloy Nair,,1,1,1,1255509006,MALLOY,NAIR,,MD,"Internal Medicine, Infectious Disease",,155 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Infectious Disease ,MD,1
+182,Jonathan,Nasser,Jonathan Nasser,,1,1,1,1194713347,JONATHAN,NASSER,,MD,Pediatrics,Internal Medicine,155 CRYSTAL RUN RD,MIDDLETOWN,NY,300 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Internal Medicine ,MD,1
+183,Peggy,Nelson,Peggy Nelson,,1,1,1,1013000629,PEGGY,NELSON,,M.D.,"Internal Medicine, Endocrinology, Diabetes & Metabolism",,155 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Endocrinology ,MD,1
+184,Anthony,Nici,Anthony Nici,,1,1,1,1750606711,ANTHONY,NICI,JOSEPH,M.D.,"Internal Medicine, Gastroenterology",,2 CENTEROCK RD,WEST NYACK,NY,95 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Gastroenterology/General ,MD,1
+185,Laura,Nicoll,Laura Nicoll,,1,1,1,1184611840,LAURA,NICOLL,,MD,Family Medicine,,855 STATE ROUTE 17M,MONROE,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Family Practice- No Surgery,MD,1
+186,Jedidah,Nuamah,Jedidah Nuamah,,1,1,1,1013412808,JEDIDAH,NUAMAH,OWUSU,DO,Student in an Organized Health Care Education/Training Program,Obstetrics & Gynecology,2 CENTEROCK RD,WEST NYACK,NY,2265 5TH AVE APT 12D,NEW YORK,NY,,,,Ob/Gyn,DO,0
+187,Olufunmilayo,Odunuga,Olufunmilayo Odunuga,,1,1,1,1952310468,OLUFUNMILAYO,ODUNUGA,,MD,Obstetrics & Gynecology,,2 CENTEROCK RD,WEST NYACK,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Obstetrics & Gynecology ,MD,1
+188,Amanda,Orengo,Amanda Orengo,,1,1,1,1215465109,AMANDA,ORENGO,,MD,Family Medicine,"Family Medicine, Sports Medicine",1200 ROUTE 300,NEWBURGH,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Family Practice- No Surgery,MD,1
+189,Sami,Osman,Sami Osman,,1,1,1,1225235385,SAMI,OSMAN,,MD,Internal Medicine,Pediatrics,155 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Internal Medicine ,MD,1
+191,Lawrence,Pan,Lawrence Pan,,1,1,1,1265750343,LAWRENCE,PAN,S,M.D.,"Radiology, Neuroradiology","Radiology, Diagnostic Radiology",155 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Diagnostic Radiology,MD,1
+192,Tapti,Panda,Tapti Panda,,1,1,1,1578739611,TAPTI,PANDA,,M.D.,Obstetrics & Gynecology,,61 EMERALD PL,ROCK HILL,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Obstetrics & Gynecology ,MD,1
+195,Rachel,Perl,Rachel Perl,,1,1,1,1043555352,RACHEL,PERL,,DPM,"Podiatrist, Foot & Ankle Surgery",,95 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Podiatry Surgical,DPM,1
+196,Xiangmin,Peng,Xiangmin Peng,,1,1,1,1013235340,XIANGMIN,PENG,,MD,"Psychiatry & Neurology, Neurology",,2 CENTEROCK RD,WEST NYACK,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Neurology ,MD,1
+197,Manuel,Perry,Manuel Perry,,1,1,1,1982691648,MANUEL,PERRY,C.,MD,"Internal Medicine, Medical Oncology","Internal Medicine, Hematology & Oncology",155 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Hematology/Oncology,MD,1
+198,Sabai,Phyu,Sabai Phyu,,1,1,1,1407105158,SABAI,PHYU,,MD,Internal Medicine,Hospitalist,707 E MAIN ST,MIDDLETOWN,NY,707 E MAIN ST,MIDDLETOWN,NY,,,,Internal Medicine ,MD,0
+199,Vasyl,Pidkaminetskiy,Vasyl Pidkaminetskiy,,1,1,1,1023270253,VASYL,PIDKAMINETSKIY,,M.D.,Internal Medicine,,155 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Urgent Care,MD,1
+200,Daphne,Pinkas,Daphne Pinkas,,1,1,1,1407152341,DAPHNE,PINKAS,E.,MD,Orthopaedic Surgery,Orthopaedic Surgery,2 CENTEROCK RD,WEST NYACK,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Orthopedics Surgery  ,MD,1
+201,Eduardo,Pinto,Eduardo Pinto,,1,1,1,1013995620,EDUARDO,PINTO,,M.D.,Internal Medicine,Hospitalist,155 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Internal Medicine ,MD,1
+202,Matthew,Pomykala,Matthew Pomykala,,1,1,1,1548578594,MATTHEW,POMYKALA,,D.O.,Ophthalmology,,155 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Ophthalmology ,DO,1
+204,Saed,Qaqish,Saed Qaqish,,1,1,1,1750524625,SAED,QAQISH,,M.D.,Family Medicine,,1200 ROUTE 300,NEWBURGH,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Family Practice- No Surgery,MD,1
+205,Romeo,Quilatan,Romeo Quilatan,L.,1,1,1,1861402851,ROMEO,QUILATAN,L,M.D.,Internal Medicine,Hospitalist,155 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Internal Medicine- No Surgery,Jr.,1
+206,Andreea,Rahman,Andreea Rahman,,1,1,1,1134110125,ANDREEA,RAHMAN,A,MD,Internal Medicine,,855 STATE ROUTE 17M,MONROE,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Internal Medicine ,MD,1
+208,Christopher,Rajkumar,Christopher Rajkumar,,1,1,1,1275813651,CHRISTOPHER,RAJKUMAR,H,M.D.,Internal Medicine,Internal Medicine,155 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Internal Medicine ,MD,1
+209,Maria,Ranin-Lay,Maria Ranin-Lay,,1,1,1,1619174240,MARIA,RANIN-LAY,T.,M.D.,"Internal Medicine, Geriatric Medicine",,855 STATE ROUTE 17M,MONROE,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Internal Medicine ,MD,1
+210,Marc,Rappaport,Marc Rappaport,,1,1,1,1619159852,MARC,RAPPAPORT,G,DO,"Internal Medicine, Hematology & Oncology",,155 CRYSTAL RUN RD,MIDDLETOWN,NY,1200 ROUTE 300,NEWBURGH,NY,,,,Hematology/Oncology,DO,1
+211,Amina,Rehman,Amina Rehman,,1,1,1,1558929877,AMINA,REHMAN,,MD,Student in an Organized Health Care Education/Training Program,,707 E MAIN ST,MIDDLETOWN,NY,707 E MAIN ST,MIDDLETOWN,NY,,,,Internal Medicine,MD,0
+212,Muhammad,Rehmani,Muhammad Rehmani,,1,1,1,1134106107,MUHAMMAD,REHMANI,,M.D.,Internal Medicine,,155 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Urgent Care,MD,1
+213,Lin-Lin,Remenar,Lin-Lin Remenar,,4,1,1,1417025321,LIN LIN,REMENAR,YU LIN,MD,Pediatrics,,300 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Pediatrics ,MD,1
+214,Amika,Reynolds,Amika Reynolds,,1,1,1,1336406644,AMIKA,REYNOLDS,R,M.D.,Family Medicine,Hospitalist,111 MALTESE DR,MIDDLETOWN,NY,111 MALTESE DR,MIDDLETOWN,NY,,,,Family Medicine-Hospitalist ,MD,0
+215,Rainier,Ricanor,Rainier Ricanor,,1,1,1,1598051484,RAINIER,RICANOR,JUDE,MD,"Pain Medicine, Pain Medicine",,2 CENTEROCK RD,WEST NYACK,NY,115 MAIN ST STE 305,TUCKAHOE,NY,,,,Pain Medicine,MD,0
+216,Christian,Roman-Rodriguez,Christian Roman-Rodriguez,,1,1,1,1942582705,CHRISTIAN,ROMAN-RODRIGUEZ,F.,MD,Obstetrics & Gynecology,,95 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Obstetrics & Gynecology ,MD,1
+217,Steven,Rowe,Steven Rowe,,1,1,1,1164416897,STEVEN,ROWE,J,M.D.,Urology,,95 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Urological ,MD,1
+218,Jonathan,Rudnick,Jonathan Rudnick,,1,1,1,1508958299,JONATHAN,RUDNICK,A.,D.O.,Physical Medicine & Rehabilitation,,95 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Physical Medicine & Rehab  ,DO,1
+219,Ramon,Ruffy,Ramon Ruffy,,1,1,1,1639160187,RAMON,RUFFY,B.,MD,Ophthalmology,,7 HATFIELD LN,GOSHEN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Ophthalmology ,MD,1
+220,Timothy,Rydell,Timothy Rydell,,1,1,1,1508866096,TIMOTHY,RYDELL,,MD,Obstetrics & Gynecology,,61 EMERALD PL,ROCK HILL,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Obstetrics & Gynecology ,MD,1
+221,Ria,Sajnani,Ria Sajnani,,1,1,1,1013536606,RIA,SAJNANI,,DPM,"Podiatrist, Foot & Ankle Surgery",,506 6TH ST,BROOKLYN,NY,95 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Podiatry,DPM,1
+223,Emmanuel,Schenkman,Emmanuel Schenkman,,1,1,1,1639137029,EMMANUEL,SCHENKMAN,M,MD,Urology,,155 CRYSTAL RUN RD,MIDDLETOWN,NY,95 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Urology ,MD,1
+224,Christopher,Schramm,Christopher Schramm,,1,1,1,1518386994,CHRISTOPHER,SCHRAMM,,MD,Emergency Medicine,Student in an Organized Health Care Education/Training Program,600 E 233RD ST,BRONX,NY,520 W 218TH ST,NEW YORK,NY,,,,Urgent Care,MD,0
+226,Robert,Scoyni,Robert Scoyni,,1,1,1,1427030691,ROBERT,SCOYNI,J,M.D.,"Internal Medicine, Gastroenterology",,61 EMERALD PL,ROCK HILL,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Gastroenterology/General ,MD,1
+227,Scot,Selbo,Scot Selbo,,1,1,1,1538141726,SCOT,SELBO,T,M.D.,Internal Medicine,,61 EMERALD PL,ROCK HILL,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Internal Medicine ,MD,1
+228,Gurvinder,Sethi,Gurvinder Sethi,,1,1,1,1891884946,GURVINDER,SETHI,,MD,"Internal Medicine, Hematology & Oncology",,155 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Hematology/Oncology,MD,1
+232,Zaineb,Shamim,Zaineb Shamim,,1,1,1,1649836925,ZAINEB,SHAMIM,,MD,Internal Medicine,Student in an Organized Health Care Education/Training Program,155 CRYSTAL RUN RD,MIDDLETOWN,NY,400 W BLACKWELL ST,DOVER,NJ,,,,Internal Medicine/Hospitalist,MD,1
+233,Lee,Shapley,Lee Shapley,,1,1,1,1780940049,LEE,SHAPLEY,H,M.D.,Internal Medicine,Hospitalist,280 MAPLE ST,ASHLAND,OR,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Internal Medicine  ,MD,1
+234,Talal,Sharaiha,Talal Sharaiha,,1,1,1,1629225651,TALAL,SHARAIHA,ZIAD,M.D.,Internal Medicine,Internal Medicine,1000 10TH AVE,NEW YORK,NY,305 W 72ND ST,NEW YORK,NY,,,,Internal Medicine/Hospitalist,MD,0
+236,Imtiyaz,Siddiqui,Imtiyaz Siddiqui,,1,1,1,1518128594,IMTIYAZ,SIDDIQUI,A,D.O.,Internal Medicine,Hospitalist,155 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Internal Medicine ,DO,1
+237,Carl,Silverio,Carl Silverio,,1,1,1,1770557860,CARL,SILVERIO,A.,MD,"Radiology, Diagnostic Radiology",,155 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Diagnostic Radiology ,MD,1
+238,Gary,Silverman,Gary Silverman,,1,1,1,1790767762,GARY,SILVERMAN,,M.D.,"Internal Medicine, Interventional Cardiology","Internal Medicine, Cardiovascular Disease",155 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Cardiovascular Disease ,MD,1
+239,Manoranjan,Singh,Manoranjan Singh,,1,1,1,1699942441,MANORANJAN,SINGH,,M.D.,Family Medicine,Family Medicine,155 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Urgent Care ,MD,1
+241,Daniel,Sinyor,Daniel Sinyor,,1,1,1,1578970414,DANIEL,SINYOR,,M.D.,Pediatrics,,2 CENTEROCK RD,WEST NYACK,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Pediatrics ,MD,1
+242,Sumeet,Smotra,Sumeet Smotra,,1,1,1,1316273493,SUMEET,SMOTRA,,MD,Hospitalist,,155 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Internal Medicine ,MD,1
+243,Maria,Sobolev,Maria Sobolev,,1,1,1,1912294448,MARIA,SOBOLEV,,M.D,"Internal Medicine, Cardiovascular Disease",,2 CENTEROCK RD,WEST NYACK,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Cardiovascular Disease ,MD,1
+244,Lucia,Somberg,Lucia Somberg,,1,1,1,1013336551,LUCIA,SOMBERG,K,"MD, MPH",Emergency Medicine,Emergency Medicine,960 MASSACHUSETTS AVE STE 2,BOSTON,MA,1 BOSTON MEDICAL CTR PL,BOSTON,MA,,,,Urgent Care,MD,0
+245,Gregory,Spencer,Gregory Spencer,,1,1,1,1194725168,GREGORY,SPENCER,A.,MD,Internal Medicine,,155 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Internal Medicine,MD,1
+246,Sam,Spinowitz,Sam Spinowitz,,1,1,1,1841607744,SAM,SPINOWITZ,A.,M.D.,Otolaryngology,,2 CENTEROCK RD,WEST NYACK,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Otorhinolaryngology  ,MD,1
+247,Amy,Spoto,Amy Spoto,,1,1,1,1508866187,AMY,SPOTO,E.,MD,Pediatrics,,100 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Pediatrics ,MD,1
+248,Christopher,Stoll,Christopher Stoll,,1,1,1,1982164935,CHRISTOPHER,STOLL,,,Emergency Medicine,Emergency Medicine,1 GUTHRIE SQ,SAYRE,PA,1 GUTHRIE SQ,SAYRE,PA,,,,Urgent Care,MD,0
+250,Sheryl,Sulangi-Lorenc,Sheryl Sulangi-Lorenc,,1,1,1,1417158023,SHERYL,SULANGI-LORENC,RIVERA,MD,Family Medicine,,155 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Family Practice- No Surgery,MD,1
+251,Rafeel,Syed,Rafeel Syed,,1,1,1,1003190711,RAFEEL,SYED,O,MD,"Internal Medicine, Nephrology",,155 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Nephrology ,MD,1
+252,Nilson,Tapia,Nilson Tapia,,1,1,1,1457843716,NILSON,TAPIA,,DO,Student in an Organized Health Care Education/Training Program,"Internal Medicine, Rheumatology",601 ELMWOOD AVE,ROCHESTER,NY,601 ELMWOOD AVE BOX MED,ROCHESTER,NY,,,,Rheumatology ,DO,0
+253,Laurence,Tawil,Laurence Tawil,,1,1,1,1033191226,LAURENCE,TAWIL,A,M.D.,Internal Medicine,,155 CRYSTAL RUN RD,MIDDLETOWN,NY,61 EMERALD PL,ROCK HILL,NY,,,,Internal Medicine,MD,1
+254,Ramzi,Tawil,Ramzi Tawil,,1,1,1,1609089457,RAMZI,TAWIL,A.,M.D.,Family Medicine,,155 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Family Practice- No Surgery,MD,1
+255,Rashmi,Tawil,Rashmi Tawil,,1,1,1,1295717486,RASHMI,TAWIL,P,M.D.,Internal Medicine,,155 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Internal Medicine ,MD,1
+256,Emily,Tetelman,Emily Tetelman,,1,1,1,1518311307,EMILY,TETELMAN,JILL,"DO, FACOG",Student in an Organized Health Care Education/Training Program,Obstetrics & Gynecology,372 POST AVE,WESTBURY,NY,372 POST AVE,WESTBURY,NY,,,,Obstetrics & Gynecology,DO,0
+257,Arthur,Tolis,Arthur Tolis,F.,1,1,1,1679573646,ARTHUR,TOLIS,,MD,Internal Medicine,,155 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Internal Medicine ,MD,1
+258,Daniel,Tomlinson,Daniel Tomlinson,,1,1,1,1760600431,DANIEL,TOMLINSON,P,MD,Orthopaedic Surgery,,95 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN ROAD,MIDDLETOWN,NY,,,,Orthopedics Surgery  ,MD,1
+259,Quang,Ton,Quang Ton,,1,1,1,1689912669,QUANG,TON,V,M.D.,"Internal Medicine, Endocrinology, Diabetes & Metabolism",,73 MARKET ST,YONKERS,NY,1345 AVENUE OF THE AMERICAS FL 8,NEW YORK,NY,,,,Endocrinology ,MD,0
+260,Thien-Duy,Tran,Thien-Duy Tran,,1,1,1,1669092672,THIEN-DUY,TRAN,BRANDON,MD,Student in an Organized Health Care Education/Training Program,,169 RIVERSIDE DR,BINGHAMTON,NY,169 RIVERSIDE DR,BINGHAMTON,NY,,,,Family Medicine- Hospitalist,MD,0
+261,Kevin,Trapp,Kevin Trapp,,1,1,1,1063412013,KEVIN,TRAPP,,MD,Orthopaedic Surgery,,155 CRYSTAL RUN RD,MIDDLETOWN,NY,95 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Orthopedics Surgery  ,MD,1
+263,Tsai-Lung,Tsai,Tsai-Lung Tsai,,1,1,1,1518112788,TSAI-LUNG,TSAI,,D.O.,"Orthopaedic Surgery, Hand Surgery",,95 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Orthopedics Surgery  ,DO,1
+264,Larisa,Tsaur,Larisa Tsaur,,1,1,1,1285634345,LARISA,TSAUR,,MD,Physical Medicine & Rehabilitation,,2 CENTEROCK RD,WEST NYACK,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Physical Medicine & Rehab,MD,1
+265,Guillermo,Uy,Guillermo Uy,,1,1,1,1285773200,GUILLERMO,UY,,MD,Surgery,,95 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,General Surgery,MD,1
+266,Noaman,Vaidya,Noaman Vaidya,,1,1,1,1013288273,NOAMAN,VAIDYA,,M.D.,"Radiology, Diagnostic Radiology",,155 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Diagnostic Radiology,MD,1
+268,Dimitri,Vital-Herne,Dimitri Vital-Herne,,1,1,1,1528598224,DIMITRI,VITAL-HERNE,,MD,Hospitalist,Student in an Organized Health Care Education/Training Program,155 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Internal Medicine ,MD,1
+269,Sorel,Vladu,Sorel Vladu,,1,1,1,1922363670,SOREL,VLADU,,D.O.,"Internal Medicine, Critical Care Medicine","Internal Medicine, Pulmonary Disease",2 CENTEROCK RD,WEST NYACK,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Pulmonary Diseases with Bronchoscopies,DO,1
+270,Alicia,Weissman,Alicia Weissman,,1,1,1,1215919030,ALICIA,WEISSMAN,M.,M.D.,Family Medicine,,155 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Family Practice- No Surgery,MD,1
+271,Stacey,Whyte-Connell,Stacey Whyte-Connell,,1,1,1,1649220740,STACEY,WHYTE-CONNELL,ELIZABETH,DO,Family Medicine,,155 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Family Practice- No Surgery,DO,1
+272,Sherma,Winchester-Penny,Sherma Winchester-Penny,,1,1,1,1346223591,SHERMA,WINCHESTER-PENNY,,M.D.,"Nuclear Medicine, Nuclear Cardiology","Internal Medicine, Cardiovascular Disease",155 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Cardiovascular Disease ,MD,1
+275,Minhui,Xie,Minhui Xie,,1,1,1,1811217714,MINHUI,XIE,,M.D.,Internal Medicine,Internal Medicine,80 SEYMOUR STREET,HARTFORD,CT,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Internal Medicine,MD,1
+276,Ying,Yang,Ying Yang,,1,1,1,1235492703,YING,YANG,,"M.D., Ph.D.","Internal Medicine, Cardiovascular Disease",,1200 ROUTE 300,NEWBURGH,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Cardiovascular Disease ,MD,1
+277,Mrilini,Yeddu,Mrilini Yeddu,,1,1,1,1477692929,MRILINI,YEDDU,M,M.D.,Internal Medicine,"Internal Medicine, Geriatric Medicine",155 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Internal Medicine ,MD,1
+278,Mae,Young,Mae Young,,1,1,1,1144463597,MAE,YOUNG,EWING,M.D.,Orthopaedic Surgery,"Orthopaedic Surgery, Hand Surgery",155 CRYSTAL RUN RD,MIDDLETOWN,NY,95 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Hand Sugery,MD,1
+279,Annabel,Yuen,Annabel Yuen,,1,1,1,1588914600,ANNABEL,YUEN,N,DO,Family Medicine,,155 CRYSTAL RUN RD,MIDDLETOWN,NY,855 STATE ROUTE 17M,MONROE,NY,,,,Family Practice- No Surgery,DO,1
+280,Aleksey,Zabludovskiy,Aleksey Zabludovskiy,,1,1,1,1255714978,ALEKSEY,ZABLUDOVSKIY,,M.D.,Internal Medicine,Hospitalist,155 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Internal Medicine,MD,1
+281,Slavica,Zdravkovic,Slavica Zdravkovic,,1,1,1,1831699842,SLAVICA,ZDRAVKOVIC,,MD,Internal Medicine,,155 CRYSTAL RUN RD,MIDDLETOWN,NY,2 N BROADWAY APT 1C,WHITE PLAINS,NY,,,,Internal Medicine- Hospitalist,MD,1
+282,Ilan,Zedek,Ilan Zedek,,1,1,1,1609877331,ILAN,ZEDEK,,MD,Obstetrics & Gynecology,,95 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Obstetrics & Gynecology ,MD,1
+283,Qing-Hua,Zhao,Qing-Hua Zhao,,1,1,1,1891769774,QING-HUA,ZHAO,,MD,"Radiology, Diagnostic Radiology",,155 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Diagnostic Radiology ,MD,1
+414,Mary,Diana,Mary Diana,,3,1,1,1962445684,MARY,DIANA,G,MD,Obstetrics & Gynecology,Obstetrics & Gynecology,16 GEORGETOWN N,GREENWICH,CT,12 AVERY PLACE,WESTPORT,CT,,,,Hospitalist-OB/GYN,MD,0
+415,Michael,Innerfield,Michael Innerfield,,1,1,1,1366528739,MICHAEL,INNERFIELD,L,MD,"Internal Medicine, Cardiovascular Disease","Internal Medicine, Interventional Cardiology",155 CRYSTAL RUN RD,MIDDLETOWN,NY,2 CENTEROCK RD,WEST NYACK,NY,,,,Cardiovascular Disease- Minor Surgery,MD,1
+284,Hilary,Petersel,Hilary Petersel,,1,1,1,1336216613,HILARY,PETERSEL,R.,MD,Pediatrics,,48 NEW MAIN ST,HAVERSTRAW,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Pediatrics,MD,1
+285,Jyothi,Rangadhama,Jyothi Rangadhama,,1,1,1,1538463799,JYOTHI,RANGADHAMA,H,M.D.,Obstetrics & Gynecology,Obstetrics & Gynecology,81 RONALD REAGAN BLVD,WARWICK,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Obstetrics & Gynecology- Major surgery,MD,1
+286,Maya,Bissonette,Maya Bissonette,,1,1,1,1467799163,MAYA,BISSONETTE,SAHAN,FNP,"Nurse Practitioner, Family",,61 EMERALD PL,ROCK HILL,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Nurse Practitioner  ,NP,1
+288,Dorothy,Bodnar,Dorothy Bodnar,,1,1,1,1356001010,DOROTHY,BODNAR,,FNP,"Nurse Practitioner, Family",,95 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Nurse Practitioner  ,FNP,1
+289,Kaitlin,Bowe,Kaitlin Bowe,,1,1,1,1740547637,KAITLIN,BOWE,,FNP,"Nurse Practitioner, Family",,155 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Nurse Practitioner  ,FNP,1
+290,Kelsey,Branch,Kelsey Branch,,1,1,1,1053916353,KELSEY,BRANCH,C.,PA-C,"Physician Assistant, Medical",,1200 ROUTE 300,NEWBURGH,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Physician Assistant/Medical,PA,1
+291,Geraldine,Brodie,Geraldine Brodie,,1,1,1,1720649395,GERALDINE,BRODIE,MARIE,FNP,"Nurse Practitioner, Family",,2 CENTEROCK RD,WEST NYACK,NY,707 E MAIN ST,MIDDLETOWN,NY,,,,Nurse Practitioner-Pulmonology,NP,0
+292,Athena,Brown,Athena Brown,,1,1,1,1770830432,ATHENA,BROWN,,FNP,"Nurse Practitioner, Family",,21 MAPLE AVE,WARWICK,NY,PO BOX 36363,NEWARK,NJ,,,,Nurse Practitioner-Family Medicine,NP,0
+293,Latoya,Byfield,Latoya Byfield,,1,1,1,1053634139,LATOYA,BYFIELD,MARIECA,"MSN, FNP",Registered Nurse,"Nurse Practitioner, Family",155 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Nurse Practitioner ,NP,1
+294,Mary,Cable,Mary Cable,,1,1,1,1336131952,MARY,CABLE,,NP,Nurse Practitioner,"Nurse Practitioner, Adult Health",155 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Nurse Practitioner  ,NP,1
+295,Christopher,Cassidy,Christopher Cassidy,,1,1,1,1568798932,CHRISTOPHER,CASSIDY,M,PA,Physician Assistant,"Physician Assistant, Surgical",95 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Physician Assistant/Medical,PA-C,1
+296,Anthony,Cestaro,Anthony Cestaro,,1,1,1,1346693546,ANTHONY,CESTARO,NEIL,PA,Physician Assistant,"Physician Assistant, Surgical",155 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Physician Assistant-Orthopedic Surgery,PA,1
+297,Theresa,Clearwater,Theresa Clearwater,,1,1,1,1104207893,THERESA,CLEARWATER,MARIE,FNP,"Nurse Practitioner, Family",,1200 ROUTE 300,NEWBURGH,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Nurse Practitioner  ,NP,1
+298,Minu,Colaco,Minu Colaco,,1,1,1,1336263672,MINU,COLACO,K,PA-C,"Physician Assistant, Medical",,6 LIBERTY SQUARE MALL,STONY POINT,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Physician Assistant/Medical,PA,1
+299,Antonio,Colaco,Antonio Colaco,,1,1,1,1356689657,ANTONIO,COLACO,ALVARAS,PA-C,"Physician Assistant, Surgical",,95 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Physician Assistant/Medical,PA-C,1
+300,Kimberly,Darrigo,Kimberly Darrigo,,1,1,1,1568762516,KIMBERLY,DARRIGO,,ANP,"Nurse Practitioner, Adult Health",Nurse Practitioner,164 WILLOW AVE,CORNWALL,NY,564 LAKESIDE RD,NEWBURGH,NY,,,,Nurse Practitioner  ,NP,0
+301,Taisha,Davis,Taisha Davis,,1,1,1,1164944294,TAISHA,DAVIS,S,NP,"Nurse Practitioner, Adult Health",,855 STATE ROUTE 17M,MONROE,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Nurse Practitioner  ,NP,1
+302,Gina,DiCostanzo,Gina DiCostanzo,,1,1,1,1306927314,GINA,DICOSTANZO,L,NP,"Nurse Practitioner, Family",Nurse Practitioner,2 CENTEROCK RD,WEST NYACK,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Nurse Practitioner ,NP,1
+303,Amy,DiMase,Amy DiMase,,1,1,1,1942410444,AMY,DIMASE,LEE,PA,"Physician Assistant, Medical",,95 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Physician Assistant/Medical,PA-C,1
+304,Melissa,Dombroski,Melissa Dombroski,,1,1,1,1275796195,MELISSA,DOMBROSKI,,PA,"Physician Assistant, Surgical",,95 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Physician Assistant/Surgical,PA,1
+305,Edmund,Donovan,Edmund Donovan,,1,1,1,1689988297,EDMUND,DONOVAN,J,FNP,"Nurse Practitioner, Family",,155 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Nurse Practitioner  ,NP,1
+306,Melissa,Druke,Melissa Druke,,1,1,1,1215256789,MELISSA,DRUKE,,FNP,"Nurse Practitioner, Family",,68 HARRIS BUSHVILLE RD,HARRIS,NY,707 E MAIN ST,MIDDLETOWN,NY,,,,Nurse Practitioner  ,NP,0
+307,Brian,Dudgeon,Brian Dudgeon,,1,1,1,1629698717,BRIAN,DUDGEON,P,PA,"Physician Assistant, Surgical",,95 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Physician Assistant/Surgical,PA,1
+308,Katie,Duggan,Katie Duggan,,1,1,1,1821700436,KATIE,DUGGAN,J,FNP,"Nurse Practitioner, Family",,155 CRYSTAL RUN RD,MIDDLETOWN,NY,855 STATE ROUTE 17M,MONROE,NY,,,,Nurse Practitioner- Family Medicine,NP,1
+309,Elizabeth,Eckardt,Elizabeth Eckardt,,1,1,1,1710351150,ELIZABETH,ECKARDT,U,NP,"Nurse Practitioner, Critical Care Medicine",,155 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Nurse Practitioner ,NP,1
+310,Korey,Evans,Korey Evans,,1,1,1,1467859512,KOREY,EVANS,D.,PA,"Physician Assistant, Medical",,95 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Physician Assistant/Surgical,PA,1
+311,Kimberly,Farrugia,Kimberly Farrugia,,1,1,1,1396906624,KIMBERLY,FARRUGIA,M.,PA-C,"Physician Assistant, Surgical",,155 CRYSTAL RUN RD,MIDDLETOWN,NY,219 BLOOMING GROVE TPKE,NEW WINDSOR,NY,,,,Physician Assistant/Surgical,PA,1
+312,Carisa,Fick,Carisa Fick,,1,1,1,1821860883,CARISA,FICK,,AGNP-C,"Nurse Practitioner, Adult Health",,155 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Nurse Practitioner- Oncology,NP,1
+313,Claudia,Finnegan,Claudia Finnegan,,1,1,1,1134510258,CLAUDIA,FINNEGAN,ANN,ANP,"Nurse Practitioner, Adult Health",,61 EMERALD PL,ROCK HILL,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Nurse Practitioner ,ANP,1
+315,Therese,Fitzgerald,Therese Fitzgerald,,1,1,1,1033675863,THERESE,FITZGERALD,MARIE,ANP,Registered Nurse,"Nurse Practitioner, Adult Health",155 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Nurse Practitioner ,NP,1
+316,Trevor,Flynn,Trevor Flynn,,1,1,1,1871228023,TREVOR,FLYNN,,PA-C,"Physician Assistant, Medical",,155 CRYSTAL RUN RD,MIDDLETOWN,NY,1200 ROUTE 300,NEWBURGH,NY,,,,Physician Assistant/Medical- Urgent Care,PA,1
+319,Victoria,Gorelova,Victoria Gorelova,,1,1,1,1588680623,VICTORIA,GORELOVA,,,"Physician Assistant, Medical",,155 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Physician Assistant/Medical,PA-C,1
+320,Katrina,Grandolfo,Katrina Grandolfo,,1,1,1,1275961260,KATRINA,GRANDOLFO,LEIGH,FNP-BC,"Nurse Practitioner, Family",,155 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Nurse Practitioner,NP,1
+321,Jaimie,Gray-O'Banks,Jaimie Gray-O'Banks,,1,1,1,1932580081,JAIMIE,GRAY-O'BANKS,MICHELLE,FNP-C,"Nurse Practitioner, Family",Nurse Practitioner,95 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Nurse Practitioner ,NP,1
+322,Janet,Guzman,Janet Guzman,,1,1,1,1255912523,JANET,GUZMAN,J,FNP,"Nurse Practitioner, Family",,1200 ROUTE 300,NEWBURGH,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Nurse Practitioner ,NP,1
+323,Elyse,Hannan,Elyse Hannan,,1,1,1,1386011385,ELYSE,HANNAN,,PA,"Physician Assistant, Surgical",,219 BLOOMING GROVE TPKE,NEW WINDSOR,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Physician Assistant/Surgical,PA,1
+325,Becky,Heins,Becky Heins,,1,1,1,1295134013,BECKY,HEINS,,FNP,"Nurse Practitioner, Family",,61 EMERALD PL,ROCK HILL,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Nurse Practitioner ,FNP,1
+326,Amy,Hujus,Amy Hujus,,1,1,1,1730119439,AMY,HUJUS,,PA,Physician Assistant,"Physician Assistant, Medical",155 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Physician Assistant/Medical,PA-C,1
+327,Kate,Ingber,Kate Ingber,,1,1,1,1801266994,KATE,INGBER,M.,PA-C,Physician Assistant,,61 EMERALD PL,ROCK HILL,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Physician Assistant/Medical,PA,1
+329,Amir,Islam,Amir Islam,,1,1,1,1205322369,AMIR,ISLAM,U,FNP,"Nurse Practitioner, Family",,707 E MAIN ST,MIDDLETOWN,NY,707 E MAIN ST,MIDDLETOWN,NY,,,,Nurse Practitioner ,FNP,0
+330,Francesca,Joyce,Francesca Joyce,,1,1,1,1790462216,FRANCESCA,JOYCE,,FNP,"Nurse Practitioner, Family",,95 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Nurse Practitioner,NP,1
+331,Carmen,Kotry,Carmen Kotry,,1,1,1,1346881836,CARMEN,KOTRY,,PA-C,"Physician Assistant, Surgical","Physician Assistant, Surgical",95 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Physician Assistant/Surgical,PA,1
+333,Justin,Kroll,Justin Kroll,,1,1,1,1134725575,JUSTIN,KROLL,D.,PA,"Physician Assistant, Medical",,155 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Physician Assistant/Medical,PA,1
+334,Caitlin,Lakeman,Caitlin Lakeman,,1,1,1,1154861060,CAITLIN,LAKEMAN,,,"Nurse Practitioner, Family",,155 CRYSTAL RUN RD,MIDDLETOWN,NY,855 STATE ROUTE 17M,MONROE,NY,,,,Nurse Practitioner ,NP,1
+335,Jacob,Lehn,Jacob Lehn,,1,1,1,1780978197,JACOB,LEHN,D.,PA,"Physician Assistant, Surgical",,95 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Physician Assistant/Surgical,PA-C,1
+337,Emmanise,Louis,Emmanise Louis,,1,1,1,1255473666,EMMANISE,LOUIS,,FNP,"Nurse Practitioner, Family",,2 PERLMAN DR,SPRING VALLEY,NY,1037 MAIN ST,PEEKSKILL,NY,,,,Nurse Practitioner ,NP,0
+338,Zohra,Ludmerer,Zohra Ludmerer,,1,1,1,1720462369,ZOHRA,LUDMERER,,FNP,"Nurse Practitioner, Family",,855 STATE ROUTE 17M,MONROE,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Nurse Practitioner ,NP,1
+339,Alexis,Manz,Alexis Manz,,1,1,1,1649894338,ALEXIS,MANZ,NICOLE,PA,"Physician Assistant, Medical",,155 CRYSTAL RUN RD,MIDDLETOWN,NY,1200 ROUTE 300,NEWBURGH,NY,,,,Physician Assistant/Medical,PA,1
+340,Sheila,Mathew,Sheila Mathew,,1,1,1,1063784908,SHEILA,MATHEW,SUSAN,FNP,"Nurse Practitioner, Family",,155 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Nurse Practitioner,NP,1
+343,Meilig,Moran,Meilig Moran,,1,1,1,1831655026,MEILIG,MORAN,,FNP,"Nurse Practitioner, Family",,155 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Nurse Practitioner ,FNP,1
+345,Maria,Noa,Maria Noa,,1,1,1,1427380138,MARIA,NOA,,FNP,"Nurse Practitioner, Primary Care","Nurse Practitioner, Family",707 E MAIN ST,MIDDLETOWN,NY,707 E MAIN ST,MIDDLETOWN,NY,,,,Nurse Practitioner ,FNP,0
+346,Lois,O'Connell,Lois O'Connell,,1,1,1,1114661832,LOIS,O'CONNELL,,,"Nurse Practitioner, Family",,43 BELCHER RD,WARWICK,NY,43 BELCHER RD,WARWICK,NY,,,,Nurse Practitioner-Pallative Care,FNP,0
+348,Douglas,Ogumbo,Douglas Ogumbo,,1,1,1,1205227352,DOUGLAS,OGUMBO,O.,FNP,"Nurse Practitioner, Family","Nurse Practitioner, Family",707 E MAIN ST,MIDDLETOWN,NY,707 E MAIN ST,MIDDLETOWN,NY,,,,Nurse Practitioner ,FNP,0
+349,Erin,Parahus,Erin Parahus,,1,1,1,1174066989,ERIN,PARAHUS,E.,PA-C,"Physician Assistant, Medical",,155 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Physician Assistant/Medical,PA,1
+350,Heidi,Pavese,Heidi Pavese,,1,1,1,1861681926,HEIDI,PAVESE,E,FNP,"Nurse Practitioner, Family",,61 EMERALD PL,ROCK HILL,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Nurse Practitioner ,NP,1
+351,Amanda,Peraffan,Amanda Peraffan,,1,1,1,1134761679,AMANDA,PERAFFAN,LEE,PA-C,"Physician Assistant, Medical",,155 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Physician Assistant-Urgent Care,PA,1
+352,Yolanda,Phillip,Yolanda Phillip,,1,1,1,1386229557,YOLANDA,PHILLIP,,FNP,"Nurse Practitioner, Family",,1200 ROUTE 300,NEWBURGH,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Nurse Practitioner ,NP,1
+353,Cara,Phillips,Cara Phillips,,1,1,1,1538141494,CARA,PHILLIPS,G,PA,Physician Assistant,"Physician Assistant, Medical",155 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Physician Assistant/Medical,PA-C,1
+354,Nisha,Pirani,Nisha Pirani,,1,1,1,1366807109,NISHA,PIRANI,,PA-C,Physician Assistant,,95 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Physician Assistant/Surgical,PA,1
+357,Simone,Reynolds,Simone Reynolds,,1,1,1,1316707979,SIMONE,REYNOLDS,,FNP,"Nurse Practitioner, Family",,155 CRYSTAL RUN RD,MIDDLETOWN,NY,PO BOX 331,ROCK HILL,NY,,,,Nurse Practitioner,NP,1
+358,Sandra,Rexhouse,Sandra Rexhouse,,1,1,1,1134224470,SANDRA,REXHOUSE,ELISE,APRN;BC,"Nurse Practitioner, Acute Care",Nurse Practitioner,241 NORTH RD,POUGHKEEPSIE,NY,53 N CROSS RD,STAATSBURG,NY,,,,Nurse Practitoner/Hospitalist,NP,0
+359,Jessica,Rizkalla,Jessica Rizkalla,,1,1,1,1417242413,JESSICA,RIZKALLA,E,PA-C,Physician Assistant,"Physician Assistant, Medical",155 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Physician Assistant/Medical,PA,1
+360,Jillian,Sandler,Jillian Sandler,,1,1,1,1205445384,JILLIAN,SANDLER,AMANDA,PA,Physician Assistant,"Physician Assistant, Medical",155 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Physician Assistant/Medical,PA,1
+361,Tara,Scaglione,Tara Scaglione,,1,1,1,1477592863,TARA,SCAGLIONE,A.,CNM,Advanced Practice Midwife,,2 CENTEROCK RD,WEST NYACK,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Certified Nurse Midwife,CNM,1
+362,Roberta,Schiffer,Roberta Schiffer,,1,1,1,1669404216,ROBERTA,SCHIFFER,L.,N.P.,"Nurse Practitioner, Women's Health",,855 STATE ROUTE 17M,MONROE,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Nurse Practitioner ,NP,1
+363,Jennifer,Shamah,Jennifer Shamah,,1,1,1,1871575019,JENNIFER,SHAMAH,,FNP,Nurse Practitioner,"Nurse Practitioner, Obstetrics & Gynecology",61 EMERALD PL,ROCK HILL,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Nurse Practitioner ,NP,1
+364,Denise,Smithem,Denise Smithem,,1,1,1,1710208814,DENISE,SMITHEM,L.,ANP,"Nurse Practitioner, Adult Health",Nurse Practitioner,155 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Nurse Practitioner ,ANP,1
+365,Julie,Starner,Julie Starner,,1,1,1,1437193521,JULIE,STARNER,K,FNP,"Nurse Practitioner, Family",,61 EMERALD PL,ROCK HILL,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Nurse Practitioner ,NP,1
+366,Deborah,Sulemana,Deborah Sulemana,,1,1,1,1841044278,DEBORAH,SULEMANA,,FNP-BC,"Nurse Practitioner, Family",,100 WOODS RD,VALHALLA,NY,100 WOODS RD,VALHALLA,NY,,,,Nurse Practitioner- Primary Care,NP,0
+367,Sandra,Tetler,Sandra Tetler,,1,1,1,1033996194,SANDRA,TETLER,L,FNP,"Nurse Practitioner, Family",,155 CRYSTAL RUN RD,MIDDLETOWN,NY,855 STATE ROUTE 17M,MONROE,NY,,,,Nurse Practitioner- Neurology,NP,1
+368,Morgan,Turnbull,Morgan Turnbull,,1,1,1,1043838246,MORGAN,TURNBULL,,FNP,"Nurse Practitioner, Family",,61 EMERALD PL,ROCK HILL,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Nurse Practitioner ,NP,1
+369,Claudean,Wright,Claudean Wright,,1,1,1,1568832665,CLAUDEAN,WRIGHT,,"FNP, RN",Registered Nurse,"Nurse Practitioner, Family",61 EMERALD PL,ROCK HILL,NY,6 NORTHGATE,GOSHEN,NY,,,,Nurse Practitioner/ Allergy Immunology,FNP,0
+370,Jennifer,Yuengst,Jennifer Yuengst,,1,1,1,1598199176,JENNIFER,YUENGST,ANN,PA,"Physician Assistant, Surgical",,75 RONALD REAGAN BLVD,WARWICK,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Physician Assistant/Surgical,PA-C,1
+371,Mandi,Zaccagnino,Mandi Zaccagnino,,1,1,1,1831610369,MANDI,ZACCAGNINO,L.,FNP,"Nurse Practitioner, Family",,1200 ROUTE 300,NEWBURGH,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Nurse Practitioner-Dermatology,NP,1
+372,Corinne,Zambetti,Corinne Zambetti,,1,1,1,1437663424,CORINNE,ZAMBETTI,,NP,"Nurse Practitioner, Family",,745 STATE ROUTE 17M,MONROE,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Nurse Practitioner ,NP,1
+373,Samatha,Bagam,Samatha Bagam,,1,1,1,1518186840,SAMATHA,BAGAM,,MD,Pediatrics,,100 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Pediatrics-No Surgery,MD,1
+376,Sandra,Sacks,Sandra Sacks,,1,1,1,1134198880,SANDRA,SACKS,L,M.D.,Plastic Surgery,,155 CRYSTAL RUN RD,MIDDLETOWN,NY,95 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Plastic NOC- Major Surgery Reconstructive,MD,1
+377,Renee,Sliva,Renee Sliva,,1,1,1,1285708222,RENEE,SLIVA,,DPM,Podiatrist,,2 CENTEROCK RD,WEST NYACK,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,"Podiatry, Surgery",DPM,1
+379,Jacquline,Todd,Jacquline Todd,,1,1,1,1568550531,JACQULINE,TODD,Y.,M.D.,Obstetrics & Gynecology,,95 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Obstetrics & Gynecology- Major surgery,MD,1
+380,Katherine,Ward-Buckley,Katherine Ward-Buckley,,1,1,1,1386759512,KATHERINE,WARD-BUCKLEY,A.,DPM,Podiatrist,,2 CENTEROCK RD,WEST NYACK,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,"Podiatry, Surgery",DPM,1
+382,Maribel,Cuevas,Maribel Cuevas,,1,1,1,1982027538,MARIBEL,CUEVAS,,OTR,Occupational Therapist,,219 BLOOMING GROVE TPKE,NEW WINDSOR,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Occupational Therapist,,1
+383,Alicia,Byrne,Alicia Byrne,,1,1,1,1467656496,ALICIA,BYRNE,M,P.T.,Physical Therapist,,219 BLOOMING GROVE TPKE,NEW WINDSOR,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Physical Therapist,,1
+384,Brenna,Carrigan-McClinsey,Brenna Carrigan-McClinsey,,1,1,1,1902087208,BRENNA,CARRIGAN-MCCLINSEY,M,AuD,Audiologist,,155 CRYSTAL RUN RD,MIDDLETOWN,NY,95 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Audiology,,1
+385,Suzanne,Meier,Suzanne Meier,,1,1,1,1083697254,SUZANNE,MEIER,,"R.D., C.D.N., C.D.E.","Nutritionist, Nutrition, Education","Dietitian, Registered",155 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Diabetes Educator,,1
+386,Laura,Ronen,Laura Ronen,,1,1,1,1619167822,LAURA,RONEN,J.,"M.S.R.D., C.D.E.","Dietitian, Registered",,1200 ROUTE 300,NEWBURGH,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Diabetes Educator,,1
+388,Sandra,Taveras,Sandra Taveras,,1,1,1,1144360884,SANDRA,TAVERAS,,LCSW,"Social Worker, Clinical",,155 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,LCSW,,1
+389,Niah,Cortez,Niah Cortez,,1,1,1,1043599236,NIAH,CORTEZ,VICENTE,PT,Physical Therapist,,95 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Physical Therapist,,1
+391,Michele,Branch,Michele Branch,,1,1,1,1831299957,MICHELE,BRANCH,DALLAIRE,M.S.,"Genetic Counselor, MS",,14 VALLEY VIEW CIR,WARWICK,NY,95 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Genetic Counseling,,1
+392,Daniel,Crowfoot,Daniel Crowfoot,,1,1,1,1487899241,DANIEL,CROWFOOT,E,MS PT,Physical Therapist,,61 EMERALD PL,ROCK HILL,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Physical Therapist,,1
+393,Heather,Carpenter-Sarmiento,Heather Carpenter-Sarmiento,,1,1,1,1972771681,HEATHER,CARPENTER-SARMIENTO,,Psy.D.,"Psychologist, Clinical",,155 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,PsyD,,1
+395,Richard,Villanoza,Richard Villanoza,,1,1,1,1144503053,RICHARD,VILLANOZA,,P.T.,Physical Therapist,,95 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Physical Therapist,,1
+397,Tirzah,Jorrey,Tirzah Jorrey,,1,1,1,1447566617,TIRZAH,JORREY,MARIA,PT,Physical Therapist,,95 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,DPT,,1
+399,John,Kaknis,John Kaknis,,1,1,1,1053307512,JOHN,KAKNIS,,O.D.,Optometrist,,4 HUDSON VALLEY PROFESSIONAL PLZ,NEWBURGH,NY,4 HUDSON VALLEY PROFESSIONAL PLZ,NEWBURGH,NY,,,,Optometrist,OD,0
+400,Israr,Khankhel,Israr Khankhel,,1,1,1,1427382399,ISRAR,KHANKHEL,,MD,Hospitalist,Family Medicine,418 BLOOMING GROVE TPKE,NEW WINDSOR,NY,34 GREENWICH AVE,CENTRAL VALLEY,NY,,,,,MD,0
+401,Lucia,Somberg,Lucia Somberg,,1,1,1,1013336551,LUCIA,SOMBERG,K,"MD, MPH",Emergency Medicine,Emergency Medicine,960 MASSACHUSETTS AVE STE 2,BOSTON,MA,1 BOSTON MEDICAL CTR PL,BOSTON,MA,,,,,MD,0
+404,Carlton,Glover,Carlton Glover,,1,1,1,1083093942,CARLTON,GLOVER,I.,MD,Family Medicine,Hospitalist,707 E MAIN ST,MIDDLETOWN,NY,707 E MAIN ST,MIDDLETOWN,NY,,,,,MD,0
+405,Ranjan,Kumar,Ranjan Kumar,,1,1,1,1659667772,RANJAN,KUMAR,V,M.D.,Hospitalist,,571 SAINT JOSEPHS BLVD,ELMIRA,NY,600 ROE AVE,ELMIRA,NY,,,,,DO,0
+406,Khin,Hnin,Khin Hnin,,1,1,1,1043475080,KHIN,HNIN,NGE,MD,Hospitalist,Internal Medicine,707 E MAIN ST,MIDDLETOWN,NY,707 E MAIN ST,MIDDLETOWN,NY,,,,,MD,0
+407,Elton,Llukani,Elton Llukani,,1,1,1,1982101614,ELTON,LLUKANI,,M.D.,Hospitalist,,707 E MAIN ST,MIDDLETOWN,NY,707 E MAIN ST,MIDDLETOWN,NY,,,,,MD,0
+408,Khin,Myat,Khin Myat,,1,1,1,1366945180,KHIN,MYAT,MAY,MD,Hospitalist,,707 E MAIN ST,MIDDLETOWN,NY,707 E MAIN ST,MIDDLETOWN,NY,,,,,MD,0
+409,Sabai,Phyu,Sabai Phyu,,1,1,1,1407105158,SABAI,PHYU,,MD,Internal Medicine,Hospitalist,707 E MAIN ST,MIDDLETOWN,NY,707 E MAIN ST,MIDDLETOWN,NY,,,,,MD,0
+410,Slavica,Zdravkovic,Slavica Zdravkovic,,1,1,1,1831699842,SLAVICA,ZDRAVKOVIC,,MD,Internal Medicine,,155 CRYSTAL RUN RD,MIDDLETOWN,NY,2 N BROADWAY APT 1C,WHITE PLAINS,NY,,,,,MD,1
+411,Sami,Ahmad,Sami Ahmad,,1,1,1,1619258381,SAMI,AHMAD,,"M.D., M.S,",Obstetrics & Gynecology,,2 CENTEROCK RD,WEST NYACK,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,,MD,1
+412,Ronen,Harel,Ronen Harel,,1,1,1,1750671228,RONEN,HAREL,JUSTIN,DO,"Internal Medicine, Hematology & Oncology",,185 RYKOWSKI LN,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,,DO,1
+413,Erum,Khan,Erum Khan,,1,1,1,1609172360,ERUM,KHAN,SHUJAAT,MD,Internal Medicine,Hospitalist,707 E MAIN ST,MIDDLETOWN,NY,707 E MAIN ST,MIDDLETOWN,NY,,,,,MD,0
+15,Nicholas,Avitabile,Nicholas Avitabile,,1,2,1,1780969790,NICHOLAS,AVITABILE,CHRISTOPHER,D.O.,Emergency Medicine,,1111 AMSTERDAM AVE,NEW YORK,NY,1111 AMSTERDAM AVE,NEW YORK,NY,,,,Endocrinology ,MD,0
+15,Nicholas,Avitabile,Nicholas Avitabile,,1,2,2,1750607602,NICHOLAS,AVITABILE,ALEXANDER,M.D.,"Internal Medicine, Endocrinology, Diabetes & Metabolism",,155 CRYSTAL RUN RD,MIDDLETOWN,NY,855 STATE ROUTE 17M,MONROE,NY,,,,Endocrinology ,MD,1
+30,Kathleen,Byrne,Kathleen Byrne,,1,2,1,1083176788,KATHLEEN,BYRNE,,MD,Pediatrics,,100 CRYSTAL RUN RD,MIDDLETOWN,NY,100 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Pediatrics,MD,1
+30,Kathleen,Byrne,Kathleen Byrne,,1,2,2,1346421963,KATHLEEN,BYRNE,,P.T.,Physical Therapist,,918 JAMES ST,SYRACUSE,NY,918 JAMES ST,SYRACUSE,NY,,,,Pediatrics,MD,0
+71,Elizabeth,George,Elizabeth George,,1,2,1,1467618678,ELIZABETH,GEORGE,,M.D.,Internal Medicine,Hospitalist,155 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Internal Medicine ,MD,1
+71,Elizabeth,George,Elizabeth George,,1,2,2,1649767559,ELIZABETH,GEORGE,V,,Family Medicine,,616 BROADWAY,MASSAPEQUA,NY,1000 MONTAUK HWY,WEST ISLIP,NY,,,,Internal Medicine ,MD,0
+104,Syed,Jafri,Syed Jafri,,1,2,1,1689619710,SYED,JAFRI,Z,M.D.,"Nuclear Medicine, Nuclear Cardiology","Internal Medicine, Cardiovascular Disease",61 EMERALD PL,ROCK HILL,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Cardiovascular Disease ,MD,1
+104,Syed,Jafri,Syed Jafri,,1,2,2,1376515155,SYED,JAFRI,A Q,MD,"Internal Medicine, Cardiovascular Disease",,330 3RD AVE,NEW YORK,NY,330 3RD AVE,NEW YORK,NY,,,,Cardiovascular Disease ,MD,0
+119,Jonathan,Katz,Jonathan Katz,,1,2,1,1053554121,JONATHAN,KATZ,SETH,MD,"Internal Medicine, Cardiovascular Disease",,2 CENTEROCK RD,WEST NYACK,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Cardiovascular Disease ,MD,1
+119,Jonathan,Katz,Jonathan Katz,,1,2,2,1275820755,JONATHAN,KATZ,,LCSW,"Social Worker, Clinical",,34 PLAZA ST E,BROOKLYN,NY,135 W 50TH ST,NEW YORK,NY,,,,Cardiovascular Disease ,MD,0
+120,Gurvinder,Kaur,Gurvinder Kaur,,1,2,1,1689836207,GURVINDER,KAUR,,M.D.,Internal Medicine,,11415 101ST AVE,SOUTH RICHMOND HILL,NY,11415 101ST AVE,SOUTH RICHMOND HILL,NY,,,,Family Practice- No Surgery,MD,0
+120,Gurvinder,Kaur,Gurvinder Kaur,,1,2,2,1386064806,GURVINDER,KAUR,,M.D.,Family Medicine,,514 ROUTE 299,HIGHLAND,NY,514 ROUTE 299,HIGHLAND,NY,,,,Family Practice- No Surgery,MD,0
+124,Rehan,Khan,Rehan Khan,,1,2,1,1104130947,REHAN,KHAN,E,DNP-BC,Registered Nurse,"Nurse Practitioner, Family",609 W 114TH ST,NEW YORK,NY,609 W 114TH ST,NEW YORK,NY,,,,Internal Medicine,MD,0
+124,Rehan,Khan,Rehan Khan,,1,2,2,1700078649,REHAN,KHAN,,M.D.,Internal Medicine,Pediatrics,15 HIGHVIEW RD,JERSEY CITY,NJ,40-18 CASE STREET,ELMHURST,NY,,,,Internal Medicine,MD,0
+138,Munish,Kumar,Munish Kumar,,1,2,1,1659306322,MUNISH,KUMAR,,M.D,Specialist,,8705 19TH AVE,BROOKLYN,NY,8705 19TH AVE,BROOKLYN,NY,,,,Pediatrics ,DO,0
+138,Munish,Kumar,Munish Kumar,,1,2,2,1922409994,MUNISH,KUMAR,,DO,Pediatrics,,855 STATE ROUTE 17M,MONROE,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Pediatrics ,DO,1
+156,April,Lucero,April Lucero,Angelique,3,2,1,1053961292,APRIL,LUCERO,,RN,"Registered Nurse, Home Health",,7710 W INTERSTATE 10,SAN ANTONIO,TX,7710 W INTERSTATE 10,SAN ANTONIO,TX,,,,Family Practice- No Surgery,MD,0
+156,April,Lucero,April Lucero,Angelique,3,2,2,1386377265,APRIL,LUCERO,,,Behavior Technician,,27777 INKSTER RD STE 100,FARMINGTON HILLS,MI,27777 INKSTER RD STE 100,FARMINGTON HILLS,MI,,,,Family Practice- No Surgery,MD,0
+164,Eric,Manheimer,Eric Manheimer,,1,2,1,1134208879,ERIC,MANHEIMER,,MD,"Internal Medicine, Geriatric Medicine",,20 E 9TH ST,NEW YORK,NY,20 E 9TH ST,NEW YORK,NY,,,,Cardiovascular Disease w/CC's,MD,0
+164,Eric,Manheimer,Eric Manheimer,,1,2,2,1134368608,ERIC,MANHEIMER,DAVID,M.D.,"Internal Medicine, Clinical Cardiac Electrophysiology",,2 CENTEROCK RD,WEST NYACK,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Cardiovascular Disease w/CC's,MD,1
+170,Christine,Mattingly,Christine Mattingly,,1,2,1,1568453546,CHRISTINE,MATTINGLY,M,M.D.,"Radiology, Diagnostic Radiology",,155 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Diagnostic Radiology,MD,1
+170,Christine,Mattingly,Christine Mattingly,,1,2,2,1386718567,CHRISTINE,MATTINGLY,ANN,LCSW,"Counselor, Addiction (Substance Use Disorder)","Social Worker, Clinical",7 MOUNT PLEASANT RD,BAINBRIDGE,NY,105 LEILANIS LN,NORWICH,NY,,,,Diagnostic Radiology,MD,0
+172,James,McLaughlin,James McLaughlin,,1,2,1,1154316131,JAMES,MCLAUGHLIN,D,MD,"Nuclear Medicine, Nuclear Cardiology","Internal Medicine, Cardiovascular Disease",155 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Cardiovascular Disease ,MD,1
+172,James,McLaughlin,James McLaughlin,,1,2,2,1770657330,JAMES,MCLAUGHLIN,VINCENT,RPh,Pharmacist,,4171 CHOKE CHERRY WAY,LIVERPOOL,NY,300 GIFFORD ST,SYRACUSE,NY,,,,Cardiovascular Disease ,MD,0
+190,Christian,Otto,Christian Otto,,3,2,1,1679942841,CHRISTIAN,OTTO,,M.D.,Emergency Medicine,Family Medicine,3100 MASSENGALE LN,WEBSTER,TX,1504 TAUB LOOP,HOUSTON,TX,,,,Urgent Care,MD,0
+190,Christian,Otto,Christian Otto,,3,2,2,1144431396,CHRISTIAN,OTTO,J.,Ph.D.,"Counselor, Mental Health",Marriage & Family Therapist,9 S FAIRVIEW AVE,PARK RIDGE,IL,9 S FAIRVIEW AVE,PARK RIDGE,IL,,,,Urgent Care,MD,0
+193,Archit,Patel,Archit Patel,,1,2,1,1184003147,ARCHIT,PATEL,,D.O.,Internal Medicine,Hospitalist,20 GLENDON PL UNIT E,WILLIAMSVILLE,NY,462 GRIDER ST,BUFFALO,NY,,,,Hand Sugery,MD,0
+193,Archit,Patel,Archit Patel,,1,2,2,1033304589,ARCHIT,PATEL,VIPUL,M.D.,Orthopaedic Surgery,Orthopaedic Surgery,219 BLOOMING GROVE TPKE,NEW WINDSOR,NY,134 GATLING PL APT 1R,BROOKLYN,NY,,,,Hand Sugery,MD,0
+203,Alexander,Pop,Alexander Pop,,1,2,1,1922458249,ALEXANDER,POP,,M.D.,"Internal Medicine, Gastroenterology",,95 CRYSTAL RUN RD,MIDDLETOWN,NY,5501 OLD YORK RD,PHILADELPHIA,PA,,,,Gastroenterology,MD,1
+203,Alexander,Pop,Alexander Pop,,1,2,2,1366079717,ALEXANDER,POP,,,Student in an Organized Health Care Education/Training Program,,45 READE PL,POUGHKEEPSIE,NY,45 READE PL,POUGHKEEPSIE,NY,,,,Gastroenterology,MD,0
+222,Adrienne,Salomon,Adrienne Salomon,,1,2,1,1114166220,ADRIENNE,SALOMON,ANTOINE,M.D.,"Psychiatry & Neurology, Neurology",,155 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Neurology ,MD,1
+222,Adrienne,Salomon,Adrienne Salomon,,1,2,2,1881700177,ADRIENNE,SALOMON,L,DO,Family Medicine,,14 KENNEDY PKWY,CORTLAND,NY,14 KENNEDY PKWY,CORTLAND,NY,,,,Neurology ,MD,0
+225,Paul,Schulze,Paul Schulze,,1,2,1,1952493538,PAUL,SCHULZE,G,PsyD,"Psychologist, Clinical",,123 DIXON RD,QUEENSBURY,NY,123 DIXON RD,QUEENSBURY,NY,,,,Diagnostic Imaging,DO,0
+225,Paul,Schulze,Paul Schulze,,1,2,2,1588833081,PAUL,SCHULZE,CHRISTIAN,"MD, PhD","Internal Medicine, Cardiovascular Disease",,435 E 70TH ST,NEW YORK,NY,622 W 168TH ST,NEW YORK,NY,,,,Diagnostic Imaging,DO,0
+235,Puja,Sharma,Puja Sharma,,1,2,1,1548518350,PUJA,SHARMA,,MD,Family Medicine,,100 PARK STREET,GLENS FALLS,NY,65 POULTNEY STREET,WHITEHALL,NY,,,,Urgent Care,MD,0
+235,Puja,Sharma,Puja Sharma,,1,2,2,1508106758,PUJA,SHARMA,,,Pharmacist,,3424 KOSSUTH AVE,BRONX,NY,3424 KOSSUTH AVE,BRONX,NY,,,,Urgent Care,MD,0
+240,Sandeep,Singh,Sandeep Singh,,1,2,1,1780121855,SANDEEP,SINGH,,DDS,Dentist,,"200 EAST, 32ND STREET",NEW YORK,NY,"200 E 32ND ST,",NY,NY,,,,Cardiovascular Disease ,MD,0
+240,Sandeep,Singh,Sandeep Singh,,1,2,2,1992787972,SANDEEP,SINGH,,M.D.,"Nuclear Medicine, Nuclear Cardiology","Internal Medicine, Cardiovascular Disease",155 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Cardiovascular Disease ,MD,1
+262,Michael,Traub,Michael Traub,,1,2,1,1821528167,MICHAEL,TRAUB,AARON,MD,Family Medicine,,155 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Family Practice- No Surgery,MD,1
+262,Michael,Traub,Michael Traub,,1,2,2,1366513749,MICHAEL,TRAUB,L,MD,Obstetrics & Gynecology,Obstetrics & Gynecology,237 RICHMOND VALLEY RD,STATEN ISLAND,NY,237 RICHMOND VALLEY RD,STATEN ISLAND,NY,,,,Family Practice- No Surgery,MD,0
+267,Miriam,Villegas,Miriam Villegas,,1,2,1,1356458277,MIRIAM,VILLEGAS,,DO,Hospitalist,Internal Medicine,155 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Internal Medicine ,DO,1
+267,Miriam,Villegas,Miriam Villegas,,1,2,2,1821363334,MIRIAM,VILLEGAS,,RN,Registered Nurse,,85 SAINT JOSEPHS AVE,STATEN ISLAND,NY,85 SAINT JOSEPHS AVE,STATEN ISLAND,NY,,,,Internal Medicine ,DO,0
+273,Katherine,Wood,Katherine Wood,,1,2,1,1750627683,KATHERINE,WOOD,D,D.P.M.,"Podiatrist, Foot & Ankle Surgery",,855 STATE ROUTE 17M,MONROE,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Podiatry Surgical,DPM,1
+273,Katherine,Wood,Katherine Wood,,1,2,2,1689931719,KATHERINE,WOOD,LEIGH,MD,Thoracic Surgery (Cardiothoracic Vascular Surgery),Internal Medicine,201 LYONS AVE # G5,NEWARK,NJ,201 LYONS AVE STE G5,NEWARK,NJ,,,,Podiatry Surgical,DPM,0
+274,Victor,Wu,Victor Wu,,1,2,1,1962497115,VICTOR,WU,HSUEH-WEN,MD,"Radiology, Diagnostic Radiology",,155 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Diagnostic Radiology ,MD,1
+274,Victor,Wu,Victor Wu,,1,2,2,1851829485,VICTOR,WU,,L.Ac.,Acupuncturist,,420 W 24TH ST STE 1D,NEW YORK,NY,420 W 24TH ST STE 1D,NEW YORK,NY,,,,Diagnostic Radiology ,MD,0
+314,Jaclyn,Fisher,Jaclyn Fisher,,1,2,1,1225515448,JACLYN,FISHER,A.,FNP-C,"Nurse Practitioner, Family",,95 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Nurse Practitioner ,NP,1
+314,Jaclyn,Fisher,Jaclyn Fisher,,1,2,2,1871124487,JACLYN,FISHER,S,NP,"Nurse Practitioner, Neonatal, Critical Care",,249 TREETOP LN,RYE BROOK,NY,525 E 68TH ST,NEW YORK,NY,,,,Nurse Practitioner ,NP,0
+324,Barbara,Heckman,Barbara Heckman,,1,2,1,1912015397,BARBARA,HECKMAN,J,NP,"Nurse Practitioner, Adult Health","Nurse Practitioner, Family",155 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN ROAD,MIDDLETOWN,NY,,,,Nurse Practitioner ,NP,1
+324,Barbara,Heckman,Barbara Heckman,,1,2,2,1831392034,BARBARA,HECKMAN,MARIE,lpn,Licensed Practical Nurse,,412 WRIGHT AVE,MATTYDALE,NY,412 WRIGHT AVE,MATTYDALE,NY,,,,Nurse Practitioner ,NP,0
+328,Nicholas,Iorio,Nicholas Iorio,,1,2,1,1619557584,NICHOLAS,IORIO,CHARLES,PMHNP-BC,"Nurse Practitioner, Psych/Mental Health",,2 CENTEROCK RD,WEST NYACK,NY,21 BLOOMINGDALE RD,WHITE PLAINS,NY,,,,Nurse Practitioner/ Psychiatry,NP,0
+328,Nicholas,Iorio,Nicholas Iorio,,1,2,2,1033985338,NICHOLAS,IORIO,,LMSW,"Counselor, Mental Health",,206 OTTER RD,CAMPBELL HALL,NY,206 0TTER ROAD,CAMPBELL HALL,NY,,,,Nurse Practitioner/ Psychiatry,NP,0
+341,Katherine,McDonald,Katherine McDonald,,1,2,1,1639515497,KATHERINE,MCDONALD,L,R.N.,Registered Nurse,,909 GREAT BROOK APTS,VICTOR,NY,909 GREAT BROOK APTS,VICTOR,NY,,,,Nurse Practitioner ,NP,0
+341,Katherine,McDonald,Katherine McDonald,,1,2,2,1033101951,KATHERINE,MCDONALD,GRACE,NP,Nurse Practitioner,,155 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Nurse Practitioner ,NP,1
+342,Colleen,Moran,Colleen Moran,,1,2,1,1770275562,COLLEEN,MORAN,,,"Nurse Practitioner, Family",,5 COLLEGE AVE,WINDSOR,NY,33 LEWIS RD,BINGHAMTON,NY,,,,Nurse Practitioner ,NP,0
+342,Colleen,Moran,Colleen Moran,,1,2,2,1902309164,COLLEEN,MORAN,R,ANP-BC,"Nurse Practitioner, Gerontology","Nurse Practitioner, Adult Health",155 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Nurse Practitioner ,NP,1
+344,Joanne,Morency,Joanne Morency,,1,2,1,1851446116,JOANNE,MORENCY,MARIE,MALS,Case Manager/Care Coordinator,,15 HARBOR RIDGE DR,CENTERPORT,NY,15 HARBOR RIDGE DR,CENTERPORT,NY,,,,Nurse Practitioner ,FNP,0
+344,Joanne,Morency,Joanne Morency,,1,2,2,1497210272,JOANNE,MORENCY,,FNP,"Nurse Practitioner, Family",,155 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Nurse Practitioner ,FNP,1
+347,Shannon,O'Keeffe,Shannon O'Keeffe,,1,2,1,1053629808,SHANNON,O'KEEFFE,,"BS, CASAC-T","Counselor, Addiction (Substance Use Disorder)",,3020 BAILEY AVE,BUFFALO,NY,6301 INDUCON DR E,SANBORN,NY,,,,Nurse Practitioner- Dermatolgy,NP,0
+347,Shannon,O'Keeffe,Shannon O'Keeffe,,1,2,2,1598920530,SHANNON,O'KEEFFE,,NP,"Nurse Practitioner, Acute Care",,303 E 60TH ST,NEW YORK,NY,303 E 60TH ST,NEW YORK,NY,,,,Nurse Practitioner- Dermatolgy,NP,0
+355,Ashley,Powell,Ashley Powell,,1,2,1,1407474604,ASHLEY,POWELL,M,FNP,"Nurse Practitioner, Family",,155 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Nurse Practitioner ,NP,1
+355,Ashley,Powell,Ashley Powell,,1,2,2,1578271474,ASHLEY,POWELL,AMADIS,LMSW,Social Worker,,720 BEACH 20TH ST,FAR ROCKAWAY,NY,9118 85TH ST # 2,WOODHAVEN,NY,,,,Nurse Practitioner ,NP,0
+356,Nicholas,Powell,Nicholas Powell,,1,2,1,1255827929,NICHOLAS,POWELL,G.,FNP,"Nurse Practitioner, Adult Health","Nurse Practitioner, Family",155 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Nurse Practitioner,NP,1
+356,Nicholas,Powell,Nicholas Powell,,1,2,2,1063097814,NICHOLAS,POWELL,DONALD,,Registered Nurse,"Nurse Anesthetist, Certified Registered",ELM AND CARLTON STREET,BUFFALO,NY,ELM AND CARLTON ST,BUFFALO,NY,,,,Nurse Practitioner,NP,0
+374,Richard,Fuchs,Richard Fuchs,,1,2,1,1013040690,RICHARD,FUCHS,,MD,"Internal Medicine, Cardiovascular Disease",,310 E 72ND ST,NEW YORK,NY,310 E 72ND ST,NEW YORK,NY,,,,Pediatircs- No Surgery,MD,0
+374,Richard,Fuchs,Richard Fuchs,,1,2,2,1740314533,RICHARD,FUCHS,T.,M.D.,Pediatrics,,100 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Pediatircs- No Surgery,MD,1
+375,Patricia,Lynch,Patricia Lynch,,1,2,1,1114659851,PATRICIA,LYNCH,,LMSW,Social Worker,,98 FERNWOOD TER,STEWART MANOR,NY,98 FERNWOOD TER,STEWART MANOR,NY,,,,Pediatrics- No Surgery,DO,0
+375,Patricia,Lynch,Patricia Lynch,,1,2,2,1528192804,PATRICIA,LYNCH,,D.O,Pediatrics,,100 CRYSTAL RUN ROAD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Pediatrics- No Surgery,DO,1
+378,Deborah,Spencer,Deborah Spencer,K.,1,2,1,1366716094,DEBORAH,SPENCER,,,"Nurse Practitioner, Psych/Mental Health",,100 PINEWILD DR,ROCHESTER,NY,100 PINEWILD DR,ROCHESTER,NY,,,,Obstetrics & Gynecology- Major surgery,MD,0
+378,Deborah,Spencer,Deborah Spencer,K.,1,2,2,1952383069,DEBORAH,SPENCER,K.,M.D.,Obstetrics & Gynecology,,95 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Obstetrics & Gynecology- Major surgery,MD,1
+390,Charles,Walker,Charles Walker,,1,2,1,1154402139,CHARLES,WALKER,NATHAN,M.D.,Urology,,1200 ROUTE 300,NEWBURGH,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Physical Therapist,,1
+390,Charles,Walker,Charles Walker,,1,2,2,1760555312,CHARLES,WALKER,LESLIE,PT,Physical Therapist,,2 VICTORY CT,NEWBURGH,NY,95 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Physical Therapist,,1
+403,Sandeep,Singh,Sandeep Singh,,1,2,1,1780121855,SANDEEP,SINGH,,DDS,Dentist,,"200 EAST, 32ND STREET",NEW YORK,NY,"200 E 32ND ST,",NY,NY,,,,,MD,0
+403,Sandeep,Singh,Sandeep Singh,,1,2,2,1992787972,SANDEEP,SINGH,,M.D.,"Nuclear Medicine, Nuclear Cardiology","Internal Medicine, Cardiovascular Disease",155 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,,MD,1
+114,David,Kang,David Kang,S.,1,3,1,1225097793,DAVID,KANG,S,M.D.,Family Medicine,,155 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Family Practice- No Surgery,MD,1
+114,David,Kang,David Kang,S.,1,3,2,1669739884,DAVID,KANG,S,D.O.,Anesthesiology,Student in an Organized Health Care Education/Training Program,301 PROSPECT AVE,SYRACUSE,NY,690 CANTON ST,WESTWOOD,MA,,,,Family Practice- No Surgery,MD,0
+114,David,Kang,David Kang,S.,1,3,3,1518007368,DAVID,KANG,,M.D.,"Psychiatry & Neurology, Psychiatry",,1045 JAMES ST,SYRACUSE,NY,620 MADISON ST,SYRACUSE,NY,,,,Family Practice- No Surgery,MD,0
+130,Katherine,Kim,Katherine Kim,,1,3,1,1962991851,KATHERINE,KIM,,MD,"Psychiatry & Neurology, Psychiatry",,156 5TH AVE STE 1107,NEW YORK,NY,156 5TH AVE,NEW YORK,NY,,,,Gastroenterology/General ,MD,0
+130,Katherine,Kim,Katherine Kim,,1,3,2,1518163039,KATHERINE,KIM,,MD,"Internal Medicine, Gastroenterology",,1200 ROUTE 300,NEWBURGH,NY,95 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Gastroenterology/General ,MD,1
+130,Katherine,Kim,Katherine Kim,,1,3,3,1851553259,KATHERINE,KIM,K,DDS,"Dentist, Orthodontics and Dentofacial Orthopedics",,45 LUDLOW ST STE 410,YONKERS,NY,45 LUDLOW ST STE 410,YONKERS,NY,,,,Gastroenterology/General ,MD,0
+207,Riaz,Rahman,Riaz Rahman,,1,3,1,1952767535,RIAZ,RAHMAN,AMEER,MD,Student in an Organized Health Care Education/Training Program,,8900 VAN WYCK EXPY,JAMAICA,NY,8900 VAN WYCK EXPY,JAMAICA,NY,,,,Internal Medicine ,MD,0
+207,Riaz,Rahman,Riaz Rahman,,1,3,2,1053336727,RIAZ,RAHMAN,,MD,Internal Medicine,,855 STATE ROUTE 17M,MONROE,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Internal Medicine ,MD,1
+207,Riaz,Rahman,Riaz Rahman,,1,3,3,1043303274,RIAZ,RAHMAN,,MD,Internal Medicine,,44 FENIMORE RD,SCARSDALE,NY,MMG - BRONX EAST,BRONX,NY,,,,Internal Medicine ,MD,0
+229,Bhakti,Shah,Bhakti Shah,,1,3,1,1174941967,BHAKTI,SHAH,,M.D.,"Internal Medicine, Rheumatology",,855 STATE ROUTE 17M,MONROE,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Rheumatology ,MD,1
+229,Bhakti,Shah,Bhakti Shah,,1,3,2,1538585716,BHAKTI,SHAH,,,Physical Therapist,,2 OLD MAMARONECK RD APT 7A,WHITE PLAINS,NY,3755 HENRY HUDSON PKWY,BRONX,NY,,,,Rheumatology ,MD,0
+229,Bhakti,Shah,Bhakti Shah,,1,3,3,1013197300,BHAKTI,SHAH,,RPA-C,Physician Assistant,,374 STOCKHOLM ST,BROOKLYN,NY,374 STOCKHOLM ST,BROOKLYN,NY,,,,Rheumatology ,MD,0
+37,Michael,Cho,Michael Cho,,1,4,1,1710979174,MICHAEL,CHO,H,M.D.,Neurological Surgery,,110 MAIN ST,POUGHKEEPSIE,NY,110 MAIN ST,POUGHKEEPSIE,NY,,,,Cardiovascular Disease,MD,0
+37,Michael,Cho,Michael Cho,,1,4,2,1932884939,MICHAEL,CHO,,L.Ac.,Acupuncturist,,242 N MAIN ST,NEW CITY,NY,265 DEMAREST AVE,CLOSTER,NJ,,,,Cardiovascular Disease,MD,0
+37,Michael,Cho,Michael Cho,,1,4,3,1043310634,MICHAEL,CHO,N,M.D.,"Nuclear Medicine, Nuclear Cardiology","Internal Medicine, Cardiovascular Disease",155 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Cardiovascular Disease,MD,1
+37,Michael,Cho,Michael Cho,,1,4,4,1427596337,MICHAEL,CHO,,,Student in an Organized Health Care Education/Training Program,"Dentist, General Practice",211 KENNEDY CT,HANOVER,PA,211 KENNEDY CT,HANOVER,PA,,,,Cardiovascular Disease,MD,0
+194,Mitul,Patel,Mitul Patel,,1,4,1,1285615120,MITUL,PATEL,R,M.D.,General Practice,,250 PATCHOGUE YAPHANK RD,EAST PATCHOGUE,NY,250 PATCHOGUE YAPHANK RD,EAST PATCHOGUE,NY,,,,Cardiology  ,MD,0
+194,Mitul,Patel,Mitul Patel,,1,4,2,1801183215,MITUL,PATEL,V,DMD,"Dentist, General Practice",,1564 W LANE RD,MACHESNEY PARK,IL,281 SANDERS CREEK PKWY,EAST SYRACUSE,NY,,,,Cardiology  ,MD,0
+194,Mitul,Patel,Mitul Patel,,1,4,3,1902000730,MITUL,PATEL,,DDS,Dentist,,774 POST RD,SCARSDALE,NY,774 POST RD,SCARSDALE,NY,,,,Cardiology  ,MD,0
+194,Mitul,Patel,Mitul Patel,,1,4,4,1184986051,MITUL,PATEL,M,M.D.,Internal Medicine,"Internal Medicine, Cardiovascular Disease",68 HARRIS BUSHVILLE RD,HARRIS,NY,PO BOX 800,HARRIS,NY,,,,Cardiology  ,MD,0
+230,Manan,Shah,Manan Shah,,1,4,1,1366999153,MANAN,SHAH,,M.D.,Student in an Organized Health Care Education/Training Program,Pediatrics,104 FOLTIM WAY,CONGERS,NY,41 WILSON AVE,NEWARK,NJ,,,,Obstetrics & Gynecology- Major surgery,MD,0
+230,Manan,Shah,Manan Shah,,1,4,2,1225369218,MANAN,SHAH,ASHOKKUMAR,,"Clinic/Center, Physical Therapy",,50 RINALDI BLVD,POUGHKEEPSIE,NY,50 RINALDI BLVD,POUGHKEEPSIE,NY,,,,Obstetrics & Gynecology- Major surgery,MD,0
+230,Manan,Shah,Manan Shah,,1,4,3,1649698259,MANAN,SHAH,SUBHASH,M.D.,Student in an Organized Health Care Education/Training Program,Hospitalist,1 GUSTAVE L LEVY PL,NEW YORK,NY,1 GUSTAVE L LEVY PL # 3000,NEW YORK,NY,,,,Obstetrics & Gynecology- Major surgery,MD,0
+230,Manan,Shah,Manan Shah,,1,4,4,1316276827,MANAN,SHAH,D.,M.D.,Obstetrics & Gynecology,,95 CRYSTAL RUN RD,MIDDLETOWN,NY,95 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Obstetrics & Gynecology- Major surgery,MD,1
+287,Julie,Black,Julie Black,,1,4,1,1366590192,JULIE,BLACK,LYNN,"RD, MNT","Dietitian, Registered",,1425 PORTLAND AVE,ROCHESTER,NY,1425 PORTLAND AVE,ROCHESTER,NY,,,,Nurse Practitioner  ,NP,0
+287,Julie,Black,Julie Black,,1,4,2,1467035998,JULIE,BLACK,ANN,MHC-LP,"Counselor, Mental Health",,260 MADISON AVE FL 8,NEW YORK,NY,260 MADISON AVE FL 8,NEW YORK,NY,,,,Nurse Practitioner  ,NP,0
+287,Julie,Black,Julie Black,,1,4,3,1992384218,JULIE,BLACK,J,FNP,"Nurse Practitioner, Family",,155 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Nurse Practitioner  ,NP,1
+287,Julie,Black,Julie Black,,1,4,4,1851393771,JULIE,BLACK,,PA-C,"Physician Assistant, Medical",,1480 PLEASANT VALLEY WAY,WEST ORANGE,NJ,255 EASTERN PKWY,BROOKLYN,NY,,,,Nurse Practitioner  ,NP,0
+131,Mary,King,Mary King,Ellen,1,5,1,1265435655,MARY,KING,P.,m.d.,Family Medicine,,2750 MERRICK RD,BELLMORE,NY,2750 MERRICK RD,BELLMORE,NY,,,,Urgent Care- Internal Medicine,DO,0
+131,Mary,King,Mary King,Ellen,1,5,2,1124050497,MARY,KING,ELLEN,DO,"Internal Medicine, Geriatric Medicine",Internal Medicine,155 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Urgent Care- Internal Medicine,DO,1
+131,Mary,King,Mary King,Ellen,1,5,3,1942055918,MARY,KING,ELIZABETH,,"Clinical Nurse Specialist, Adult Health",,177 FORT WASHINGTON AVE,NEW YORK,NY,210 DENVER RD,PARAMUS,NJ,,,,Urgent Care- Internal Medicine,DO,0
+131,Mary,King,Mary King,Ellen,1,5,4,1659451128,MARY,KING,E,MD,Obstetrics & Gynecology,,19 WATERS EDGE,KINNELON,NJ,WEILER - DEPT. OF OBGYN,BRONX,NY,,,,Urgent Care- Internal Medicine,DO,0
+131,Mary,King,Mary King,Ellen,1,5,5,1912033424,MARY,KING,ALICE,LCSW,"Social Worker, Clinical",,21 OLD STATE RD,HOPEWELL JUNCTION,NY,21 OLD STATE RD,HOPEWELL JUNCTION,NY,,,,Urgent Care- Internal Medicine,DO,0
+145,Sophia,Lee,Sophia Lee,,1,5,1,1427881531,SOPHIA,LEE,TE YU,,"Counselor, Mental Health",,12815 PEARL RD # 27B,COLLEGE POINT,NY,14108 JEWEL AVE,FLUSHING,NY,,,,Internal Medicine ,MD,0
+145,Sophia,Lee,Sophia Lee,,1,5,2,1164208385,SOPHIA,LEE,,,"Nurse Practitioner, Family","Nurse Practitioner, Family",31 CHELSEA PL,RIDGEWOOD,NJ,3411 WAYNE AVE,BRONX,NY,,,,Internal Medicine ,MD,0
+145,Sophia,Lee,Sophia Lee,,1,5,3,1639167679,SOPHIA,LEE,S.,MD,Internal Medicine,,155 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Internal Medicine ,MD,1
+145,Sophia,Lee,Sophia Lee,,1,5,4,1437860566,SOPHIA,LEE,,LMT,Massage Therapist,,9 AVE AT PORT IMPERIAL APT 1021,WEST NEW YORK,NJ,576 3RD AVE,NEW YORK,NY,,,,Internal Medicine ,MD,0
+145,Sophia,Lee,Sophia Lee,,1,5,5,1982985610,SOPHIA,LEE,YUNGWEN,M.D.,Family Medicine,,13617 39TH AVE,FLUSHING,NY,13617 39TH AVE,FLUSHING,NY,,,,Internal Medicine ,MD,0
+231,Parth,Shah,Parth Shah,,1,5,1,1033824222,PARTH,SHAH,,"PT,  DPT",Physical Therapist,,1100 CLOVE ROAD,STATEN ISLAND,NY,1100 CLOVE ROAD,STATEN ISLAND,NY,,,,Family Practice- No Surgery,MD,0
+231,Parth,Shah,Parth Shah,,1,5,2,1093958613,PARTH,SHAH,M.,M.D.,Family Medicine,,1200 ROUTE 300,NEWBURGH,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Family Practice- No Surgery,MD,1
+231,Parth,Shah,Parth Shah,,1,5,3,1730641606,PARTH,SHAH,,DO,Student in an Organized Health Care Education/Training Program,Emergency Medicine,7700 S BROADWAY,LITTLETON,CO,7700 S BROADWAY,LITTLETON,CO,,,,Family Practice- No Surgery,MD,0
+231,Parth,Shah,Parth Shah,,1,5,4,1093028102,PARTH,SHAH,D,DDS,Dentist,,2570 ROUTE 9W STE 10,CORNWALL,NY,260 N LITTLE TOR RD,NEW CITY,NY,,,,Family Practice- No Surgery,MD,0
+231,Parth,Shah,Parth Shah,,1,5,5,1841674926,PARTH,SHAH,,MD,Internal Medicine,,1145 S UTICA AVE STE 460,TULSA,OK,1145 S UTICA AVE STE 460,TULSA,OK,,,,Family Practice- No Surgery,MD,0
+317,Jo,Frisbie,Jo Frisbie,Anne,4,5,1,1467796268,ANN,FRISBIE,C,IBCLC,"Lactation Consultant, Non-RN",,39-32 55TH ST,WOODSIDE,NY,3932 55TH ST,WOODSIDE,NY,,,,Nurse Practitioner ,NP,0
+317,Jo,Frisbie,Jo Frisbie,Anne,4,5,2,1831378413,ERIKA,FRISBIE,ELIZABETH,"M.S., P.T.",Physical Therapist,,50 E NORTH ST,BUFFALO,NY,50 E NORTH ST,BUFFALO,NY,,,,Nurse Practitioner ,NP,0
+317,Jo,Frisbie,Jo Frisbie,Anne,4,5,3,1003194689,JESSICA,FRISBIE,,M.S. CCC-SLP,"Speech-Language Pathologist,  ",,51 CAYUGA DR,HORSEHEADS,NY,9579 VOCATIONAL DR,PAINTED POST,NY,,,,Nurse Practitioner ,NP,0
+317,Jo,Frisbie,Jo Frisbie,Anne,4,5,4,1942294335,JOANNE,FRISBIE,,FNP,Dermatology,Nurse Practitioner,155 CRYSTAL RUN RD,MIDDLETOWN,NY,155 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Nurse Practitioner ,NP,1
+317,Jo,Frisbie,Jo Frisbie,Anne,4,5,5,1336349984,KATHY,FRISBIE,A,Registered Nurse,Registered Nurse,,62 CORTLAND ST,HOMER,NY,62 CORTLAND ST,HOMER,NY,,,,Nurse Practitioner ,NP,0
+336,Jennifer,Levy,Jennifer Levy,,1,5,1,1245959253,JENNIFER,LEVY,,,Counselor,,40 MONTGOMERY ST,NEW YORK,NY,40 MONTGOMERY ST,NEW YORK,NY,,,,Physician Assistant/Surgical- Vascular Surgery,PA,0
+336,Jennifer,Levy,Jennifer Levy,,1,5,2,1356996813,JENNIFER,LEVY,LYNN,AuD,Audiologist,,8502 4TH AVE,BROOKLYN,NY,8502 4TH AVE,BROOKLYN,NY,,,,Physician Assistant/Surgical- Vascular Surgery,PA,0
+336,Jennifer,Levy,Jennifer Levy,,1,5,3,1760128805,JENNIFER,LEVY,K,PA,"Physician Assistant, Surgical",,155 CRYSTAL RUN RD,MIDDLETOWN,NY,95 CRYSTAL RUN RD,MIDDLETOWN,NY,,,,Physician Assistant/Surgical- Vascular Surgery,PA,1
+336,Jennifer,Levy,Jennifer Levy,,1,5,4,1902102387,JENNIFER,LEVY,,,Licensed Practical Nurse,,1095 WHALEN RD,PENFIELD,NY,1095 WHALEN RD,PENFIELD,NY,,,,Physician Assistant/Surgical- Vascular Surgery,PA,0
+336,Jennifer,Levy,Jennifer Levy,,1,5,5,1982943957,JENNIFER,LEVY,R,R.N.,Registered Nurse,,2228 E 59TH PL,BROOKLYN,NY,2228 E 59TH PL,BROOKLYN,NY,,,,Physician Assistant/Surgical- Vascular Surgery,PA,0
