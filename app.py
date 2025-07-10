@@ -19,8 +19,17 @@ st.set_page_config(page_title="NPI Matcher", layout="wide", initial_sidebar_stat
 REQUIRED_COLUMNS = {"First Name", "Last Name"}
 @st.cache_data(show_spinner=False)
 def load_hospital_df():
-    df = pd.read_csv("ProviderOfService.csv")
-    df["Norm_Address_City"] = (df["Address_1"].fillna('') + " " + df["City"].fillna('')).apply(normalize_address)
+    df = pd.read_csv("Filtered_Hospitals.csv", dtype=str)
+
+    # Fill NaNs and normalize key fields
+    df["Hospital"] = df["Hospital"].fillna("").str.strip()
+    df["Address"] = df["Address"].fillna("").str.upper().str.strip()
+    df["City"] = df["City"].fillna("").str.upper().str.strip()
+    df["State"] = df["State"].fillna("").str.upper().str.strip()
+
+    # Normalize full address + city string for fuzzy comparison
+    df["Norm_Address_City"] = (df["Address"] + " " + df["City"]).apply(normalize_address)
+
     return df
 
 hospital_df = load_hospital_df()
@@ -190,24 +199,36 @@ def clean_specialty(s):
     return re.split(r"[/,]", str(s))[0].strip()
 
 def find_hospital_for_address(address, city, state, hospital_df, threshold=70):
-    best_score = 0
-    best_hospital = ""
-    # Normalize city and state for filtering
+    norm_street = normalize_address(address)
     norm_city = str(city).upper().strip()
     norm_state = str(state).upper().strip()
-    # Only consider hospitals in the same city AND state (case-insensitive)
+
+    # Filter hospitals
     city_state_hospitals = hospital_df[
-        (hospital_df["City"].str.upper().str.strip() == norm_city) &
-        (hospital_df["State"].str.upper().str.strip() == norm_state)
+        (hospital_df["City"] == norm_city) & (hospital_df["State"] == norm_state)
     ]
-    norm_street = normalize_address(address)
+
+    #print(f"\n🔍 Matching address: '{norm_street}' | City: '{norm_city}' | State: '{norm_state}'")
+    #print(f"🧪 Found {len(city_state_hospitals)} hospitals in that city/state.")
+
+    best_score = 0
+    best_hospital = ""
+
     for _, row in city_state_hospitals.iterrows():
-        hosp_street = normalize_address(row['Address_1'])
+        hosp_street = normalize_address(row["Address"])
         score = fuzz.token_sort_ratio(norm_street, hosp_street)
+        print(f" → Comparing to hospital address: '{hosp_street}' | Score: {score}")
         if score > best_score and score >= threshold:
             best_score = score
-            best_hospital = row['Hospital_Name']
+            best_hospital = row["Hospital"]
+
+    #if best_hospital:
+        #print(f"✅ MATCHED: {best_hospital} with score {best_score}")
+    #else:
+        #print(f"❌ No match above threshold {threshold}")
+    
     return best_hospital
+
 
 # -------------------- NPI API & MATCHING HELPERS --------------------
 @st.cache_data(show_spinner=False, ttl=86400)  # 86400 seconds = 24 hours
@@ -519,8 +540,8 @@ if uploaded_file:
     if error:
         st.error(error)
     else:
-        if debug:
-            df = df[df["Last Name"].str.strip().str.lower() == "sandler"]  # use this to debug
+        #if debug:
+            #df = df[df["Last Name"].str.strip().str.lower() == "sandler"]  # use this to debug
 
         st.success(f"Uploaded {len(df)} rows successfully!")
         #df = split_first_and_middle(df)
@@ -531,8 +552,11 @@ if uploaded_file:
         df["Suffix"] = df["Suffix"].fillna("").astype(str)
         df["Specialty"] = df["Specialty"].fillna("").astype(str)
         def process_row(row):
+            print("⚡ process_row called for:", row.to_dict())
+
             result_rows = []
             found_match = False
+            addresses = []  # <-- Add this line to always define addresses
 
             if search_type == "Best: Full first and last name match":
                 # NY-first logic as before
@@ -547,26 +571,6 @@ if uploaded_file:
                             basic = m.get("basic", {})
                             taxonomies = m.get("taxonomies", [])
                             addresses = m.get("addresses", [])
-
-                            # Get hospital names for each address (up to 3)
-                            hospital_1 = find_hospital_for_address(
-                                addresses[0]["address_1"] if len(addresses) > 0 else "",
-                                addresses[0]["city"] if len(addresses) > 0 else "",
-                                addresses[0]["state"] if len(addresses) > 0 else "",
-                                hospital_df
-                            ) if len(addresses) > 0 else ""
-                            hospital_2 = find_hospital_for_address(
-                                addresses[1]["address_1"] if len(addresses) > 1 else "",
-                                addresses[1]["city"] if len(addresses) > 1 else "",
-                                addresses[1]["state"] if len(addresses) > 1 else "",
-                                hospital_df
-                            ) if len(addresses) > 1 else ""
-                            hospital_3 = find_hospital_for_address(
-                                addresses[2]["address_1"] if len(addresses) > 2 else "",
-                                addresses[2]["city"] if len(addresses) > 2 else "",
-                                addresses[2]["state"] if len(addresses) > 2 else "",
-                                hospital_df
-                            ) if len(addresses) > 2 else ""
 
                             result_rows.append({
                                 "First_Name_Supplied": row_for_results.get("First Name", ""),
@@ -585,18 +589,15 @@ if uploaded_file:
                                 "Creditials": basic.get("credential", ""),
                                 "Specialty_1": taxonomies[0].get("desc", "") if len(taxonomies) > 0 else "",
                                 "Specialty_2": taxonomies[1].get("desc", "") if len(taxonomies) > 1 else "",
-                                "Address_1": addresses[0]["address_1"] if len(addresses) > 0 else "",
-                                "City_1": addresses[0]["city"] if len(addresses) > 0 else "",
-                                "State_1": addresses[0]["state"] if len(addresses) > 0 else "",
-                                "Matched Hospital (Address 1)": hospital_1,
-                                "Address_2": addresses[1]["address_1"] if len(addresses) > 1 else "",
-                                "City_2": addresses[1]["city"] if len(addresses) > 1 else "",
-                                "State_2": addresses[1]["state"] if len(addresses) > 1 else "",
-                                "Matched Hospital (Address 2)": hospital_2,
-                                "Address_3": addresses[2]["address_1"] if len(addresses) > 2 else "",
-                                "City_3": addresses[2]["city"] if len(addresses) > 2 else "",
-                                "State_3": addresses[2]["state"] if len(addresses) > 2 else "",
-                                "Matched Hospital (Address 3)": hospital_3,
+                                "Address_1": addresses[0].get("address_1", "") if len(addresses) > 0 else "",
+                                "City_1": addresses[0].get("city", "") if len(addresses) > 0 else "",
+                                "State_1": addresses[0].get("state", "") if len(addresses) > 0 else "",
+                                "Address_2": addresses[1].get("address_1", "") if len(addresses) > 1 else "",
+                                "City_2": addresses[1].get("city", "") if len(addresses) > 1 else "",
+                                "State_2": addresses[1].get("state", "") if len(addresses) > 1 else "",
+                                "Address_3": addresses[2].get("address_1", "") if len(addresses) > 2 else "",
+                                "City_3": addresses[2].get("city", "") if len(addresses) > 2 else "",
+                                "State_3": addresses[2].get("state", "") if len(addresses) > 2 else "",
                                 "Suffix": row_for_results.get("Suffix", ""),
 
                                 #"Address Match": "",
@@ -623,24 +624,6 @@ if uploaded_file:
                         basic = m.get("basic", {})
                         taxonomies = m.get("taxonomies", [])
                         addresses = m.get("addresses", [])
-                        hospital_1 = find_hospital_for_address(
-                            addresses[0]["address_1"] if len(addresses) > 0 else "",
-                            addresses[0]["city"] if len(addresses) > 0 else "",
-                            addresses[0]["state"] if len(addresses) > 0 else "",
-                            hospital_df
-                        ) if len(addresses) > 0 else ""
-                        hospital_2 = find_hospital_for_address(
-                            addresses[1]["address_1"] if len(addresses) > 1 else "",
-                            addresses[1]["city"] if len(addresses) > 1 else "",
-                            addresses[1]["state"] if len(addresses) > 1 else "",
-                            hospital_df
-                        ) if len(addresses) > 1 else ""
-                        hospital_3 = find_hospital_for_address(
-                            addresses[2]["address_1"] if len(addresses) > 2 else "",
-                            addresses[2]["city"] if len(addresses) > 2 else "",
-                            addresses[2]["state"] if len(addresses) > 2 else "",
-                            hospital_df
-                        ) if len(addresses) > 2 else ""
                         result_rows.append({
                             "First_Name_Supplied": row_for_results.get("First Name", ""),
                             "Last_Name_Supplied": row_for_results.get("Last Name", ""),
@@ -658,28 +641,25 @@ if uploaded_file:
                             "Creditials": basic.get("credential", ""),
                             "Specialty_1": taxonomies[0].get("desc", "") if len(taxonomies) > 0 else "",
                             "Specialty_2": taxonomies[1].get("desc", "") if len(taxonomies) > 1 else "",
-                            "Address_1": addresses[0]["address_1"] if len(addresses) > 0 else "",
-                            "City_1": addresses[0]["city"] if len(addresses) > 0 else "",
-                            "State_1": addresses[0]["state"] if len(addresses) > 0 else "",
-                            "Matched Hospital (Address 1)": hospital_1,
-                            "Address_2": addresses[1]["address_1"] if len(addresses) > 1 else "",
-                            "City_2": addresses[1]["city"] if len(addresses) > 1 else "",
-                            "State_2": addresses[1]["state"] if len(addresses) > 1 else "",
-                            "Matched Hospital (Address 2)": hospital_2,
-                            "Address_3": addresses[2]["address_1"] if len(addresses) > 2 else "",
-                            "City_3": addresses[2]["city"] if len(addresses) > 2 else "",
-                            "State_3": addresses[2]["state"] if len(addresses) > 2 else "",
-                            "Matched Hospital (Address 3)": hospital_3,
+                            "Address_1": addresses[0].get("address_1", "") if len(addresses) > 0 else "",
+                            "City_1": addresses[0].get("city", "") if len(addresses) > 0 else "",
+                            "State_1": addresses[0].get("state", "") if len(addresses) > 0 else "",
+                            "Address_2": addresses[1].get("address_1", "") if len(addresses) > 1 else "",
+                            "City_2": addresses[1].get("city", "") if len(addresses) > 1 else "",
+                            "State_2": addresses[1].get("state", "") if len(addresses) > 1 else "",
+                            "Address_3": addresses[2].get("address_1", "") if len(addresses) > 2 else "",
+                            "City_3": addresses[2].get("city", "") if len(addresses) > 2 else "",
+                            "State_3": addresses[2].get("state", "") if len(addresses) > 2 else "",
                             "Suffix": row_for_results.get("Suffix", ""),
                             #"Address Match": "",
                         })
 
+            print("found_match:", found_match)
             if not found_match:
                 result_rows.append({
                     "First_Name_Supplied": row.get("First Name", ""),
                     "Last_Name_Supplied": row.get("Last Name", ""),
                     "FIRST_LAST": f"{row.get('First Name', '')} {row.get('Last Name', '')}".strip(),
-                    #"Middle_Name_Supplied": row.get("Middle Name", ""),
                     "Specialty_Supplied": row.get("Specialty", ""),
                     "Match_Level": "No Match",
                     "Result_Count": 0,
@@ -691,23 +671,39 @@ if uploaded_file:
                     "Creditials": "",
                     "Specialty_1": "",
                     "Specialty_2": "",
-                    "Address_1": "",
-                    "City_1": "",
-                    "State_1": "",
-                    "Address_2": "",
-                    "City_2": "",
-                    "State_2": "",
-                    "Address_3": "",
-                    "City_3": "",
-                    "State_3": "",
+                    # Copy provider address fields here:
+                    "Address_1": row.get("Address_1", ""),
+                    "City_1": row.get("City_1", ""),
+                    "State_1": row.get("State_1", ""),
+                    "Address_2": row.get("Address_2", ""),
+                    "City_2": row.get("City_2", ""),
+                    "State_2": row.get("State_2", ""),
+                    "Address_3": row.get("Address_3", ""),
+                    "City_3": row.get("City_3", ""),
+                    "State_3": row.get("State_3", ""),
                     "Specialty_Supplied": row.get("Specialty", ""),
                     "Suffix": row.get("Suffix", ""),
                     "Address Match": "",
-                    "Hospital_1": "",
-                    "Hospital_2": "",
-                    "Hospital_3": ""
+                    "Matched Hospital": "",
                 })
+                # After building result_rows, add "Matched Hospital" for each row
+            for result_row in result_rows:
+                matched_hospital = ""
+                for i in range(1, 4):
+                    address = result_row.get(f"Address_{i}", "")
+                    city = result_row.get(f"City_{i}", "")
+                    state_val = result_row.get(f"State_{i}", "")
+                    print(f"🏥 Trying to match: {address=}, {city=}, {state_val=}")
+                    if address and state_val:
+                        hospital = find_hospital_for_address(address, city, state_val, hospital_df)
+                        print(f"✅ Hospital match: {hospital}")
+                        if hospital:
+                            matched_hospital = hospital
+                            break  # stop after first match
+                result_row["Matched Hospital"] = matched_hospital
+
             return result_rows
+            
 
         # In your "Click to Run Matching" button:
         if st.button("Click to Run Matching"):
@@ -723,11 +719,12 @@ if uploaded_file:
                 "Match_Level", "Result_Count", "Result", "NPI",
                 "First_Name", "Last_Name", "Middle_Name", "Creditials",
                 "Specialty_1", "Specialty_2",
-                "Address_1", "City_1", "State_1", "Matched Hospital (Address 1)",
-                "Address_2", "City_2", "State_2", "Matched Hospital (Address 2)",
-                "Address_3", "City_3", "State_3", "Matched Hospital (Address 3)",
+                "Address_1", "City_1", "State_1",
+                "Address_2", "City_2", "State_2",
+                "Address_3", "City_3", "State_3", "Matched Hospital"
             ]
             result_df = pd.DataFrame(result_rows, columns=desired_columns)
+
 
             if show_stats:
                 expected_set = set(npi_expected)
@@ -770,9 +767,8 @@ if result_df is not None and not result_df.empty:
         # Add hospital filter here
     with filter_col4:
         all_hospitals = pd.concat([
-            result_df["Matched Hospital (Address 1)"].dropna(),
-            result_df["Matched Hospital (Address 2)"].dropna(),
-            result_df["Matched Hospital (Address 3)"].dropna()
+            result_df["Matched Hospital"].dropna(),
+
         ]).unique()
         hospital_filter = st.multiselect(
             "Filter by Hospital",
@@ -795,9 +791,7 @@ if result_df is not None and not result_df.empty:
         filtered_df = filtered_df[filtered_df["Match_Level"].isin(match_level_filter)]
     if hospital_filter:
         filtered_df = filtered_df[
-            filtered_df["Matched Hospital (Address 1)"].isin(hospital_filter) |
-            filtered_df["Matched Hospital (Address 2)"].isin(hospital_filter) |
-            filtered_df["Matched Hospital (Address 3)"].isin(hospital_filter)
+            filtered_df["Matched Hospital"].isin(hospital_filter)
         ]
 
     st.dataframe(filtered_df, use_container_width=True)
@@ -844,3 +838,12 @@ if show_stats and result_df is not None and not result_df.empty:
         print("NPIs in expected but NOT in your results:")
         for npi in sorted(expected_not_found):
             print(npi)
+
+# Print all unique hospitals and their addresses for debugging
+if debug and result_df is not None and not result_df.empty:
+    print("\n--- Unique hospitals and addresses in results ---")
+    unique_hospitals = result_df[
+        ["Matched Hospital (Address 1)", "Address_1", "City_1", "State_1"]
+    ].drop_duplicates()
+    for row in unique_hospitals.itertuples(index=False):
+        print(f"Hospital: {row[0]} | Address: {row[1]}, {row[2]}, {row[3]}")
